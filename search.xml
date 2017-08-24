@@ -1,8 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2017%2F08%2F24%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[CSS常见样式]]></title>
+    <url>%2FCSS%E5%B8%B8%E8%A7%81%E6%A0%B7%E5%BC%8F.html</url>
+    <content type="text"><![CDATA[1. 块级元素和行内元素分别有哪些？ 块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等 行内元素: span, a, input, button, lable, select, textarea, em, br, img, strong 区别： 行内元素只能容纳行内元素和文本。而块级可以容纳块级元素和行内元素。 块级元素可以设定宽高，而行内元素不可以。 块级元素独占一行，而行内元素可以与其它行内元素共同处在一行。 行内元素的默认宽度为内容的宽度，块级元素默认宽度与浏览器窗口宽度一致 2. 什么是 CSS 继承? 哪些属性能继承，哪些不能？ CSS继承: 子元素继承了父元素的CSS属性。 不可继承属性：display, margin, border, padding, background, width, height, overflow, z-index, float, position, vertical-align 所有元素可继承：visibility和cursor 内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、 font-family、font-size、font-style、font-variant、font-weight、text- decoration、text-transform、direction。 块状元素可继承：text-indent和text-align。 列表元素可继承：list-style、list-style-type、list-style-position、list-style-image。 表格元素可继承：border-collapse。 3. 如何让块级元素水平居中？如何让行内元素水平居中? 块级元素水平居中：给块级元素设定宽高,margin: 0 auto; 多个块级元素可以使用inline-block和flex 行内元素: text-align: center; 4. 用 CSS 实现一个三角形一个CSS三角形 5. 单行文本溢出加 …如何实现?12345.box &#123; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;&#125; 6. px, em, rem 有什么区别 px: 相对长度单位。像素px是相对于显示器屏幕分辨率而言的 em: 指的是相对于其父级元素的大小，即倍数。 rem: 相对于根html元素的大小，即倍数。 7. 解释下面代码的作用?为什么要加引号?字体里\5b8b\4f53代表什么?123body&#123; font: 12px/1.5 tahoma,arial,&apos;Hiragino Sans GB&apos;,&apos;\5b8b\4f53&apos;,sans-serif;&#125; 字体大小：12px 字体行距：1.5倍 字体选择的优先级从高到低：tahoma -&gt; … -&gt; sans-serif 字体描述需要加引号的情况，常见有下面几种： 字体描述使用的中文 字体描述使用英文，中间有空格 字体描述使用unicode编码\5b8b\4f53 是unicode编码模式，表示“宋体” 控制台中输入：escape(“字体”)将字体中文转换为unicode编码格式 代码实现如下效果 实现按钮 表格 三角形 实现Card 1. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中作用是使得元素中的文本水平居中。作用在块级元素上，能让块级元素中display为inline和inline-block元素居中。 2. IE 盒模型和W3C盒模型有什么区别? IE盒模型的宽度和高度包含border,padding和content W3C盒模型只包含content部分的宽高3. *{ box-sizing: border-box;}的作用是什么？为元素设定的宽度和高度决定了元素的边框盒。就是说，为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。4. line-height: 2和linde-height: 200%有什么区别？line-height: 2 表示根据子元素自己字体的大小乘以2来计算行高，而line-height: 200% 表示根据父元素的字体大小计算行高，并且子元素会继承父元素的行高。5. inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?inline-block使元素具有内联的特性时， 内容又具有块级元素的特性，可以设置宽高等；去除缝隙有两种方法：1.去除两元素间的空白字符，2.将父元素的字体大小设置为0，再分别设置它们的字体大小；高度不一样时，对具有inline-block属性的元素使用 vertical-align: top使其对其。6. CSS sprite 是什么?CSS精灵，指的是将多张图片拼接在一起，通过改变background-position来改变显示出来的图片，达到减少HTTP请求，提高页面性能的效果。7. 让一个元素”看不见”有几种方式？有什么区别?1234opacity: 0; 使元素变得透明，仍处在页面上display: none; 使元素在页面上消失,不占用空间visibility: hidden; 使元素不可见，但仍在页面上占据空间background-color: rgba(0, 0, 0, 0.2) 只是背景色透明 CSSsprite 字体图标实现]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>样式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS选择器]]></title>
+    <url>%2FCSS%E9%80%89%E6%8B%A9%E5%99%A8.html</url>
+    <content type="text"><![CDATA[1. class和id的使用场景？12class 用于选择页面上带相同类属性的元素，可以有多个id 它是唯一的，选择页面上唯一匹配id属性的元素 2. CSS选择器常见的有几种？1234567891011121. 元素选择器 如：p, h1, span2. 类选择器 .class-name3. id选择器 #id-name4. 通配选择器 *5. 属性选择器 E[attr], E[attr=value]等6. 组合选择器 E,F 多元素选择器 E F 后代选择器 E&gt;F 子元素选择器 E+F 相邻兄弟选择器 E~F 普通相邻选择器7. 伪类选择器 E:first-child, E:hover, E:nth-child(n)等8. 伪元素选择器 E::before, E::after 3. 选择器的优先级是怎样的?对于复杂场景如何计算优先级？要了解选择器的优先级，必须先知道CSS的特殊性，特殊性即CSS的优先级，而特殊性值的决定了CSS的优先级。如下：123456选择器的特殊性值表述为4个部分，用0,0,0,0表示。1. ID选择器的特殊性值，加0,1,0,0。2. 类选择器，属性选择器的特殊性值，加0,0,1,0。3. 元素和伪元素的特殊性值, 加0,0,0,1。4. 通配选择器*对特殊性没有贡献，即0,0,0,0。5. 最后一个比较特殊一个标志!important（权重），它没有特殊性值，但它的优先级是最高的，可以用1,0,0,0表示。 场景下，如：12345678910111213&lt;body&gt; &lt;div class="demo"&gt; &lt;a href="#"&gt;demo&lt;/a&gt; &lt;/div&gt;&lt;/body&gt;&lt;style&gt; div a &#123; color: blue; /*这里的优先级为0,0,0,2*/ &#125; .demo a &#123; color: red; /*这里的优先级为0,0,1,1 故这个优先级较高*/ &#125;&lt;/style&gt; 再者，1,0,0,0是要比0,99,99,99优先级要高的，因此我们可以得出常见的选择器的优先级为：1234561. !important: 在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式2. 内联样式3. ID选择器4. 类选择器，属性选择器5. 元素和伪元素选择器6. 通配选择器 4.a:link, a:hover, a:active, a:visited 的顺序是怎样的？ 为什么？ css会先查看规则的权重（!important），加了权重的优先级最高，当权重相同的时候，会比较规则的特殊性，根据（3）的优先级计算规则决定哪条规则起作用，当特殊性值也一样的时候，css规则会按顺序排序，后声明的规则优先级高 一个链接只有访问和未访问的状态，因此 :link 与 :visited 谁前谁后都可以。要保证点击后即active有样式变化，:active必须要覆盖:hover，因此:active要在:hover之后。要保证鼠标滑过有效果，:hover必须要在:link和:visited后。因此一般的顺序为： a:link a:visited a:hover a:active 有人将这个LVHT(LoVe HAte)称为“爱恨原则”。 5. 以下选择器分别是什么意思?123456789101112131415161718#header&#123; id为header的元素&#125;.header&#123; class为header的元素&#125;.header .logo&#123; class为header的所有class为logo的后代元素&#125;.header.mobile&#123; class同时包含header和mobile的元素&#125;.header p, .header h3&#123; class为header的后代元素中所有的p和h3元素&#125;#header .nav&gt;li&#123; id为header后代元素中class为.nav的子元素li&#125;#header a:hover&#123; id为header后代元素中a的伪类:hover&#125;#header .logo~p&#123; id为header的后代元素中与class为logo同级的p元素&#125;#header input[type="text"]&#123;&#125; id为header后代中type="text"的input的元素 列出你知道的伪类选择器 :hover :link :visited :active :focus :checked :enabled :first-of-type :first-child :nth-child(n) div:first-child和div:first-of-type的作用和区别 div:first-child 指的是当前元素父元素下的第一个子元素 div:first-of-type指的是当前元素父元素下拥有相同标签的第一个子元素 运行如下代码，解析下输出样式的原因。12345678910111213&lt;style&gt;.item1:first-child&#123; color: red;&#125;.item1:first-of-type&#123; background: blue;&#125;&lt;/style&gt; &lt;div class=&quot;ct&quot;&gt; &lt;p class=&quot;item1&quot;&gt;aa&lt;/p&gt; &lt;h3 class=&quot;item1&quot;&gt;bb&lt;/h3&gt; &lt;h3 class=&quot;item1&quot;&gt;ccc&lt;/h3&gt; &lt;/div&gt; 原因是: .item1:first-child匹配了类为.item1的父元素的第一个子元素;.item:first-of-type匹配了类为.item1的父元素下各种相同标签的第一个子元素，即p和h3的第一个。]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS基础]]></title>
+    <url>%2FCSS%E5%9F%BA%E7%A1%80.html</url>
+    <content type="text"><![CDATA[1. CSS的全称是什么?层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。 2. CSS有几种引入方式? link 和@import 有什么区别? 内联样式 1&lt;p style="background-color: red"&gt;&lt;/p&gt; 内部样式 123456&lt;style&gt; .demo &#123; margin: 0 auto; background-color: #ccc; &#125;&lt;/style&gt; 外部样式通过link引入外部css文件 123&lt;head&gt; &lt;link rel="stylesheet" type="text/css" href="index.css"&gt;&lt;/head&gt; @import引入 123&lt;style&gt; @import url(style.css);&lt;/style&gt; link和@import的区别： 引入的语法不同 link的语法为： 1&lt;link rel="stylesheet" type="text/css" href="index.css"&gt; @import语法为: 123&lt;style type="text/css"&gt; @import url(style.css);&lt;/style&gt; link是html标签，link标签除了可以加载CSS外，还可以做很多事情，比如定义RSS，定义rel连接属性等；而@import看作是CSS的样式，只能加载CSS。 link引用CSS时，在页面载入时同时加载；@import需要页面网页完全载入以后加载。 link支持使用JavaScript控制DOM去改变样式；而@import不支持。 link是html标签，无兼容性问题；@import是在CSS2.1提出的，低版本浏览器不支持。 3. 以下这几种文件路径分别用在什么地方，代表什么意思? css/a.css 相对路径，当前文件夹内css文件夹内的a.css ./css/a.css 相对路径，同上 b.css 相对路径，当前文件夹下的b.css ../imgs/a.png 相对路径，上级目录下img文件夹下的a.png /Users/hunger/project/css/a.css 绝对路径，本地文件夹内的a.css /static/css/a.css 相对路径，在网站根目录的static文件夹下css文件夹下的a.css http://kmac007.com/8-1.png 绝对路径，指向网站上的图片 4. 如果我想在kmac007.com上展示一个图片，需要怎么操作? 获取图片URL 打开kmac007 在body中加入img标签，URL为图片URL 修改URL为相对路径 5. 列出5条以上html和 css 的书写规范1. CSS 文件使用无 BOM 的 UTF-8 编码。 2. 选择器 与 { 之间必须包含空格。 3. 属性名 与之后的 : 之间不允许包含空格， : 与 属性值 之间必须包含空格。 4. 列表型属性值 书写在单行时，, 后必须跟一个空格。 5. 属性定义后必须以分号结尾。 6. 在可以使用缩写的情况下，尽量使用属性缩写。 7. 长度为 0 时须省略单位。 8. 表示小数时，可以省略小数点前的0]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>前端面试</tag>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML表单的用法简介]]></title>
+    <url>%2FHTML%E8%A1%A8%E5%8D%95%E7%9A%84%E7%94%A8%E6%B3%95%E7%AE%80%E4%BB%8B.html</url>
+    <content type="text"><![CDATA[标签用于用户输入创建HTML表单 表单能够包含 input 元素，比如文本字段、复选框、单选框、提交按钮等等。表单还可以包含 menus、textarea、fieldset和label元素。 表单用于向服务器传输数据 属性 属性 值 描述 action URL 规定当提交表单时向何处发送表单数据 autocomplete on off 规定是否启用表单的自动完成功能 method get post 规定用于发送form-data的HTTP方法 name form_name 规定表单名称 enctype application/x-www-form-urlencoded ; multipart/form-data ; text/plain 规定在发送表单数据之前如何对其进行编码。 inputtext, password, submit12345&lt;form action="form_action.php" method="get"&gt; 用户名：&lt;input type="text" name="username"&gt; 密码：&lt;input type="password" name="password"&gt; &lt;input type="submit" value="submit"&gt;&lt;/form&gt; checkbox1234&lt;form action="form_action.php" method="get"&gt; 汽车: &lt;input type="checkbox" name="Car"&gt; 飞机: &lt;input type="checkbox" name="Plane" checked="checked"&gt;&lt;/form&gt; radio1234&lt;form action="form_action.php" method="get"&gt; 男：&lt;input type="radio" checked="checked" name="Sex" value="male"&gt; 女: &lt;input type="radio" name="Sex" value="female"&gt;&lt;/form&gt; select12345678&lt;form&gt; &lt;select name="city"&gt; &lt;option value="shanghai"&gt;上海&lt;/option&gt; &lt;option value="beijing"&gt;北京&lt;/option&gt; &lt;option value="guangzhou"&gt;广州&lt;/option&gt; &lt;option value="shenzhen" selected&gt;深圳&lt;/option&gt; &lt;/select&gt;&lt;/form&gt; textarea1&lt;textarea rows="10" cols="30"&gt; button123&lt;form&gt; &lt;button type="submit"&gt;提交&lt;/button&gt;&lt;/form&gt;]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>表单</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML]]></title>
+    <url>%2FHTML.html</url>
+    <content type="text"><![CDATA[HTML、XML、XHTML 有什么区别 HTML：超文本标记语言（HyperText Markup Language）,是一种用于创建网页的标准标记语言，被涉及用来显示数据。 XML：可扩展标记语言（Extensible Markuo Language）,它被涉及用来传输和存储数据。它是对超文本标记语言的补充，是各种应用程序之间进行数据传输的常用工具。由于标签没有被预定义，使用者可以自行定义标签。 XHTML：可扩展的超文本标记语言（Extensible HyperText Markup Language）,HTML4 和XML1.0 重组而成。改进了HTML定义不规范，结构不严谨的缺点。它的语法更加严格，相对HTML的兼容性也不差。 怎样理解 HTML 语义化什么是语义化?根据内容的结构化（内容语义化），选择合适的标签（代码语义化）便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好地解析。 为什么要语义化? 在没有CSS的情况下，页面也能呈现合理的结构 良好的用户体验，例如title、alt用于解释名词或解释图片信息 有利于SEO：有利于爬虫抓取更多的有效信息，爬虫依赖于标签来确定上下文和各个关键字的权重 用HTML开发特殊设备的网页时，有助于这些设备解析（如屏幕阅读器、盲人阅读器、移动设备等），使其能以合理的结构呈现 便于团队开发和维护，语义化更具可读性。 内容与样式分离的原则 HTML 仅处理内容，只考虑 HTML 的结构和语义化，避免出现内联样式。 写 JS 的时候，尽量不使用 JS直接操作样式。 页面展现的所有样式，都由CSS来负责实现。 常见的meta标签 标签提供关于HTML文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。它可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他 web 服务。 页面关键字 1&lt;meta name="keywords" content="your tags"&gt; 页面描述 1&lt;meta name="description" content="150 words"&gt; 声明文件编码 1&lt;meta charset="UTF-8"&gt; viewport:能优化移动浏览器显示 1&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; 优先使用IE最新版本和Chrome 12345&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /&gt;&lt;!-- 关于X-UA-Compatible --&gt;&lt;meta http-equiv="X-UA-Compatible" content="IE=6" &gt;&lt;!-- 使用IE6 --&gt;&lt;meta http-equiv="X-UA-Compatible" content="IE=7" &gt;&lt;!-- 使用IE7 --&gt;&lt;meta http-equiv="X-UA-Compatible" content="IE=8" &gt;&lt;!-- 使用IE8 --&gt; 浏览器内核控制 1&lt;meta name="renderer" content="webkit|ie-comp|ie-stand"&gt; 文档声明的作用?严格模式和混杂模式指什么?&lt;!DOCTYPE html&gt; 的作用? 文档声明声明文档的解析类型(document.compatMode)，避免浏览器的混杂模式。 严格模式：浏览器使用W3C的标准解析渲染页面 混杂模式：浏览器使用自身的方式解析渲染页面 &lt;!DOCTYPE html&gt;的作用是声明该页面的HTML版本为HTML5如果没有&lt;!DOCTYPE html&gt;，那么compatMode默认是BackCompat，即为混杂模式，浏览器按照自己的方式解析渲染页面，那么在不同的浏览器下就会到显示不同的样式。而添加了&lt;!DOCTYPE html&gt;，浏览器就会遵循W3C标准来解析渲染页面。 浏览器乱码的原因是什么？如何解决页面的编码方式与浏览器的解码方式不匹配；解决方法为在中加1&lt;meta charset="文档编码方式"&gt; 常见浏览器及其内核 浏览器 内核 IE Trident Chrome WebKit Safari WebKit Firefox Gecko Opera Presto 其中国内的浏览器一般为WebKit/Trident的双内核，如360浏览器，QQ浏览器等 常见标签及其使用场景12345678910111213141516171819202122232425262728293031323334&lt;!--...--&gt;：注释&lt;!DOCTYPE&gt;：定义文档类型&lt;html&gt;： 定义 HTML 文档&lt;head&gt;：定义关于文档的信息&lt;body&gt;： 定义文档的主体&lt;header&gt;：定义了文档的头部区域&lt;section&gt;：&lt;section&gt; 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。&lt;footer&gt;：定义 section 或 body的页脚。&lt;div&gt;： 定义文档中的节&lt;meta&gt;：定义关于 HTML 文档的元信息。&lt;title&gt;：定义文档的标题。&lt;link&gt;：定义文档与外部资源的关系&lt;script&gt;：定义客户端脚本。&lt;nav&gt;：定义导航链接的部分&lt;aside&gt;：定义页面的侧边栏内容&lt;a&gt;：定义超文本链接&lt;br&gt;： 定义换行&lt;button&gt;： 定义一个点击按钮&lt;canvas&gt;：定义图形,绘图&lt;form&gt;：定义了HTML文档的表单&lt;h1&gt; to &lt;h6&gt;：定义 HTML 标题&lt;iframe&gt;：定义内联框架&lt;img&gt;：定义图像&lt;input&gt;：定义输入控件&lt;label&gt;：定义 input 元素的标注&lt;li&gt;：定义列表的项目&lt;object&gt;：定义内嵌对象&lt;param&gt;：定义对象的参数。&lt;ol&gt;： 定义有序列表。&lt;p&gt;： 定义段落。&lt;select&gt;：定义选择列表（下拉列表）。&lt;option&gt;：定义选择列表中的选项。&lt;style&gt;：定义文档的样式信息。&lt;table&gt;： 定义表格。]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>语义化</tag>
+        <tag>meta</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[从输入 URL 到页面展示发生了什么事情]]></title>
+    <url>%2F%E4%BB%8E%E8%BE%93%E5%85%A5%20URL%20%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%E4%BA%8B%E6%83%85.html</url>
+    <content type="text"><![CDATA[这是一道经典的前端面试题，在学习的过程中，我想如果通过自己的语言来描述出来印象会更加深刻。 什么是URL URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络上的门牌，是因特网上标准的资源的地址。URL的标准格式如下：协议类型://服务器地址（必要时需加上端口号）/路径/文件名 例如：http://www.jianshu.com/users/78757d5285cd/timeline协议：http网络地址：www.jianshu.com资源路径：users/78757d5285cd/timeline 流程1. 浏览器中输入URL并回车2. 浏览器查找域名的IP地址1. 浏览器缓存 – 浏览器会缓存DNS记录一段时间 2. 系统缓存 - 从 Hosts 文件查找是否有该域名和对应 IP。 3. 路由器缓存 – 一般路由器也会缓存域名信息。 4. ISP DNS 缓存（互联网服务提供商的DNS缓存） – 比如到电信的 DNS 上查找缓存。 5. 如果都没有找到，则向根域名服务器查找域名对应 IP，根域名服务器把请求转发到下一级，直到找到 IP 3. 浏览器发送一个HTTP请求到web服务器4. 服务器处理 常见的 web服务器有 Apache、Nginx、IIS、Lighttpd web服务器接收用户的Request 交给网站代码，或者接受请求反向代理到其他 web服务器5. 网站处理URL中的文件地址部分经过服务器上的路由程序重定向到对应的控制器(controller)对象,控制器对象根据URL中指定的操作执行相关的逻辑并调用目标数据的模型(Model)对象,模型对象与数据库交互完成目标操作后,控制器将模型中反馈的数据填充到视图中。视图部分(通常是HTML页面)作为HTTP响应发送到浏览器端。6. 浏览器处理HTML字符串被浏览器接受后被一句句读取解析解析到link 标签后重新发送请求获取css解析到 script标签后发送请求获取 js，并执行代码解析到img 标签后发送请求获取图片资源7. 绘制网页将渲染好的页面图像显示出来，并开始响应用户的操作。 以上只是一个简单的流程，过程中还会涉及到很多问题。]]></content>
+      <categories>
+        <category>前端面试</category>
+      </categories>
+      <tags>
+        <tag>URL</tag>
+        <tag>前端面试</tag>
+      </tags>
   </entry>
 </search>

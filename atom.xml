@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>kmac007</title>
+  <subtitle>kmac007&#39;s blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://kmac007.com/"/>
+  <updated>2017-08-24T15:29:51.777Z</updated>
+  <id>https://kmac007.com/</id>
+  
+  <author>
+    <name>Robb Chan</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS常见样式</title>
+    <link href="https://kmac007.com/CSS%E5%B8%B8%E8%A7%81%E6%A0%B7%E5%BC%8F.html"/>
+    <id>https://kmac007.com/CSS常见样式.html</id>
+    <published>2017-03-03T12:07:36.000Z</published>
+    <updated>2017-08-24T15:29:51.777Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-块级元素和行内元素分别有哪些？"><a href="#1-块级元素和行内元素分别有哪些？" class="headerlink" title="1. 块级元素和行内元素分别有哪些？"></a>1. 块级元素和行内元素分别有哪些？</h1><ul>
+<li>块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等</li>
+<li>行内元素: span, a, input, button, lable, select, textarea, em, br, img, strong</li>
+</ul>
+<p>区别：</p>
+<ol>
+<li>行内元素只能容纳行内元素和文本。而块级可以容纳块级元素和行内元素。</li>
+<li>块级元素可以设定宽高，而行内元素不可以。</li>
+<li>块级元素独占一行，而行内元素可以与其它行内元素共同处在一行。</li>
+<li>行内元素的默认宽度为内容的宽度，块级元素默认宽度与浏览器窗口宽度一致</li>
+</ol>
+<h1 id="2-什么是-CSS-继承-哪些属性能继承，哪些不能？"><a href="#2-什么是-CSS-继承-哪些属性能继承，哪些不能？" class="headerlink" title="2. 什么是 CSS 继承? 哪些属性能继承，哪些不能？"></a>2. 什么是 CSS 继承? 哪些属性能继承，哪些不能？</h1><blockquote>
+<p>CSS继承: 子元素继承了父元素的CSS属性。</p>
+<ul>
+<li>不可继承属性：display, margin, border, padding, background, width, height, overflow, z-index, float, position, vertical-align</li>
+<li>所有元素可继承：visibility和cursor</li>
+<li>内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、 font-family、font-size、font-style、font-variant、font-weight、text- decoration、text-transform、direction。</li>
+<li>块状元素可继承：text-indent和text-align。</li>
+<li>列表元素可继承：list-style、list-style-type、list-style-position、list-style-image。</li>
+<li>表格元素可继承：border-collapse。</li>
+</ul>
+</blockquote>
+<h1 id="3-如何让块级元素水平居中？如何让行内元素水平居中"><a href="#3-如何让块级元素水平居中？如何让行内元素水平居中" class="headerlink" title="3. 如何让块级元素水平居中？如何让行内元素水平居中?"></a>3. 如何让块级元素水平居中？如何让行内元素水平居中?</h1><ul>
+<li>块级元素水平居中：给块级元素设定宽高,margin: 0 auto;</li>
+<li>多个块级元素可以使用inline-block和flex</li>
+<li>行内元素: text-align: center;</li>
+</ul>
+<h1 id="4-用-CSS-实现一个三角形"><a href="#4-用-CSS-实现一个三角形" class="headerlink" title="4. 用 CSS 实现一个三角形"></a>4. 用 CSS 实现一个三角形</h1><p><a href="http://js.jirengu.com/romekefagu/2/edit" target="_blank" rel="external">一个CSS三角形</a></p>
+<h1 id="5-单行文本溢出加-…如何实现"><a href="#5-单行文本溢出加-…如何实现" class="headerlink" title="5. 单行文本溢出加 …如何实现?"></a>5. 单行文本溢出加 …如何实现?</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.box &#123;</div><div class="line">  white-space: nowrap;</div><div class="line">  overflow: hidden;</div><div class="line">  text-overflow: ellipsis;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="6-px-em-rem-有什么区别"><a href="#6-px-em-rem-有什么区别" class="headerlink" title="6. px, em, rem 有什么区别"></a>6. px, em, rem 有什么区别</h1><ul>
+<li>px: 相对长度单位。像素px是相对于显示器屏幕分辨率而言的</li>
+<li>em: 指的是相对于其父级元素的大小，即倍数。</li>
+<li><p>rem: 相对于根html元素的大小，即倍数。</p>
+<h1 id="7-解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么"><a href="#7-解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么" class="headerlink" title="7. 解释下面代码的作用?为什么要加引号?字体里\5b8b\4f53代表什么?"></a>7. 解释下面代码的作用?为什么要加引号?字体里\5b8b\4f53代表什么?</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  font: 12px/1.5 tahoma,arial,&apos;Hiragino Sans GB&apos;,&apos;\5b8b\4f53&apos;,sans-serif;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>字体大小：12px</p>
+</li>
+<li>字体行距：1.5倍</li>
+<li>字体选择的优先级从高到低：tahoma -&gt; … -&gt; sans-serif</li>
+<li>字体描述需要加引号的情况，常见有下面几种：<ol>
+<li>字体描述使用的中文</li>
+<li>字体描述使用英文，中间有空格</li>
+<li>字体描述使用unicode编码<br>\5b8b\4f53 是unicode编码模式，表示“宋体”</li>
+</ol>
+</li>
+</ul>
+<p>控制台中输入：escape(“字体”)将字体中文转换为unicode编码格式</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p><a href="http://js.jirengu.com/kiqarubose/1/edit?output" target="_blank" rel="external">实现如下效果</a></p>
+<p><a href="http://js.jirengu.com/najelasado/1/edit?html,css,output" target="_blank" rel="external">实现按钮</a></p>
+<p><a href="http://js.jirengu.com/xiqilixuzo/4/edit?output" target="_blank" rel="external">表格</a></p>
+<p><a href="http://js.jirengu.com/goxigeyami/1/edit?html,css,output" target="_blank" rel="external">三角形</a></p>
+<p><a href="http://js.jirengu.com/lejuyevohi/2/edit?html,css,output" target="_blank" rel="external">实现Card</a></p>
+<h1 id="1-text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中"><a href="#1-text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中" class="headerlink" title="1. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中"></a>1. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中</h1><p>作用是使得元素中的文本水平居中。作用在块级元素上，能让块级元素中display为inline和inline-block元素居中。</p>
+<h1 id="2-IE-盒模型和W3C盒模型有什么区别"><a href="#2-IE-盒模型和W3C盒模型有什么区别" class="headerlink" title="2. IE 盒模型和W3C盒模型有什么区别?"></a>2. IE 盒模型和W3C盒模型有什么区别?</h1><ul>
+<li>IE盒模型的宽度和高度包含border,padding和content</li>
+<li>W3C盒模型只包含content部分的宽高<h1 id="3-box-sizing-border-box-的作用是什么？"><a href="#3-box-sizing-border-box-的作用是什么？" class="headerlink" title="3. *{ box-sizing: border-box;}的作用是什么？"></a>3. *{ box-sizing: border-box;}的作用是什么？</h1>为元素设定的宽度和高度决定了元素的边框盒。<br>就是说，为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。<h1 id="4-line-height-2和linde-height-200-有什么区别？"><a href="#4-line-height-2和linde-height-200-有什么区别？" class="headerlink" title="4. line-height: 2和linde-height: 200%有什么区别？"></a>4. line-height: 2和linde-height: 200%有什么区别？</h1>line-height: 2 表示根据子元素自己字体的大小乘以2来计算行高，而line-height: 200% 表示根据父元素的字体大小计算行高，并且子元素会继承父元素的行高。<h1 id="5-inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐"><a href="#5-inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐" class="headerlink" title="5. inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?"></a>5. inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?</h1>inline-block使元素具有内联的特性时， 内容又具有块级元素的特性，可以设置宽高等；去除缝隙有两种方法：1.去除两元素间的空白字符，2.将父元素的字体大小设置为0，再分别设置它们的字体大小；高度不一样时，对具有inline-block属性的元素使用    vertical-align: top使其对其。<h1 id="6-CSS-sprite-是什么"><a href="#6-CSS-sprite-是什么" class="headerlink" title="6. CSS sprite 是什么?"></a>6. CSS sprite 是什么?</h1>CSS精灵，指的是将多张图片拼接在一起，通过改变background-position来改变显示出来的图片，达到减少HTTP请求，提高页面性能的效果。<h1 id="7-让一个元素”看不见”有几种方式？有什么区别"><a href="#7-让一个元素”看不见”有几种方式？有什么区别" class="headerlink" title="7. 让一个元素”看不见”有几种方式？有什么区别?"></a>7. 让一个元素”看不见”有几种方式？有什么区别?</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">opacity: 0;  使元素变得透明，仍处在页面上</div><div class="line">display: none; 使元素在页面上消失,不占用空间</div><div class="line">visibility: hidden; 使元素不可见，但仍在页面上占据空间</div><div class="line">background-color: rgba(0, 0, 0, 0.2) 只是背景色透明</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p><a href="https://kmac007.github.io/demos/test/sprite.html" target="_blank" rel="external">CSSsprite</a></p>
+</li>
+<li><p><a href="https://kmac007.github.io/demos/test/iconfont.html" target="_blank" rel="external">字体图标实现</a></p>
+</li>
+</ul>
+<iframe width="100%" height="300" src="//jsfiddle.net/a22a6jrq/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1-块级元素和行内元素分别有哪些？&quot;&gt;&lt;a href=&quot;#1-块级元素和行内元素分别有哪些？&quot; class=&quot;headerlink&quot; title=&quot;1. 块级元素和行内元素分别有哪些？&quot;&gt;&lt;/a&gt;1. 块级元素和行内元素分别有哪些？&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;块级
+    
+    </summary>
+    
+      <category term="CSS" scheme="https://kmac007.com/categories/CSS/"/>
+    
+    
+      <category term="CSS" scheme="https://kmac007.com/tags/CSS/"/>
+    
+      <category term="样式" scheme="https://kmac007.com/tags/%E6%A0%B7%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS选择器</title>
+    <link href="https://kmac007.com/CSS%E9%80%89%E6%8B%A9%E5%99%A8.html"/>
+    <id>https://kmac007.com/CSS选择器.html</id>
+    <published>2017-03-02T11:26:31.000Z</published>
+    <updated>2017-08-24T15:17:53.668Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-class和id的使用场景？"><a href="#1-class和id的使用场景？" class="headerlink" title="1. class和id的使用场景？"></a>1. class和id的使用场景？</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">class 用于选择页面上带相同类属性的元素，可以有多个</div><div class="line">id    它是唯一的，选择页面上唯一匹配id属性的元素</div></pre></td></tr></table></figure>
+<h1 id="2-CSS选择器常见的有几种？"><a href="#2-CSS选择器常见的有几种？" class="headerlink" title="2. CSS选择器常见的有几种？"></a>2. CSS选择器常见的有几种？</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">1. 元素选择器 如：p, h1, span</div><div class="line">2. 类选择器 .class-name</div><div class="line">3. id选择器 #id-name</div><div class="line">4. 通配选择器 *</div><div class="line">5. 属性选择器 E[attr], E[attr=value]等</div><div class="line">6. 组合选择器  E,F 多元素选择器</div><div class="line">              E F 后代选择器</div><div class="line">              E&gt;F 子元素选择器</div><div class="line">              E+F 相邻兄弟选择器</div><div class="line">              E~F 普通相邻选择器</div><div class="line">7. 伪类选择器 E:first-child, E:hover, E:nth-child(n)等</div><div class="line">8. 伪元素选择器 E::before, E::after</div></pre></td></tr></table></figure>
+<h1 id="3-选择器的优先级是怎样的-对于复杂场景如何计算优先级？"><a href="#3-选择器的优先级是怎样的-对于复杂场景如何计算优先级？" class="headerlink" title="3. 选择器的优先级是怎样的?对于复杂场景如何计算优先级？"></a>3. 选择器的优先级是怎样的?对于复杂场景如何计算优先级？</h1><p>要了解选择器的优先级，必须先知道CSS的特殊性，特殊性即CSS的优先级，而特殊性值的决定了CSS的优先级。<br>如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">选择器的特殊性值表述为4个部分，用0,0,0,0表示。</div><div class="line">1. ID选择器的特殊性值，加0,1,0,0。</div><div class="line">2. 类选择器，属性选择器的特殊性值，加0,0,1,0。</div><div class="line">3. 元素和伪元素的特殊性值, 加0,0,0,1。</div><div class="line">4. 通配选择器*对特殊性没有贡献，即0,0,0,0。</div><div class="line">5. 最后一个比较特殊一个标志!important（权重），它没有特殊性值，但它的优先级是最高的，可以用1,0,0,0表示。</div></pre></td></tr></table></figure></p>
+<p>场景下，如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"demo"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>demo<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">  div a &#123;</span></div><div class="line"><span class="undefined">    color: blue; /*这里的优先级为0,0,0,2*/</span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="undefined">  .demo a &#123;</span></div><div class="line"><span class="undefined">    color: red; /*这里的优先级为0,0,1,1 故这个优先级较高*/</span></div><div class="line"><span class="undefined">  &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>再者，1,0,0,0是要比0,99,99,99优先级要高的，因此我们可以得出常见的选择器的优先级为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1. !important: 在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式</div><div class="line">2. 内联样式</div><div class="line">3. ID选择器</div><div class="line">4. 类选择器，属性选择器</div><div class="line">5. 元素和伪元素选择器</div><div class="line">6. 通配选择器</div></pre></td></tr></table></figure></p>
+<h1 id="4-a-link-a-hover-a-active-a-visited-的顺序是怎样的？-为什么？"><a href="#4-a-link-a-hover-a-active-a-visited-的顺序是怎样的？-为什么？" class="headerlink" title="4.a:link, a:hover, a:active, a:visited 的顺序是怎样的？ 为什么？"></a>4.a:link, a:hover, a:active, a:visited 的顺序是怎样的？ 为什么？</h1><blockquote>
+<p>css会先查看规则的权重（!important），加了权重的优先级最高，当权重相同的时候，会比较规则的特殊性，根据（3）的优先级计算规则决定哪条规则起作用，当特殊性值也一样的时候，css规则会按顺序排序，后声明的规则优先级高</p>
+</blockquote>
+<p>一个链接只有访问和未访问的状态，因此 :link 与 :visited 谁前谁后都可以。要保证点击后即active有样式变化，:active必须要覆盖:hover，因此:active要在:hover之后。要保证鼠标滑过有效果，:hover必须要在:link和:visited后。因此一般的顺序为：</p>
+<ol>
+<li>a:link</li>
+<li>a:visited</li>
+<li>a:hover</li>
+<li>a:active</li>
+</ol>
+<p>有人将这个<strong>LVHT</strong>(LoVe HAte)称为“爱恨原则”。</p>
+<h1 id="5-以下选择器分别是什么意思"><a href="#5-以下选择器分别是什么意思" class="headerlink" title="5. 以下选择器分别是什么意思?"></a>5. 以下选择器分别是什么意思?</h1><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">#header&#123;             id为header的元素</div><div class="line">&#125;</div><div class="line">.header&#123;             class为header的元素</div><div class="line">&#125;</div><div class="line">.header .logo&#123;       class为header的所有class为logo的后代元素</div><div class="line">&#125;</div><div class="line">.header.mobile&#123;       class同时包含header和mobile的元素</div><div class="line">&#125;</div><div class="line">.header p, .header h3&#123;   class为header的后代元素中所有的p和h3元素</div><div class="line">&#125;</div><div class="line">#header .nav&gt;li&#123;    id为header后代元素中class为.nav的子元素li</div><div class="line">&#125;</div><div class="line">#header a:hover&#123;  id为header后代元素中a的伪类:hover</div><div class="line">&#125;</div><div class="line">#header .logo~p&#123;  id为header的后代元素中与class为logo同级的p元素</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#header</span> <span class="selector-tag">input</span><span class="selector-attr">[type="text"]</span>&#123;</div><div class="line">&#125;  id为header后代中type="text"的input的元素</div></pre></td></tr></table></figure>
+<ul>
+<li>列出你知道的伪类选择器<ol>
+<li>:hover</li>
+<li>:link</li>
+<li>:visited</li>
+<li>:active</li>
+<li>:focus</li>
+<li>:checked</li>
+<li>:enabled</li>
+<li>:first-of-type</li>
+<li>:first-child</li>
+<li>:nth-child(n)</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>div:first-child和div:first-of-type的作用和区别<ul>
+<li>div:first-child 指的是当前元素父元素下的第一个子元素</li>
+<li>div:first-of-type指的是当前元素父元素下拥有相同标签的第一个子元素</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>运行如下代码，解析下输出样式的原因。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">.item1:first-child&#123;</div><div class="line">  color: red;</div><div class="line">&#125;</div><div class="line">.item1:first-of-type&#123;</div><div class="line">  background: blue;</div><div class="line">&#125;</div><div class="line">&lt;/style&gt;</div><div class="line"> &lt;div class=&quot;ct&quot;&gt;</div><div class="line">   &lt;p class=&quot;item1&quot;&gt;aa&lt;/p&gt;</div><div class="line">   &lt;h3 class=&quot;item1&quot;&gt;bb&lt;/h3&gt;</div><div class="line">   &lt;h3 class=&quot;item1&quot;&gt;ccc&lt;/h3&gt;</div><div class="line"> &lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>原因是: .item1:first-child匹配了类为.item1的父元素的第一个子元素;.item:first-of-type匹配了类为.item1的父元素下各种相同标签的第一个子元素，即p和h3的第一个。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1-class和id的使用场景？&quot;&gt;&lt;a href=&quot;#1-class和id的使用场景？&quot; class=&quot;headerlink&quot; title=&quot;1. class和id的使用场景？&quot;&gt;&lt;/a&gt;1. class和id的使用场景？&lt;/h1&gt;&lt;figure class=&quot;
+    
+    </summary>
+    
+      <category term="CSS" scheme="https://kmac007.com/categories/CSS/"/>
+    
+    
+      <category term="CSS" scheme="https://kmac007.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS基础</title>
+    <link href="https://kmac007.com/CSS%E5%9F%BA%E7%A1%80.html"/>
+    <id>https://kmac007.com/CSS基础.html</id>
+    <published>2017-02-27T09:27:21.000Z</published>
+    <updated>2017-08-24T15:03:45.167Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-CSS的全称是什么"><a href="#1-CSS的全称是什么" class="headerlink" title="1. CSS的全称是什么?"></a>1. CSS的全称是什么?</h1><p>层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。</p>
+<h1 id="2-CSS有几种引入方式-link-和-import-有什么区别"><a href="#2-CSS有几种引入方式-link-和-import-有什么区别" class="headerlink" title="2. CSS有几种引入方式? link 和@import 有什么区别?"></a>2. CSS有几种引入方式? link 和@import 有什么区别?</h1><ol>
+<li><p>内联样式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"background-color: red"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>内部样式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    .demo &#123;</span></div><div class="line"><span class="undefined">        margin: 0 auto;</span></div><div class="line"><span class="undefined">        background-color: #ccc;</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>外部样式<br>通过link引入外部css文件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"index.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>@import引入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">   @import url(style.css);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="link和-import的区别："><a href="#link和-import的区别：" class="headerlink" title="link和@import的区别："></a>link和@import的区别：</h3></li>
+</ol>
+<ol>
+<li><p>引入的语法不同<br> link的语法为：</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"index.css"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p> @import语法为:</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    @import url(style.css);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>link是html标签，link标签除了可以加载CSS外，还可以做很多事情，比如定义RSS，定义rel连接属性等；而@import看作是CSS的样式，只能加载CSS。</p>
+</li>
+<li>link引用CSS时，在页面载入时同时加载；@import需要页面网页完全载入以后加载。</li>
+<li>link支持使用JavaScript控制DOM去改变样式；而@import不支持。</li>
+<li>link是html标签，无兼容性问题；@import是在CSS2.1提出的，低版本浏览器不支持。</li>
+</ol>
+<h1 id="3-以下这几种文件路径分别用在什么地方，代表什么意思"><a href="#3-以下这几种文件路径分别用在什么地方，代表什么意思" class="headerlink" title="3. 以下这几种文件路径分别用在什么地方，代表什么意思?"></a>3. 以下这几种文件路径分别用在什么地方，代表什么意思?</h1><ul>
+<li>css/a.css<ul>
+<li>相对路径，当前文件夹内css文件夹内的a.css</li>
+</ul>
+</li>
+<li>./css/a.css<ul>
+<li>相对路径，同上</li>
+</ul>
+</li>
+<li>b.css<ul>
+<li>相对路径，当前文件夹下的b.css</li>
+</ul>
+</li>
+<li>../imgs/a.png<ul>
+<li>相对路径，上级目录下img文件夹下的a.png</li>
+</ul>
+</li>
+<li>/Users/hunger/project/css/a.css<ul>
+<li>绝对路径，本地文件夹内的a.css</li>
+</ul>
+</li>
+<li>/static/css/a.css<ul>
+<li>相对路径，在网站根目录的static文件夹下css文件夹下的a.css</li>
+</ul>
+</li>
+<li><a href="http://kmac007.com/8-1.png">http://kmac007.com/8-1.png</a><ul>
+<li>绝对路径，指向网站上的图片</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-如果我想在kmac007-com上展示一个图片，需要怎么操作"><a href="#4-如果我想在kmac007-com上展示一个图片，需要怎么操作" class="headerlink" title="4. 如果我想在kmac007.com上展示一个图片，需要怎么操作?"></a>4. 如果我想在kmac007.com上展示一个图片，需要怎么操作?</h1><ol>
+<li>获取图片URL</li>
+<li>打开kmac007</li>
+<li>在body中加入img标签，URL为图片URL</li>
+<li>修改URL为相对路径</li>
+</ol>
+<h1 id="5-列出5条以上html和-css-的书写规范"><a href="#5-列出5条以上html和-css-的书写规范" class="headerlink" title="5. 列出5条以上html和 css 的书写规范"></a>5. 列出5条以上html和 css 的书写规范</h1><pre><code>1. CSS 文件使用无 BOM 的 UTF-8 编码。
+2. 选择器 与 { 之间必须包含空格。
+3. 属性名 与之后的 : 之间不允许包含空格， : 与 属性值 之间必须包含空格。
+4. 列表型属性值 书写在单行时，, 后必须跟一个空格。
+5. 属性定义后必须以分号结尾。
+6. 在可以使用缩写的情况下，尽量使用属性缩写。
+7. 长度为 0 时须省略单位。
+8. 表示小数时，可以省略小数点前的0
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;1-CSS的全称是什么&quot;&gt;&lt;a href=&quot;#1-CSS的全称是什么&quot; class=&quot;headerlink&quot; title=&quot;1. CSS的全称是什么?&quot;&gt;&lt;/a&gt;1. CSS的全称是什么?&lt;/h1&gt;&lt;p&gt;层叠样式表(英文全称：Cascading Style She
+    
+    </summary>
+    
+      <category term="CSS" scheme="https://kmac007.com/categories/CSS/"/>
+    
+    
+      <category term="前端面试" scheme="https://kmac007.com/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="CSS" scheme="https://kmac007.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML表单的用法简介</title>
+    <link href="https://kmac007.com/HTML%E8%A1%A8%E5%8D%95%E7%9A%84%E7%94%A8%E6%B3%95%E7%AE%80%E4%BB%8B.html"/>
+    <id>https://kmac007.com/HTML表单的用法简介.html</id>
+    <published>2017-02-26T12:14:32.000Z</published>
+    <updated>2017-08-24T14:49:23.609Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="标签用于用户输入创建HTML表单"><a href="#标签用于用户输入创建HTML表单" class="headerlink" title="标签用于用户输入创建HTML表单"></a><form>标签用于用户输入创建HTML表单</form></h1><blockquote>
+<p>表单能够包含 input 元素，比如文本字段、复选框、单选框、提交按钮等等。表单还可以包含 menus、textarea、fieldset和label元素。</p>
+</blockquote>
+<p>表单用于向服务器传输数据</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title=" 属性"></a><form> 属性</form></h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action</td>
+<td>URL</td>
+<td>规定当提交表单时向何处发送表单数据</td>
+</tr>
+<tr>
+<td>autocomplete</td>
+<td>on off</td>
+<td>规定是否启用表单的自动完成功能</td>
+</tr>
+<tr>
+<td>method</td>
+<td>get post</td>
+<td>规定用于发送form-data的HTTP方法</td>
+</tr>
+<tr>
+<td>name</td>
+<td>form_name</td>
+<td>规定表单名称</td>
+</tr>
+<tr>
+<td>enctype</td>
+<td>application/x-www-form-urlencoded ; multipart/form-data ; text/plain</td>
+<td>规定在发送表单数据之前如何对其进行编码。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="input"><a href="#input" class="headerlink" title="input"></a>input</h2><h3 id="text-password-submit"><a href="#text-password-submit" class="headerlink" title="text, password, submit"></a>text, password, submit</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"form_action.php"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></div><div class="line">    用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span>&gt;</span></div><div class="line">    密码：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="checkbox"><a href="#checkbox" class="headerlink" title="checkbox"></a>checkbox</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"form_action.php"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></div><div class="line">    汽车: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"Car"</span>&gt;</span></div><div class="line">    飞机: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"Plane"</span> <span class="attr">checked</span>=<span class="string">"checked"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="radio"><a href="#radio" class="headerlink" title="radio"></a>radio</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"form_action.php"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></div><div class="line">    男：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">checked</span>=<span class="string">"checked"</span> <span class="attr">name</span>=<span class="string">"Sex"</span> <span class="attr">value</span>=<span class="string">"male"</span>&gt;</span></div><div class="line">    女: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"Sex"</span> <span class="attr">value</span>=<span class="string">"female"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="select"><a href="#select" class="headerlink" title="select"></a>select</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">"city"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"shanghai"</span>&gt;</span>上海<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"beijing"</span>&gt;</span>北京<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"guangzhou"</span>&gt;</span>广州<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"shenzhen"</span> <span class="attr">selected</span>&gt;</span>深圳<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="textarea"><a href="#textarea" class="headerlink" title="textarea"></a>textarea</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span>=<span class="string">"10"</span> <span class="attr">cols</span>=<span class="string">"30"</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="button"><a href="#button" class="headerlink" title="button"></a>button</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;标签用于用户输入创建HTML表单&quot;&gt;&lt;a href=&quot;#标签用于用户输入创建HTML表单&quot; class=&quot;headerlink&quot; title=&quot;标签用于用户输入创建HTML表单&quot;&gt;&lt;/a&gt;&lt;form&gt;标签用于用户输入创建HTML表单&lt;/form&gt;&lt;/h1&gt;&lt;blo
+    
+    </summary>
+    
+      <category term="HTML" scheme="https://kmac007.com/categories/HTML/"/>
+    
+    
+      <category term="HTML" scheme="https://kmac007.com/tags/HTML/"/>
+    
+      <category term="表单" scheme="https://kmac007.com/tags/%E8%A1%A8%E5%8D%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML</title>
+    <link href="https://kmac007.com/HTML.html"/>
+    <id>https://kmac007.com/HTML.html</id>
+    <published>2017-02-26T09:34:53.000Z</published>
+    <updated>2017-08-24T14:41:00.508Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="HTML、XML、XHTML-有什么区别"><a href="#HTML、XML、XHTML-有什么区别" class="headerlink" title="HTML、XML、XHTML 有什么区别"></a>HTML、XML、XHTML 有什么区别</h1><ul>
+<li>HTML：超文本标记语言（HyperText Markup Language）,是一种用于创建网页的标准标记语言，被涉及用来显示数据。</li>
+<li>XML：可扩展标记语言（Extensible Markuo Language）,它被涉及用来传输和存储数据。它是对超文本标记语言的补充，是各种应用程序之间进行数据传输的常用工具。由于标签没有被预定义，使用者可以自行定义标签。</li>
+<li>XHTML：可扩展的超文本标记语言（Extensible HyperText Markup Language）,HTML4 和XML1.0 重组而成。改进了HTML定义不规范，结构不严谨的缺点。它的语法更加严格，相对HTML的兼容性也不差。</li>
+</ul>
+<h1 id="怎样理解-HTML-语义化"><a href="#怎样理解-HTML-语义化" class="headerlink" title="怎样理解 HTML 语义化"></a>怎样理解 HTML 语义化</h1><h2 id="什么是语义化"><a href="#什么是语义化" class="headerlink" title="什么是语义化?"></a>什么是语义化?</h2><p>根据内容的结构化（内容语义化），选择合适的标签（代码语义化）便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好地解析。</p>
+<h2 id="为什么要语义化"><a href="#为什么要语义化" class="headerlink" title="为什么要语义化?"></a>为什么要语义化?</h2><ol>
+<li>在没有CSS的情况下，页面也能呈现合理的结构</li>
+<li>良好的用户体验，例如title、alt用于解释名词或解释图片信息</li>
+<li>有利于SEO：有利于爬虫抓取更多的有效信息，爬虫依赖于标签来确定上下文和各个关键字的权重</li>
+<li>用HTML开发特殊设备的网页时，有助于这些设备解析（如屏幕阅读器、盲人阅读器、移动设备等），使其能以合理的结构呈现</li>
+<li>便于团队开发和维护，语义化更具可读性。</li>
+</ol>
+<h1 id="内容与样式分离的原则"><a href="#内容与样式分离的原则" class="headerlink" title="内容与样式分离的原则"></a>内容与样式分离的原则</h1><ul>
+<li>HTML 仅处理内容，只考虑 HTML 的结构和语义化，避免出现内联样式。</li>
+<li>写 JS 的时候，尽量不使用 JS直接操作样式。</li>
+<li>页面展现的所有样式，都由CSS来负责实现。</li>
+</ul>
+<h1 id="常见的meta标签"><a href="#常见的meta标签" class="headerlink" title="常见的meta标签"></a>常见的meta标签</h1><blockquote>
+<p><meta> 标签提供关于HTML文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。它可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他 web 服务。</p>
+</blockquote>
+<ul>
+<li><p><strong>页面关键字</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"your tags"</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>页面描述</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"150 words"</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>声明文件编码</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>viewport</strong>:能优化移动浏览器显示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>优先使用IE最新版本和Chrome</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span> /&gt;</span></div><div class="line"><span class="comment">&lt;!-- 关于X-UA-Compatible --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=6"</span> &gt;</span><span class="comment">&lt;!-- 使用IE6 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=7"</span> &gt;</span><span class="comment">&lt;!-- 使用IE7 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=8"</span> &gt;</span><span class="comment">&lt;!-- 使用IE8 --&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>浏览器内核控制</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit|ie-comp|ie-stand"</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="文档声明的作用-严格模式和混杂模式指什么-lt-DOCTYPE-html-gt-的作用"><a href="#文档声明的作用-严格模式和混杂模式指什么-lt-DOCTYPE-html-gt-的作用" class="headerlink" title="文档声明的作用?严格模式和混杂模式指什么?&lt;!DOCTYPE html&gt; 的作用?"></a>文档声明的作用?严格模式和混杂模式指什么?&lt;!DOCTYPE html&gt; 的作用?</h1><p>  <strong>文档声明</strong>声明文档的解析类型(document.compatMode)，避免浏览器的混杂模式。</p>
+<ul>
+<li>严格模式：浏览器使用W3C的标准解析渲染页面</li>
+<li>混杂模式：浏览器使用自身的方式解析渲染页面</li>
+<li>&lt;!DOCTYPE html&gt;的作用是声明该页面的HTML版本为HTML5<br>如果没有&lt;!DOCTYPE html&gt;，那么compatMode默认是BackCompat，即为混杂模式，浏览器按照自己的方式解析渲染页面，那么在不同的浏览器下就会到显示不同的样式。而添加了&lt;!DOCTYPE html&gt;，浏览器就会遵循W3C标准来解析渲染页面。</li>
+</ul>
+<h1 id="浏览器乱码的原因是什么？如何解决"><a href="#浏览器乱码的原因是什么？如何解决" class="headerlink" title="浏览器乱码的原因是什么？如何解决"></a>浏览器乱码的原因是什么？如何解决</h1><p>页面的编码方式与浏览器的解码方式不匹配；解决方法为在<head>中加<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"文档编码方式"</span>&gt;</span></div></pre></td></tr></table></figure></head></p>
+<h1 id="常见浏览器及其内核"><a href="#常见浏览器及其内核" class="headerlink" title="常见浏览器及其内核"></a>常见浏览器及其内核</h1><table>
+<thead>
+<tr>
+<th>浏览器</th>
+<th>内核</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IE</td>
+<td>Trident</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>WebKit</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>WebKit</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>Gecko</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>Presto</td>
+</tr>
+</tbody>
+</table>
+<p>其中国内的浏览器一般为WebKit/Trident的双内核，如360浏览器，QQ浏览器等</p>
+<h1 id="常见标签及其使用场景"><a href="#常见标签及其使用场景" class="headerlink" title="常见标签及其使用场景"></a>常见标签及其使用场景</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--...--&gt;</span>：注释</div><div class="line"><span class="meta">&lt;!DOCTYPE&gt;</span>：定义文档类型</div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span>： 定义 HTML 文档</div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>：定义关于文档的信息</div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>： 定义文档的主体</div><div class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span>：定义了文档的头部区域</div><div class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span>：<span class="tag">&lt;<span class="name">section</span>&gt;</span> 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。</div><div class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span>：定义 section 或 body的页脚。</div><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>： 定义文档中的节</div><div class="line"><span class="tag">&lt;<span class="name">meta</span>&gt;</span>：定义关于 HTML 文档的元信息。</div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>：定义文档的标题。</div><div class="line"><span class="tag">&lt;<span class="name">link</span>&gt;</span>：定义文档与外部资源的关系</div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined">：定义客户端脚本。</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">nav</span>&gt;</span>：定义导航链接的部分</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">aside</span>&gt;</span>：定义页面的侧边栏内容</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span>&gt;</span>：定义超文本链接</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span>： 定义换行</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">button</span>&gt;</span>： 定义一个点击按钮</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">canvas</span>&gt;</span>：定义图形,绘图</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">form</span>&gt;</span>：定义了HTML文档的表单</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span> to <span class="tag">&lt;<span class="name">h6</span>&gt;</span>：定义 HTML 标题</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">iframe</span>&gt;</span>：定义内联框架</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span>&gt;</span>：定义图像</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">input</span>&gt;</span>：定义输入控件</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">label</span>&gt;</span>：定义 input 元素的标注</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span>：定义列表的项目</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">object</span>&gt;</span>：定义内嵌对象</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">param</span>&gt;</span>：定义对象的参数。</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">ol</span>&gt;</span>： 定义有序列表。</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>： 定义段落。</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">select</span>&gt;</span>：定义选择列表（下拉列表）。</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">option</span>&gt;</span>：定义选择列表中的选项。</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined">：定义文档的样式信息。</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">table</span>&gt;</span>： 定义表格。</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;HTML、XML、XHTML-有什么区别&quot;&gt;&lt;a href=&quot;#HTML、XML、XHTML-有什么区别&quot; class=&quot;headerlink&quot; title=&quot;HTML、XML、XHTML 有什么区别&quot;&gt;&lt;/a&gt;HTML、XML、XHTML 有什么区别&lt;/h1&gt;&lt;
+    
+    </summary>
+    
+      <category term="HTML" scheme="https://kmac007.com/categories/HTML/"/>
+    
+    
+      <category term="HTML" scheme="https://kmac007.com/tags/HTML/"/>
+    
+      <category term="语义化" scheme="https://kmac007.com/tags/%E8%AF%AD%E4%B9%89%E5%8C%96/"/>
+    
+      <category term="meta" scheme="https://kmac007.com/tags/meta/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从输入 URL 到页面展示发生了什么事情</title>
+    <link href="https://kmac007.com/%E4%BB%8E%E8%BE%93%E5%85%A5%20URL%20%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%E4%BA%8B%E6%83%85.html"/>
+    <id>https://kmac007.com/从输入 URL 到页面展示发生了什么事情.html</id>
+    <published>2017-02-25T12:24:51.000Z</published>
+    <updated>2017-08-24T12:56:21.193Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是一道经典的前端面试题，在学习的过程中，我想如果通过自己的语言来描述出来印象会更加深刻。</p>
+<h1 id="什么是URL"><a href="#什么是URL" class="headerlink" title="什么是URL"></a>什么是URL</h1><blockquote>
+<p>URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络上的门牌，是因特网上标准的资源的地址。<br>URL的标准格式如下：<br>协议类型://服务器地址（必要时需加上端口号）/路径/文件名</p>
+</blockquote>
+<p>例如：<a href="http://www.jianshu.com/users/78757d5285cd/timeline" target="_blank" rel="external">http://www.jianshu.com/users/78757d5285cd/timeline</a><br>协议：http<br>网络地址：www.jianshu.com<br>资源路径：users/78757d5285cd/timeline</p>
+<h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><h2 id="1-浏览器中输入URL并回车"><a href="#1-浏览器中输入URL并回车" class="headerlink" title="1. 浏览器中输入URL并回车"></a>1. 浏览器中输入URL并回车</h2><h2 id="2-浏览器查找域名的IP地址"><a href="#2-浏览器查找域名的IP地址" class="headerlink" title="2. 浏览器查找域名的IP地址"></a>2. 浏览器查找域名的IP地址</h2><pre><code>1. 浏览器缓存 – 浏览器会缓存DNS记录一段时间
+2. 系统缓存 - 从 Hosts 文件查找是否有该域名和对应 IP。
+3. 路由器缓存 – 一般路由器也会缓存域名信息。
+4. ISP DNS 缓存（互联网服务提供商的DNS缓存） – 比如到电信的 DNS 上查找缓存。
+5. 如果都没有找到，则向根域名服务器查找域名对应 IP，根域名服务器把请求转发到下一级，直到找到 IP
+</code></pre><h2 id="3-浏览器发送一个HTTP请求到web服务器"><a href="#3-浏览器发送一个HTTP请求到web服务器" class="headerlink" title="3. 浏览器发送一个HTTP请求到web服务器"></a>3. 浏览器发送一个HTTP请求到web服务器</h2><h2 id="4-服务器处理"><a href="#4-服务器处理" class="headerlink" title="4. 服务器处理"></a>4. 服务器处理</h2><ul>
+<li>常见的 web服务器有 Apache、Nginx、IIS、Lighttpd</li>
+<li>web服务器接收用户的Request 交给网站代码，或者接受请求反向代理到其他 web服务器<br><img src="http://upload-images.jianshu.io/upload_images/5419891-1c36c3af5c589a7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="web服务器.png"><h2 id="5-网站处理"><a href="#5-网站处理" class="headerlink" title="5. 网站处理"></a>5. 网站处理</h2><img src="http://upload-images.jianshu.io/upload_images/5419891-e932ec6042139b14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>URL中的文件地址部分经过服务器上的路由程序重定向到对应的控制器(controller)对象,控制器对象根据URL中指定的操作执行相关的逻辑并调用目标数据的模型(Model)对象,模型对象与数据库交互完成目标操作后,控制器将模型中反馈的数据填充到视图中。<br>视图部分(通常是HTML页面)作为HTTP响应发送到浏览器端。<h2 id="6-浏览器处理"><a href="#6-浏览器处理" class="headerlink" title="6. 浏览器处理"></a>6. 浏览器处理</h2>HTML字符串被浏览器接受后被一句句读取解析<br>解析到link 标签后重新发送请求获取css<br>解析到 script标签后发送请求获取 js，并执行代码<br>解析到img 标签后发送请求获取图片资源<h2 id="7-绘制网页"><a href="#7-绘制网页" class="headerlink" title="7. 绘制网页"></a>7. 绘制网页</h2>将渲染好的页面图像显示出来，并开始响应用户的操作。</li>
+</ul>
+<p>以上只是一个简单的流程，过程中还会涉及到很多问题。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这是一道经典的前端面试题，在学习的过程中，我想如果通过自己的语言来描述出来印象会更加深刻。&lt;/p&gt;
+&lt;h1 id=&quot;什么是URL&quot;&gt;&lt;a href=&quot;#什么是URL&quot; class=&quot;headerlink&quot; title=&quot;什么是URL&quot;&gt;&lt;/a&gt;什么是URL&lt;/h1&gt;&lt;blo
+    
+    </summary>
+    
+      <category term="前端面试" scheme="https://kmac007.com/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="URL" scheme="https://kmac007.com/tags/URL/"/>
+    
+      <category term="前端面试" scheme="https://kmac007.com/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+</feed>

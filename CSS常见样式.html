@@ -83,7 +83,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="前端,JavaScript,React,Redux,React-route,webpack,sass,Vue,Vuex,jQuery,Vscode,前端工程师" />
+  <meta name="keywords" content="CSS,样式," />
 
 
 
@@ -101,16 +101,18 @@
 
 
 
-<meta name="description" content="Risk everything.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="kmac007">
-<meta property="og:url" content="https://kmac007.com/index.html">
+<meta name="description" content="1. 块级元素和行内元素分别有哪些？ 块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等 行内元素: span, a, input, button, lable, select, textarea, em, br, img, st">
+<meta name="keywords" content="CSS,样式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS常见样式">
+<meta property="og:url" content="https://kmac007.com/CSS常见样式.html">
 <meta property="og:site_name" content="kmac007">
-<meta property="og:description" content="Risk everything.">
+<meta property="og:description" content="1. 块级元素和行内元素分别有哪些？ 块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等 行内元素: span, a, input, button, lable, select, textarea, em, br, img, st">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-24T15:29:51.777Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kmac007">
-<meta name="twitter:description" content="Risk everything.">
+<meta name="twitter:title" content="CSS常见样式">
+<meta name="twitter:description" content="1. 块级元素和行内元素分别有哪些？ 块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等 行内元素: span, a, input, button, lable, select, textarea, em, br, img, st">
 
 
 
@@ -140,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="https://kmac007.com/"/>
+  <link rel="canonical" href="https://kmac007.com/CSS常见样式.html"/>
 
 
 
 
 
-  <title>kmac007</title>
+  <title>CSS常见样式 | kmac007</title>
   
 
 
@@ -175,8 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,9 +314,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -345,9 +346,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/CSS常见样式.html" itemprop="url">CSS常见样式</a></h2>
+          <h2 class="post-title" itemprop="name headline">CSS常见样式</h2>
         
 
         <div class="post-meta">
@@ -461,20 +460,72 @@
       
 
       
-        
-          
-          1. 块级元素和行内元素分别有哪些？
-块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等
-行内元素: span, a, input, button, lable, select, textarea, em, br, img, st
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/CSS常见样式.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h1 id="1-块级元素和行内元素分别有哪些？"><a href="#1-块级元素和行内元素分别有哪些？" class="headerlink" title="1. 块级元素和行内元素分别有哪些？"></a>1. 块级元素和行内元素分别有哪些？</h1><ul>
+<li>块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等</li>
+<li>行内元素: span, a, input, button, lable, select, textarea, em, br, img, strong</li>
+</ul>
+<p>区别：</p>
+<ol>
+<li>行内元素只能容纳行内元素和文本。而块级可以容纳块级元素和行内元素。</li>
+<li>块级元素可以设定宽高，而行内元素不可以。</li>
+<li>块级元素独占一行，而行内元素可以与其它行内元素共同处在一行。</li>
+<li>行内元素的默认宽度为内容的宽度，块级元素默认宽度与浏览器窗口宽度一致</li>
+</ol>
+<h1 id="2-什么是-CSS-继承-哪些属性能继承，哪些不能？"><a href="#2-什么是-CSS-继承-哪些属性能继承，哪些不能？" class="headerlink" title="2. 什么是 CSS 继承? 哪些属性能继承，哪些不能？"></a>2. 什么是 CSS 继承? 哪些属性能继承，哪些不能？</h1><blockquote>
+<p>CSS继承: 子元素继承了父元素的CSS属性。</p>
+<ul>
+<li>不可继承属性：display, margin, border, padding, background, width, height, overflow, z-index, float, position, vertical-align</li>
+<li>所有元素可继承：visibility和cursor</li>
+<li>内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、 font-family、font-size、font-style、font-variant、font-weight、text- decoration、text-transform、direction。</li>
+<li>块状元素可继承：text-indent和text-align。</li>
+<li>列表元素可继承：list-style、list-style-type、list-style-position、list-style-image。</li>
+<li>表格元素可继承：border-collapse。</li>
+</ul>
+</blockquote>
+<h1 id="3-如何让块级元素水平居中？如何让行内元素水平居中"><a href="#3-如何让块级元素水平居中？如何让行内元素水平居中" class="headerlink" title="3. 如何让块级元素水平居中？如何让行内元素水平居中?"></a>3. 如何让块级元素水平居中？如何让行内元素水平居中?</h1><ul>
+<li>块级元素水平居中：给块级元素设定宽高,margin: 0 auto;</li>
+<li>多个块级元素可以使用inline-block和flex</li>
+<li>行内元素: text-align: center;</li>
+</ul>
+<h1 id="4-用-CSS-实现一个三角形"><a href="#4-用-CSS-实现一个三角形" class="headerlink" title="4. 用 CSS 实现一个三角形"></a>4. 用 CSS 实现一个三角形</h1><p><a href="http://js.jirengu.com/romekefagu/2/edit" target="_blank" rel="external">一个CSS三角形</a></p>
+<h1 id="5-单行文本溢出加-…如何实现"><a href="#5-单行文本溢出加-…如何实现" class="headerlink" title="5. 单行文本溢出加 …如何实现?"></a>5. 单行文本溢出加 …如何实现?</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.box &#123;</div><div class="line">  white-space: nowrap;</div><div class="line">  overflow: hidden;</div><div class="line">  text-overflow: ellipsis;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="6-px-em-rem-有什么区别"><a href="#6-px-em-rem-有什么区别" class="headerlink" title="6. px, em, rem 有什么区别"></a>6. px, em, rem 有什么区别</h1><ul>
+<li>px: 相对长度单位。像素px是相对于显示器屏幕分辨率而言的</li>
+<li>em: 指的是相对于其父级元素的大小，即倍数。</li>
+<li><p>rem: 相对于根html元素的大小，即倍数。</p>
+<h1 id="7-解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么"><a href="#7-解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么" class="headerlink" title="7. 解释下面代码的作用?为什么要加引号?字体里\5b8b\4f53代表什么?"></a>7. 解释下面代码的作用?为什么要加引号?字体里\5b8b\4f53代表什么?</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">  font: 12px/1.5 tahoma,arial,&apos;Hiragino Sans GB&apos;,&apos;\5b8b\4f53&apos;,sans-serif;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>字体大小：12px</p>
+</li>
+<li>字体行距：1.5倍</li>
+<li>字体选择的优先级从高到低：tahoma -&gt; … -&gt; sans-serif</li>
+<li>字体描述需要加引号的情况，常见有下面几种：<ol>
+<li>字体描述使用的中文</li>
+<li>字体描述使用英文，中间有空格</li>
+<li>字体描述使用unicode编码<br>\5b8b\4f53 是unicode编码模式，表示“宋体”</li>
+</ol>
+</li>
+</ul>
+<p>控制台中输入：escape(“字体”)将字体中文转换为unicode编码格式</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p><a href="http://js.jirengu.com/kiqarubose/1/edit?output" target="_blank" rel="external">实现如下效果</a></p>
+<p><a href="http://js.jirengu.com/najelasado/1/edit?html,css,output" target="_blank" rel="external">实现按钮</a></p>
+<p><a href="http://js.jirengu.com/xiqilixuzo/4/edit?output" target="_blank" rel="external">表格</a></p>
+<p><a href="http://js.jirengu.com/goxigeyami/1/edit?html,css,output" target="_blank" rel="external">三角形</a></p>
+<p><a href="http://js.jirengu.com/lejuyevohi/2/edit?html,css,output" target="_blank" rel="external">实现Card</a></p>
+<h1 id="1-text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中"><a href="#1-text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中" class="headerlink" title="1. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中"></a>1. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中</h1><p>作用是使得元素中的文本水平居中。作用在块级元素上，能让块级元素中display为inline和inline-block元素居中。</p>
+<h1 id="2-IE-盒模型和W3C盒模型有什么区别"><a href="#2-IE-盒模型和W3C盒模型有什么区别" class="headerlink" title="2. IE 盒模型和W3C盒模型有什么区别?"></a>2. IE 盒模型和W3C盒模型有什么区别?</h1><ul>
+<li>IE盒模型的宽度和高度包含border,padding和content</li>
+<li>W3C盒模型只包含content部分的宽高<h1 id="3-box-sizing-border-box-的作用是什么？"><a href="#3-box-sizing-border-box-的作用是什么？" class="headerlink" title="3. *{ box-sizing: border-box;}的作用是什么？"></a>3. *{ box-sizing: border-box;}的作用是什么？</h1>为元素设定的宽度和高度决定了元素的边框盒。<br>就是说，为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。<h1 id="4-line-height-2和linde-height-200-有什么区别？"><a href="#4-line-height-2和linde-height-200-有什么区别？" class="headerlink" title="4. line-height: 2和linde-height: 200%有什么区别？"></a>4. line-height: 2和linde-height: 200%有什么区别？</h1>line-height: 2 表示根据子元素自己字体的大小乘以2来计算行高，而line-height: 200% 表示根据父元素的字体大小计算行高，并且子元素会继承父元素的行高。<h1 id="5-inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐"><a href="#5-inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐" class="headerlink" title="5. inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?"></a>5. inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?</h1>inline-block使元素具有内联的特性时， 内容又具有块级元素的特性，可以设置宽高等；去除缝隙有两种方法：1.去除两元素间的空白字符，2.将父元素的字体大小设置为0，再分别设置它们的字体大小；高度不一样时，对具有inline-block属性的元素使用    vertical-align: top使其对其。<h1 id="6-CSS-sprite-是什么"><a href="#6-CSS-sprite-是什么" class="headerlink" title="6. CSS sprite 是什么?"></a>6. CSS sprite 是什么?</h1>CSS精灵，指的是将多张图片拼接在一起，通过改变background-position来改变显示出来的图片，达到减少HTTP请求，提高页面性能的效果。<h1 id="7-让一个元素”看不见”有几种方式？有什么区别"><a href="#7-让一个元素”看不见”有几种方式？有什么区别" class="headerlink" title="7. 让一个元素”看不见”有几种方式？有什么区别?"></a>7. 让一个元素”看不见”有几种方式？有什么区别?</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">opacity: 0;  使元素变得透明，仍处在页面上</div><div class="line">display: none; 使元素在页面上消失,不占用空间</div><div class="line">visibility: hidden; 使元素不可见，但仍在页面上占据空间</div><div class="line">background-color: rgba(0, 0, 0, 0.2) 只是背景色透明</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p><a href="https://kmac007.github.io/demos/test/sprite.html" target="_blank" rel="external">CSSsprite</a></p>
+</li>
+<li><p><a href="https://kmac007.github.io/demos/test/iconfont.html" target="_blank" rel="external">字体图标实现</a></p>
+</li>
+</ul>
+<iframe width="100%" height="300" src="//jsfiddle.net/a22a6jrq/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
       
     </div>
     
@@ -482,422 +533,76 @@
     
     <div>
       
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
     </div>
     <div>
+      
+        
       
     </div>
     
 
     
 
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Robb Chan
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://kmac007.com/CSS常见样式.html" title="CSS常见样式">https://kmac007.com/CSS常见样式.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kmac007.com/CSS选择器.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Robb Chan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatardk.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kmac007">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/CSS选择器.html" itemprop="url">CSS选择器</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-02T19:26:31+08:00">
-                2017-03-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/CSS/" rel="tag"><i class="fa fa-tag"></i> CSS</a>
           
-
+            <a href="/tags/样式/" rel="tag"><i class="fa fa-tag"></i> 样式</a>
           
-            
-          
-
-          
-          
-             <span id="/CSS选择器.html" class="leancloud_visitors" data-flag-title="CSS选择器">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-          
-            <span class="post-meta-divider">|</span>
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,089
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  4 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          1. class和id的使用场景？12class 用于选择页面上带相同类属性的元素，可以有多个id    它是唯一的，选择页面上唯一匹配id属性的元素
-2. CSS选择器常见的有几种？1234567891011121. 元素选择器 如：p, h1, span2. 类选择器 .class-name3. id选择器 #id-name4. 通配选择器 *5. 属性选择器 E[attr], E[attr=
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/CSS选择器.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CSS选择器.html" rel="next" title="CSS选择器">
+                <i class="fa fa-chevron-left"></i> CSS选择器
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-      
-    </div>
-    <div>
-      
-    </div>
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kmac007.com/CSS基础.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Robb Chan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatardk.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kmac007">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/CSS基础.html" itemprop="url">CSS基础</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-27T17:27:21+08:00">
-                2017-02-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/CSS基础.html" class="leancloud_visitors" data-flag-title="CSS基础">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-          
-            <span class="post-meta-divider">|</span>
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  667
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  3 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          1. CSS的全称是什么?层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。
-2. CSS有几种引入方式? link 和@import 有什么区别?
-内联样式
-1&lt;p style="background-color: red"&gt;&lt;/p&gt;
-
-内部
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/CSS基础.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-      
-    </div>
-    <div>
-      
-    </div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -907,632 +612,24 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kmac007.com/HTML表单的用法简介.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Robb Chan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatardk.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kmac007">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/HTML表单的用法简介.html" itemprop="url">HTML表单的用法简介</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-26T20:14:32+08:00">
-                2017-02-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/HTML表单的用法简介.html" class="leancloud_visitors" data-flag-title="HTML表单的用法简介">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-          
-            <span class="post-meta-divider">|</span>
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  285
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          标签用于用户输入创建HTML表单
-表单能够包含 input 元素，比如文本字段、复选框、单选框、提交按钮等等。表单还可以包含 menus、textarea、fieldset和label元素。
-
-表单用于向服务器传输数据
- 属性
-
-
-属性
-值
-描述
-
-
-
-
-action
-URL
-规定当提交表单时向何处发送表单数据
-
-
-autocomplete
-on off
-规定是否启用表单的自动完成功能
-
-
-met
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/HTML表单的用法简介.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-    <div>
-      
-    </div>
-    <div>
-      
-    </div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kmac007.com/HTML.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Robb Chan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatardk.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kmac007">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/HTML.html" itemprop="url">HTML</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-26T17:34:53+08:00">
-                2017-02-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/HTML.html" class="leancloud_visitors" data-flag-title="HTML">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-          
-            <span class="post-meta-divider">|</span>
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,278
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  5 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          HTML、XML、XHTML 有什么区别
-HTML：超文本标记语言（HyperText Markup Language）,是一种用于创建网页的标准标记语言，被涉及用来显示数据。
-XML：可扩展标记语言（Extensible Markuo Language）,它被涉及用来传输和存储数据。它是对超文本标记语言的补充，是各种应用程序之间进行数据传输的常用工具。由于标签没有被预定义，使用者可以自行定义标签
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/HTML.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-      
-    </div>
-    <div>
-      
-    </div>
-    
+          
 
+
+          
+  <div class="comments" id="comments">
     
-
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDQwNi82OTYw"></div>
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
 
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kmac007.com/从输入 URL 到页面展示发生了什么事情.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Robb Chan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatardk.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kmac007">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/从输入 URL 到页面展示发生了什么事情.html" itemprop="url">从输入 URL 到页面展示发生了什么事情</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-25T20:24:51+08:00">
-                2017-02-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端面试/" itemprop="url" rel="index">
-                    <span itemprop="name">前端面试</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/从输入 URL 到页面展示发生了什么事情.html" class="leancloud_visitors" data-flag-title="从输入 URL 到页面展示发生了什么事情">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-          
-            <span class="post-meta-divider">|</span>
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  615
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          这是一道经典的前端面试题，在学习的过程中，我想如果通过自己的语言来描述出来印象会更加深刻。
-什么是URL
-URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络上的门牌，是因特网上标准的资源的地址。URL的标准格式如下：协议类型://服务器地址（必要时需加上端口号）/路径/文件名
-
-例如：http://www.jianshu.com/users
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/从输入 URL 到页面展示发生了什么事情.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-      
-    </div>
-    <div>
-      
-    </div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
 
         </div>
         
@@ -1555,8 +652,17 @@ URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatardk.jpg"
@@ -1686,6 +792,22 @@ URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-块级元素和行内元素分别有哪些？"><span class="nav-number">1.</span> <span class="nav-text">1. 块级元素和行内元素分别有哪些？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-什么是-CSS-继承-哪些属性能继承，哪些不能？"><span class="nav-number">2.</span> <span class="nav-text">2. 什么是 CSS 继承? 哪些属性能继承，哪些不能？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-如何让块级元素水平居中？如何让行内元素水平居中"><span class="nav-number">3.</span> <span class="nav-text">3. 如何让块级元素水平居中？如何让行内元素水平居中?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-用-CSS-实现一个三角形"><span class="nav-number">4.</span> <span class="nav-text">4. 用 CSS 实现一个三角形</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-单行文本溢出加-…如何实现"><span class="nav-number">5.</span> <span class="nav-text">5. 单行文本溢出加 …如何实现?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-px-em-rem-有什么区别"><span class="nav-number">6.</span> <span class="nav-text">6. px, em, rem 有什么区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么"><span class="nav-number">7.</span> <span class="nav-text">7. 解释下面代码的作用?为什么要加引号?字体里\5b8b\4f53代表什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">8.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中"><span class="nav-number">9.</span> <span class="nav-text">1. text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-IE-盒模型和W3C盒模型有什么区别"><span class="nav-number">10.</span> <span class="nav-text">2. IE 盒模型和W3C盒模型有什么区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-box-sizing-border-box-的作用是什么？"><span class="nav-number">11.</span> <span class="nav-text">3. *{ box-sizing: border-box;}的作用是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-line-height-2和linde-height-200-有什么区别？"><span class="nav-number">12.</span> <span class="nav-text">4. line-height: 2和linde-height: 200%有什么区别？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐"><span class="nav-number">13.</span> <span class="nav-text">5. inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-CSS-sprite-是什么"><span class="nav-number">14.</span> <span class="nav-text">6. CSS sprite 是什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-让一个元素”看不见”有几种方式？有什么区别"><span class="nav-number">15.</span> <span class="nav-text">7. 让一个元素”看不见”有几种方式？有什么区别?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -1805,10 +927,10 @@ URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -1837,6 +959,17 @@ URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
