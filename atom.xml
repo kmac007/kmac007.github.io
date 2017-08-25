@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>kmac007</title>
+  <title>kmac007小站</title>
   <subtitle>kmac007&#39;s blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://kmac007.com/"/>
+  <link href="https://www.kmac007.com/"/>
   <updated>2017-08-24T15:29:51.777Z</updated>
-  <id>https://kmac007.com/</id>
+  <id>https://www.kmac007.com/</id>
   
   <author>
     <name>Robb Chan</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>CSS常见样式</title>
-    <link href="https://kmac007.com/CSS%E5%B8%B8%E8%A7%81%E6%A0%B7%E5%BC%8F.html"/>
-    <id>https://kmac007.com/CSS常见样式.html</id>
+    <link href="https://www.kmac007.com/CSS%E5%B8%B8%E8%A7%81%E6%A0%B7%E5%BC%8F.html"/>
+    <id>https://www.kmac007.com/CSS常见样式.html</id>
     <published>2017-03-03T12:07:36.000Z</published>
     <updated>2017-08-24T15:29:51.777Z</updated>
     
@@ -96,19 +96,19 @@
     
     </summary>
     
-      <category term="CSS" scheme="https://kmac007.com/categories/CSS/"/>
+      <category term="CSS" scheme="https://www.kmac007.com/categories/CSS/"/>
     
     
-      <category term="CSS" scheme="https://kmac007.com/tags/CSS/"/>
+      <category term="CSS" scheme="https://www.kmac007.com/tags/CSS/"/>
     
-      <category term="样式" scheme="https://kmac007.com/tags/%E6%A0%B7%E5%BC%8F/"/>
+      <category term="样式" scheme="https://www.kmac007.com/tags/%E6%A0%B7%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>CSS选择器</title>
-    <link href="https://kmac007.com/CSS%E9%80%89%E6%8B%A9%E5%99%A8.html"/>
-    <id>https://kmac007.com/CSS选择器.html</id>
+    <link href="https://www.kmac007.com/CSS%E9%80%89%E6%8B%A9%E5%99%A8.html"/>
+    <id>https://www.kmac007.com/CSS选择器.html</id>
     <published>2017-03-02T11:26:31.000Z</published>
     <updated>2017-08-24T15:17:53.668Z</updated>
     
@@ -164,17 +164,17 @@
     
     </summary>
     
-      <category term="CSS" scheme="https://kmac007.com/categories/CSS/"/>
+      <category term="CSS" scheme="https://www.kmac007.com/categories/CSS/"/>
     
     
-      <category term="CSS" scheme="https://kmac007.com/tags/CSS/"/>
+      <category term="CSS" scheme="https://www.kmac007.com/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>CSS基础</title>
-    <link href="https://kmac007.com/CSS%E5%9F%BA%E7%A1%80.html"/>
-    <id>https://kmac007.com/CSS基础.html</id>
+    <link href="https://www.kmac007.com/CSS%E5%9F%BA%E7%A1%80.html"/>
+    <id>https://www.kmac007.com/CSS基础.html</id>
     <published>2017-02-27T09:27:21.000Z</published>
     <updated>2017-08-24T15:03:45.167Z</updated>
     
@@ -230,7 +230,7 @@
 <li>相对路径，在网站根目录的static文件夹下css文件夹下的a.css</li>
 </ul>
 </li>
-<li><a href="http://kmac007.com/8-1.png">http://kmac007.com/8-1.png</a><ul>
+<li><a href="http://kmac007.com/8-1.png" target="_blank" rel="external">http://kmac007.com/8-1.png</a><ul>
 <li>绝对路径，指向网站上的图片</li>
 </ul>
 </li>
@@ -257,19 +257,19 @@
     
     </summary>
     
-      <category term="CSS" scheme="https://kmac007.com/categories/CSS/"/>
+      <category term="CSS" scheme="https://www.kmac007.com/categories/CSS/"/>
     
     
-      <category term="CSS" scheme="https://kmac007.com/tags/CSS/"/>
+      <category term="CSS" scheme="https://www.kmac007.com/tags/CSS/"/>
     
-      <category term="前端面试" scheme="https://kmac007.com/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+      <category term="前端面试" scheme="https://www.kmac007.com/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>HTML表单的用法简介</title>
-    <link href="https://kmac007.com/HTML%E8%A1%A8%E5%8D%95%E7%9A%84%E7%94%A8%E6%B3%95%E7%AE%80%E4%BB%8B.html"/>
-    <id>https://kmac007.com/HTML表单的用法简介.html</id>
+    <link href="https://www.kmac007.com/HTML%E8%A1%A8%E5%8D%95%E7%9A%84%E7%94%A8%E6%B3%95%E7%AE%80%E4%BB%8B.html"/>
+    <id>https://www.kmac007.com/HTML表单的用法简介.html</id>
     <published>2017-02-26T12:14:32.000Z</published>
     <updated>2017-08-24T14:49:23.609Z</updated>
     
@@ -327,19 +327,19 @@
     
     </summary>
     
-      <category term="HTML" scheme="https://kmac007.com/categories/HTML/"/>
+      <category term="HTML" scheme="https://www.kmac007.com/categories/HTML/"/>
     
     
-      <category term="HTML" scheme="https://kmac007.com/tags/HTML/"/>
+      <category term="HTML" scheme="https://www.kmac007.com/tags/HTML/"/>
     
-      <category term="表单" scheme="https://kmac007.com/tags/%E8%A1%A8%E5%8D%95/"/>
+      <category term="表单" scheme="https://www.kmac007.com/tags/%E8%A1%A8%E5%8D%95/"/>
     
   </entry>
   
   <entry>
     <title>HTML</title>
-    <link href="https://kmac007.com/HTML.html"/>
-    <id>https://kmac007.com/HTML.html</id>
+    <link href="https://www.kmac007.com/HTML.html"/>
+    <id>https://www.kmac007.com/HTML.html</id>
     <published>2017-02-26T09:34:53.000Z</published>
     <updated>2017-08-24T14:41:00.508Z</updated>
     
@@ -430,21 +430,21 @@
     
     </summary>
     
-      <category term="HTML" scheme="https://kmac007.com/categories/HTML/"/>
+      <category term="HTML" scheme="https://www.kmac007.com/categories/HTML/"/>
     
     
-      <category term="HTML" scheme="https://kmac007.com/tags/HTML/"/>
+      <category term="HTML" scheme="https://www.kmac007.com/tags/HTML/"/>
     
-      <category term="语义化" scheme="https://kmac007.com/tags/%E8%AF%AD%E4%B9%89%E5%8C%96/"/>
+      <category term="语义化" scheme="https://www.kmac007.com/tags/%E8%AF%AD%E4%B9%89%E5%8C%96/"/>
     
-      <category term="meta" scheme="https://kmac007.com/tags/meta/"/>
+      <category term="meta" scheme="https://www.kmac007.com/tags/meta/"/>
     
   </entry>
   
   <entry>
     <title>从输入 URL 到页面展示发生了什么事情</title>
-    <link href="https://kmac007.com/%E4%BB%8E%E8%BE%93%E5%85%A5%20URL%20%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%E4%BA%8B%E6%83%85.html"/>
-    <id>https://kmac007.com/从输入 URL 到页面展示发生了什么事情.html</id>
+    <link href="https://www.kmac007.com/%E4%BB%8E%E8%BE%93%E5%85%A5%20URL%20%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%E4%BA%8B%E6%83%85.html"/>
+    <id>https://www.kmac007.com/从输入 URL 到页面展示发生了什么事情.html</id>
     <published>2017-02-25T12:24:51.000Z</published>
     <updated>2017-08-24T12:56:21.193Z</updated>
     
@@ -472,12 +472,12 @@
     
     </summary>
     
-      <category term="前端面试" scheme="https://kmac007.com/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+      <category term="前端面试" scheme="https://www.kmac007.com/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="前端面试" scheme="https://kmac007.com/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+      <category term="前端面试" scheme="https://www.kmac007.com/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
     
-      <category term="URL" scheme="https://kmac007.com/tags/URL/"/>
+      <category term="URL" scheme="https://www.kmac007.com/tags/URL/"/>
     
   </entry>
   
