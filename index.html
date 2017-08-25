@@ -192,7 +192,7 @@
       </a>
     </div>
       
-        <h1 class="site-subtitle" itemprop="description">kmac007's blog</h1>
+        <h1 class="site-subtitle" itemprop="description">kmac007's blog.</h1>
       
   </div>
 
@@ -328,10 +328,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/CSS常见样式.html">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/03/07/CSS常见布局.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Robb Chan">
+      <meta itemprop="name" content="kmac007">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatardk.jpg">
     </span>
@@ -347,7 +347,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/CSS常见样式.html" itemprop="url">CSS常见样式</a></h2>
+                <a class="post-title-link" href="/2017/03/07/CSS常见布局.html" itemprop="url">常见的CSS布局</a></h2>
         
 
         <div class="post-meta">
@@ -359,8 +359,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-03T20:07:36+08:00">
-                2017-03-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-07T17:20:34+08:00">
+                2017-03-07
               </time>
             
 
@@ -399,7 +399,7 @@
 
           
           
-             <span id="/CSS常见样式.html" class="leancloud_visitors" data-flag-title="CSS常见样式">
+             <span id="/2017/03/07/CSS常见布局.html" class="leancloud_visitors" data-flag-title="常见的CSS布局">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -424,7 +424,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,198
+                  303
                 </span>
               
 
@@ -440,7 +440,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5 分钟
+                  1 分钟
                 </span>
               
             </div>
@@ -463,13 +463,26 @@
       
         
           
-          1. 块级元素和行内元素分别有哪些？
-块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等
-行内元素: span, a, input, button, lable, select, textarea, em, br, img, st
+          五种方式实现三栏布局采用五种方式实现横向左右定宽，中间自适应的三栏布局
+浮动
+
+左右模块各自向左右浮动，并设置中间部分的左右margin值缺点是要按照left,right,main这样的顺序写HTML。
+绝对定位
+
+实用。
+flexbox布局
+
+要考虑兼容性的问题，对于移动端我一般采用这种方式来进行三栏布局。
+table布局
+
+缺点：无法设置main与两边的间隔
+grid布局
+
+缺点：兼容性有点尴
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/CSS常见样式.html#more" rel="contents">
+            <a class="btn" href="/2017/03/07/CSS常见布局.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -525,10 +538,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/CSS选择器.html">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/03/05/浅析浮动定位BFC边距合并.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Robb Chan">
+      <meta itemprop="name" content="kmac007">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatardk.jpg">
     </span>
@@ -544,7 +557,402 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/CSS选择器.html" itemprop="url">CSS选择器</a></h2>
+                <a class="post-title-link" href="/2017/03/05/浅析浮动定位BFC边距合并.html" itemprop="url">浅析浮动定位BFC边距合并</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-05T15:00:55+08:00">
+                2017-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/03/05/浅析浮动定位BFC边距合并.html" class="leancloud_visitors" data-flag-title="浅析浮动定位BFC边距合并">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,330
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响?浮动的特征是使元素脱离普通流，按照指定方向发生移动，遇到父级边界或者相邻的浮动元素才停下来；
+对父容器的影响: 父容器中的元素浮动后，脱离普通流会使得父容器失去高度；
+对其他浮动元素的影响： 如果是同一方向浮动，相邻的浮动元素会并列在同一行，空间不够，会换到下一行
+对普通元素的影响： 浮动元素会脱离普通流，普通元素会占据它原
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/05/浅析浮动定位BFC边距合并.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/03/03/CSS常见样式.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/03/CSS常见样式.html" itemprop="url">CSS常见样式</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-03T20:06:36+08:00">
+                2017-03-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/03/03/CSS常见样式.html" class="leancloud_visitors" data-flag-title="CSS常见样式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,182
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          块级元素和行内元素分别有哪些？
+块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等
+行内元素: span, a, input, button, lable, select, textarea, em, br, img, stron
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/03/CSS常见样式.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/03/02/CSS选择器.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/02/CSS选择器.html" itemprop="url">CSS选择器</a></h2>
         
 
         <div class="post-meta">
@@ -596,7 +1004,7 @@
 
           
           
-             <span id="/CSS选择器.html" class="leancloud_visitors" data-flag-title="CSS选择器">
+             <span id="/2017/03/02/CSS选择器.html" class="leancloud_visitors" data-flag-title="CSS选择器">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -621,7 +1029,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,089
+                  1,087
                 </span>
               
 
@@ -660,12 +1068,12 @@
       
         
           
-          1. class和id的使用场景？12class 用于选择页面上带相同类属性的元素，可以有多个id    它是唯一的，选择页面上唯一匹配id属性的元素
-2. CSS选择器常见的有几种？1234567891011121. 元素选择器 如：p, h1, span2. 类选择器 .class-name3. id选择器 #id-name4. 通配选择器 *5. 属性选择器 E[attr], E[attr=
+          class和id的使用场景？12class 用于选择页面上带相同类属性的元素，可以有多个id    它是唯一的，选择页面上唯一匹配id属性的元素
+CSS选择器常见的有几种？1234567891011121. 元素选择器 如：p, h1, span2. 类选择器 .class-name3. id选择器 #id-name4. 通配选择器 *5. 属性选择器 E[attr], E[attr=value]
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/CSS选择器.html#more" rel="contents">
+            <a class="btn" href="/2017/03/02/CSS选择器.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -721,10 +1129,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/CSS基础.html">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/02/27/CSS基础.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Robb Chan">
+      <meta itemprop="name" content="kmac007">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatardk.jpg">
     </span>
@@ -740,7 +1148,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/CSS基础.html" itemprop="url">CSS基础</a></h2>
+                <a class="post-title-link" href="/2017/02/27/CSS基础.html" itemprop="url">CSS基础</a></h2>
         
 
         <div class="post-meta">
@@ -792,7 +1200,7 @@
 
           
           
-             <span id="/CSS基础.html" class="leancloud_visitors" data-flag-title="CSS基础">
+             <span id="/2017/02/27/CSS基础.html" class="leancloud_visitors" data-flag-title="CSS基础">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -817,7 +1225,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  667
+                  662
                 </span>
               
 
@@ -856,16 +1264,17 @@
       
         
           
-          1. CSS的全称是什么?层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。
-2. CSS有几种引入方式? link 和@import 有什么区别?
+          CSS的全称是什么?层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。
+CSS有几种引入方式? link 和@import 有什么区别?
 内联样式
 1&lt;p style="background-color: red"&gt;&lt;/p&gt;
 
-内部
+内部样式
+123
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/CSS基础.html#more" rel="contents">
+            <a class="btn" href="/2017/02/27/CSS基础.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -921,10 +1330,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/HTML表单的用法简介.html">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/02/26/HTML表单的用法简介.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Robb Chan">
+      <meta itemprop="name" content="kmac007">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatardk.jpg">
     </span>
@@ -940,7 +1349,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/HTML表单的用法简介.html" itemprop="url">HTML表单的用法简介</a></h2>
+                <a class="post-title-link" href="/2017/02/26/HTML表单的用法简介.html" itemprop="url">HTML表单的用法简介</a></h2>
         
 
         <div class="post-meta">
@@ -992,7 +1401,7 @@
 
           
           
-             <span id="/HTML表单的用法简介.html" class="leancloud_visitors" data-flag-title="HTML表单的用法简介">
+             <span id="/2017/02/26/HTML表单的用法简介.html" class="leancloud_visitors" data-flag-title="HTML表单的用法简介">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1084,7 +1493,7 @@ met
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/HTML表单的用法简介.html#more" rel="contents">
+            <a class="btn" href="/2017/02/26/HTML表单的用法简介.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1140,10 +1549,10 @@ met
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/HTML.html">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/02/26/HTML.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Robb Chan">
+      <meta itemprop="name" content="kmac007">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatardk.jpg">
     </span>
@@ -1159,7 +1568,7 @@ met
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/HTML.html" itemprop="url">HTML</a></h2>
+                <a class="post-title-link" href="/2017/02/26/HTML.html" itemprop="url">HTML</a></h2>
         
 
         <div class="post-meta">
@@ -1211,7 +1620,7 @@ met
 
           
           
-             <span id="/HTML.html" class="leancloud_visitors" data-flag-title="HTML">
+             <span id="/2017/02/26/HTML.html" class="leancloud_visitors" data-flag-title="HTML">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1281,7 +1690,7 @@ XML：可扩展标记语言（Extensible Markuo Language）,它被涉及用来�
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/HTML.html#more" rel="contents">
+            <a class="btn" href="/2017/02/26/HTML.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1337,10 +1746,10 @@ XML：可扩展标记语言（Extensible Markuo Language）,它被涉及用来�
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/从输入 URL 到页面展示发生了什么事情.html">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/02/25/从输入 URL 到页面展示发生了什么事情.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Robb Chan">
+      <meta itemprop="name" content="kmac007">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatardk.jpg">
     </span>
@@ -1356,7 +1765,7 @@ XML：可扩展标记语言（Extensible Markuo Language）,它被涉及用来�
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/从输入 URL 到页面展示发生了什么事情.html" itemprop="url">从输入 URL 到页面展示发生了什么事情</a></h2>
+                <a class="post-title-link" href="/2017/02/25/从输入 URL 到页面展示发生了什么事情.html" itemprop="url">从输入 URL 到页面展示发生了什么事情</a></h2>
         
 
         <div class="post-meta">
@@ -1408,7 +1817,7 @@ XML：可扩展标记语言（Extensible Markuo Language）,它被涉及用来�
 
           
           
-             <span id="/从输入 URL 到页面展示发生了什么事情.html" class="leancloud_visitors" data-flag-title="从输入 URL 到页面展示发生了什么事情">
+             <span id="/2017/02/25/从输入 URL 到页面展示发生了什么事情.html" class="leancloud_visitors" data-flag-title="从输入 URL 到页面展示发生了什么事情">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1433,7 +1842,7 @@ XML：可扩展标记语言（Extensible Markuo Language）,它被涉及用来�
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  615
+                  608
                 </span>
               
 
@@ -1480,7 +1889,7 @@ URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/从输入 URL 到页面展示发生了什么事情.html#more" rel="contents">
+            <a class="btn" href="/2017/02/25/从输入 URL 到页面展示发生了什么事情.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1560,8 +1969,8 @@ URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatardk.jpg"
-               alt="Robb Chan" />
-          <p class="site-author-name" itemprop="name">Robb Chan</p>
+               alt="kmac007" />
+          <p class="site-author-name" itemprop="name">kmac007</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
            
@@ -1573,7 +1982,7 @@ URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1595,7 +2004,7 @@ URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1707,7 +2116,7 @@ URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Robb Chan  </span>
+  <span class="author" itemprop="copyrightHolder">kmac007  </span>
   <span class="post-meta-divider">|</span>
 
   <p class="powered-by">Hosted by <a class="theme-link" href="https://pages.coding.me" style="font-weight: bold" rel="external nofollow">Coding Pages</a></p>
