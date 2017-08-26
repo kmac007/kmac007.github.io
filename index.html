@@ -328,6 +328,401 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/字符串与JSON相关操作.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/字符串与JSON相关操作.html" itemprop="url">字符串与JSON相关操作</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-20T16:28:55+08:00">
+                2017-03-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/字符串与JSON相关操作.html" class="leancloud_visitors" data-flag-title="字符串与JSON相关操作">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  915
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="使用数组拼接出如下字符串"><a href="#使用数组拼接出如下字符串" class="headerlink" title="使用数组拼接出如下字符串"></a>使用数组拼接出如下字符串</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;&lt;dl class=&quot;product&quot;&gt;&lt;dt&gt;女装&lt;/dt&gt;&lt;dd&gt;短款&lt;/dd&gt;&lt;dd&gt;冬季&lt;/dd&gt;&lt;dd&gt;春装&lt;/dd&gt;&lt;/dl&gt;&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> prod = &#123;</div><div class="line">  name: <span class="string">'女装'</span>,</div><div class="line">  styles: [<span class="string">'短款'</span>, <span class="string">'冬季'</span>, <span class="string">'春装'</span>]</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getTplStr</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> arr = []</div><div class="line">  arr.push(<span class="string">'&lt;dl class="product"&gt;'</span>)</div><div class="line">  arr.push(<span class="string">'&lt;dt&gt;'</span> + data.name + <span class="string">'&lt;/dt&gt;'</span>)</div><div class="line">  <span class="keyword">for</span> (key <span class="keyword">in</span> data[<span class="string">'styles'</span>]) &#123;</div><div class="line">    arr.push(<span class="string">'&lt;dd&gt;'</span> + data[<span class="string">'styles'</span>][key] + <span class="string">'&lt;/dd&gt;'</span>)</div><div class="line">  &#125;</div><div class="line">  arr.push(<span class="string">"&lt;/dl&gt;"</span>)</div><div class="line">  <span class="keyword">return</span> arr.join(<span class="string">''</span>)</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> result = getTplStr(prod) <span class="comment">//result拼接后的字符串</span></div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/字符串与JSON相关操作.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/函数与作用域.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/函数与作用域.html" itemprop="url">函数与函数作用域</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-15T19:56:07+08:00">
+                2017-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/函数与作用域.html" class="leancloud_visitors" data-flag-title="函数与函数作用域">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,518
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="函数声明与函数表达式的区别"><a href="#函数声明与函数表达式的区别" class="headerlink" title="函数声明与函数表达式的区别"></a>函数声明与函数表达式的区别</h1><p>函数声明与函数表达式的区别在于:</p>
+<ol>
+<li><p>函数声明是function命令后面是函数名，函数名后面是一对圆括号，里面是传入函数的参数。函数体放在大括号里面。如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHi</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'hi'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>而函数表达式采用的是变量赋值的写法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> sayHi = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'hi'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种写法将一个匿名函数赋值给变量，这个匿名函数又称为函数表达式。</p>
+</li>
+<li><p>由于函数声明前置，对于函数声明不必放到调用的前面，而函数表达式必须放到调用的前面。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/函数与作用域.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/几种方式实现元素的垂直居中.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -462,13 +857,12 @@
 
       
         
-          
-          
-HTML结构
-
-123&lt;div class="container"&gt;  &lt;div class="box"&gt;垂直居中&lt;/div&gt;&lt;/div&gt;
-flexbox布局1234567891011121314.container &#123;  background-color: red;  width: 200px;  height: 200px;  dis
-          ...
+          <blockquote>
+<p>HTML结构</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span>垂直居中<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="flexbox布局"><a href="#flexbox布局" class="headerlink" title="flexbox布局"></a>flexbox布局</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: red;</div><div class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">display</span>: flex;</div><div class="line">  <span class="attribute">justify-content</span>: center;</div><div class="line">  <span class="attribute">align-items</span>: center;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#000</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="table-cell"><a href="#table-cell" class="headerlink" title="table-cell"></a>table-cell</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: red;</div><div class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">display</span>: table-cell;</div><div class="line">  <span class="attribute">vertical-align</span>: middle;</div><div class="line">  <span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#000</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/几种方式实现元素的垂直居中.html#more" rel="contents">
@@ -623,7 +1017,7 @@ flexbox布局1234567891011121314.container &#123;  background-color: red;  width
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,089
+                  1,088
                 </span>
               
 
@@ -661,11 +1055,18 @@ flexbox布局1234567891011121314.container &#123;  background-color: red;  width
 
       
         
-          
-          CSS hackCSS hack由于不同厂商的浏览器，比如IE, Safari, firefox, chorme，或同一厂商不同版本，如IE6和IE7，对CSS的解析认识不完全一样，因此能够导致生成页面效果不一样，得不到所需要的效果。这个时候我们需要针对不同浏览器写不同的CSS，让它能够同时兼容不同的浏览器，能在不同浏览器中也能得到我们想要的页面效果。
-浏览器兼容的思路要不要做
-产品的角度（产品的
-          ...
+          <h1 id="CSS-hack"><a href="#CSS-hack" class="headerlink" title="CSS hack"></a>CSS hack</h1><p>CSS hack由于不同厂商的浏览器，比如IE, Safari, firefox, chorme，或同一厂商不同版本，如IE6和IE7，对CSS的解析认识不完全一样，因此能够导致生成页面效果不一样，得不到所需要的效果。这个时候我们需要针对不同浏览器写不同的CSS，让它能够同时兼容不同的浏览器，能在不同浏览器中也能得到我们想要的页面效果。</p>
+<h1 id="浏览器兼容的思路"><a href="#浏览器兼容的思路" class="headerlink" title="浏览器兼容的思路"></a>浏览器兼容的思路</h1><h2 id="要不要做"><a href="#要不要做" class="headerlink" title="要不要做"></a>要不要做</h2><ul>
+<li>产品的角度（产品的受众、受众的浏览器比例、效果优先还是基本功能优先）</li>
+<li>成本角度（有无必要做某件事情）</li>
+</ul>
+<h2 id="做到什么程度"><a href="#做到什么程度" class="headerlink" title="做到什么程度"></a>做到什么程度</h2><ul>
+<li>让哪些浏览器支持哪些效果</li>
+</ul>
+<h2 id="如何做"><a href="#如何做" class="headerlink" title="如何做"></a>如何做</h2><ul>
+<li>根据兼容需求选择技术框架/库(jquery)</li>
+<li>根据兼容需求选择兼容工具(html5shiv.js、repond.js、css reset、normalize.css、Modernizr)、postCSS</li>
+<li>条件注释、CSS hack、js能力检测做一些修补
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/浏览器兼容.html#more" rel="contents">
@@ -858,24 +1259,10 @@ flexbox布局1234567891011121314.container &#123;  background-color: red;  width
 
       
         
-          
-          五种方式实现三栏布局采用五种方式实现横向左右定宽，中间自适应的三栏布局
-浮动
+          <h1 id="五种方式实现三栏布局"><a href="#五种方式实现三栏布局" class="headerlink" title="五种方式实现三栏布局"></a>五种方式实现三栏布局</h1><p>采用五种方式实现横向左右定宽，中间自适应的三栏布局</p>
+<h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><script async src="//jsfiddle.net/kmac007/pgd5xo51/embed/css,result,html/dark/"></script>
 
-左右模块各自向左右浮动，并设置中间部分的左右margin值缺点是要按照left,right,main这样的顺序写HTML。
-绝对定位
-
-实用。
-flexbox布局
-
-要考虑兼容性的问题，对于移动端我一般采用这种方式来进行三栏布局。
-table布局
-
-缺点：无法设置main与两边的间隔
-grid布局
-
-缺点：兼容性有点尴
-          ...
+<p>左右模块各自向左右浮动，并设置中间部分的左右margin值<br>缺点是要按照left,right,main这样的顺序写HTML。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/CSS常见布局.html#more" rel="contents">
@@ -1068,12 +1455,11 @@ grid布局
 
       
         
-          
-          浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响?浮动的特征是使元素脱离普通流，按照指定方向发生移动，遇到父级边界或者相邻的浮动元素才停下来；
-对父容器的影响: 父容器中的元素浮动后，脱离普通流会使得父容器失去高度；
-对其他浮动元素的影响： 如果是同一方向浮动，相邻的浮动元素会并列在同一行，空间不够，会换到下一行
-对普通元素的影响： 浮动元素会脱离普通流，普通元素会占据它原
-          ...
+          <h1 id="浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响"><a href="#浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响" class="headerlink" title="浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响?"></a>浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响?</h1><p>浮动的特征是使元素脱离普通流，按照指定方向发生移动，遇到父级边界或者相邻的浮动元素才停下来；</p>
+<p><strong>对父容器的影响:</strong> 父容器中的元素浮动后，脱离普通流会使得父容器失去高度；</p>
+<p><strong>对其他浮动元素的影响：</strong> 如果是同一方向浮动，相邻的浮动元素会并列在同一行，空间不够，会换到下一行</p>
+<p><strong>对普通元素的影响</strong>： 浮动元素会脱离普通流，普通元素会占据它原有的空间，从而会出现浮动元素覆盖普通元素</p>
+<p><strong>对文字的影响：</strong> 文字可以感知的浮动元素的存在，文字会在浮动元素周围形成环绕效果<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/浅析浮动定位BFC边距合并.html#more" rel="contents">
@@ -1266,11 +1652,16 @@ grid布局
 
       
         
-          
-          块级元素和行内元素分别有哪些？
-块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等
-行内元素: span, a, input, button, lable, select, textarea, em, br, img, stron
-          ...
+          <h1 id="块级元素和行内元素分别有哪些？"><a href="#块级元素和行内元素分别有哪些？" class="headerlink" title="块级元素和行内元素分别有哪些？"></a>块级元素和行内元素分别有哪些？</h1><ul>
+<li>块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等</li>
+<li>行内元素: span, a, input, button, lable, select, textarea, em, br, img, strong</li>
+</ul>
+<p>区别：</p>
+<ol>
+<li>行内元素只能容纳行内元素和文本。而块级可以容纳块级元素和行内元素。</li>
+<li>块级元素可以设定宽高，而行内元素不可以。</li>
+<li>块级元素独占一行，而行内元素可以与其它行内元素共同处在一行。</li>
+<li>行内元素的默认宽度为内容的宽度，块级元素默认宽度与浏览器窗口宽度一致
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/CSS常见样式.html#more" rel="contents">
@@ -1463,10 +1854,8 @@ grid布局
 
       
         
-          
-          class和id的使用场景？12class 用于选择页面上带相同类属性的元素，可以有多个id    它是唯一的，选择页面上唯一匹配id属性的元素
-CSS选择器常见的有几种？1234567891011121. 元素选择器 如：p, h1, span2. 类选择器 .class-name3. id选择器 #id-name4. 通配选择器 *5. 属性选择器 E[attr], E[attr=value]
-          ...
+          <h1 id="class和id的使用场景？"><a href="#class和id的使用场景？" class="headerlink" title="class和id的使用场景？"></a>class和id的使用场景？</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">class 用于选择页面上带相同类属性的元素，可以有多个</div><div class="line">id    它是唯一的，选择页面上唯一匹配id属性的元素</div></pre></td></tr></table></figure>
+<h1 id="CSS选择器常见的有几种？"><a href="#CSS选择器常见的有几种？" class="headerlink" title="CSS选择器常见的有几种？"></a>CSS选择器常见的有几种？</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">1. 元素选择器 如：p, h1, span</div><div class="line">2. 类选择器 .class-name</div><div class="line">3. id选择器 #id-name</div><div class="line">4. 通配选择器 *</div><div class="line">5. 属性选择器 E[attr], E[attr=value]等</div><div class="line">6. 组合选择器  E,F 多元素选择器</div><div class="line">              E F 后代选择器</div><div class="line">              E&gt;F 子元素选择器</div><div class="line">              E+F 相邻兄弟选择器</div><div class="line">              E~F 普通相邻选择器</div><div class="line">7. 伪类选择器 E:first-child, E:hover, E:nth-child(n)等</div><div class="line">8. 伪元素选择器 E::before, E::after</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/CSS选择器.html#more" rel="contents">
@@ -1659,15 +2048,21 @@ CSS选择器常见的有几种？1234567891011121. 元素选择器 如：p, h1, 
 
       
         
-          
-          CSS的全称是什么?层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。
-CSS有几种引入方式? link 和@import 有什么区别?
-内联样式
-1&lt;p style="background-color: red"&gt;&lt;/p&gt;
-
-内部样式
-123
-          ...
+          <h1 id="CSS的全称是什么"><a href="#CSS的全称是什么" class="headerlink" title="CSS的全称是什么?"></a>CSS的全称是什么?</h1><p>层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。</p>
+<h1 id="CSS有几种引入方式-link-和-import-有什么区别"><a href="#CSS有几种引入方式-link-和-import-有什么区别" class="headerlink" title="CSS有几种引入方式? link 和@import 有什么区别?"></a>CSS有几种引入方式? link 和@import 有什么区别?</h1><ol>
+<li><p>内联样式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"background-color: red"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>内部样式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    .demo &#123;</span></div><div class="line"><span class="undefined">        margin: 0 auto;</span></div><div class="line"><span class="undefined">        background-color: #ccc;</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>外部样式<br>通过link引入外部css文件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"index.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>@import引入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">   @import url(style.css);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/CSS基础.html#more" rel="contents">
@@ -1860,33 +2255,46 @@ CSS有几种引入方式? link 和@import 有什么区别?
 
       
         
-          
-          标签用于用户输入创建HTML表单
-表单能够包含 input 元素，比如文本字段、复选框、单选框、提交按钮等等。表单还可以包含 menus、textarea、fieldset和label元素。
-
-表单用于向服务器传输数据
- 属性
-
-
-属性
-值
-描述
-
-
-
-
-action
-URL
-规定当提交表单时向何处发送表单数据
-
-
-autocomplete
-on off
-规定是否启用表单的自动完成功能
-
-
-met
-          ...
+          <h1 id="标签用于用户输入创建HTML表单"><a href="#标签用于用户输入创建HTML表单" class="headerlink" title="标签用于用户输入创建HTML表单"></a><form>标签用于用户输入创建HTML表单</form></h1><blockquote>
+<p>表单能够包含 input 元素，比如文本字段、复选框、单选框、提交按钮等等。表单还可以包含 menus、textarea、fieldset和label元素。</p>
+</blockquote>
+<p>表单用于向服务器传输数据</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title=" 属性"></a><form> 属性</form></h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>action</td>
+<td>URL</td>
+<td>规定当提交表单时向何处发送表单数据</td>
+</tr>
+<tr>
+<td>autocomplete</td>
+<td>on off</td>
+<td>规定是否启用表单的自动完成功能</td>
+</tr>
+<tr>
+<td>method</td>
+<td>get post</td>
+<td>规定用于发送form-data的HTTP方法</td>
+</tr>
+<tr>
+<td>name</td>
+<td>form_name</td>
+<td>规定表单名称</td>
+</tr>
+<tr>
+<td>enctype</td>
+<td>application/x-www-form-urlencoded ; multipart/form-data ; text/plain</td>
+<td>规定在发送表单数据之前如何对其进行编码。</td>
+</tr>
+</tbody>
+</table>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/HTML表单的用法简介.html#more" rel="contents">
@@ -1932,405 +2340,13 @@ met
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/HTML.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="kmac007">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatardk.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kmac007">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/HTML.html" itemprop="url">HTML</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-26T17:34:53+08:00">
-                2017-02-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTML/" itemprop="url" rel="index">
-                    <span itemprop="name">HTML</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/HTML.html" class="leancloud_visitors" data-flag-title="HTML">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-          
-            <span class="post-meta-divider">|</span>
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,278
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  5 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          HTML、XML、XHTML 有什么区别
-HTML：超文本标记语言（HyperText Markup Language）,是一种用于创建网页的标准标记语言，被涉及用来显示数据。
-XML：可扩展标记语言（Extensible Markuo Language）,它被涉及用来传输和存储数据。它是对超文本标记语言的补充，是各种应用程序之间进行数据传输的常用工具。由于标签没有被预定义，使用者可以自行定义标签
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/HTML.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-      
-    </div>
-    <div>
-      
-    </div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/从输入 URL 到页面展示发生了什么事情.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="kmac007">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatardk.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kmac007">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/从输入 URL 到页面展示发生了什么事情.html" itemprop="url">从输入 URL 到页面展示发生了什么事情</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-25T20:24:51+08:00">
-                2017-02-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端面试/" itemprop="url" rel="index">
-                    <span itemprop="name">前端面试</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/从输入 URL 到页面展示发生了什么事情.html" class="leancloud_visitors" data-flag-title="从输入 URL 到页面展示发生了什么事情">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-          
-            <span class="post-meta-divider">|</span>
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  608
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          这是一道经典的前端面试题，在学习的过程中，我想如果通过自己的语言来描述出来印象会更加深刻。
-什么是URL
-URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络上的门牌，是因特网上标准的资源的地址。URL的标准格式如下：协议类型://服务器地址（必要时需加上端口号）/路径/文件名
-
-例如：http://www.jianshu.com/users
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/从输入 URL 到页面展示发生了什么事情.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-      
-    </div>
-    <div>
-      
-    </div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -2378,7 +2394,7 @@ URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2389,7 +2405,7 @@ URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -2400,7 +2416,7 @@ URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

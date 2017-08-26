@@ -111,7 +111,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5419891-1c36c3af5c589a7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5419891-e932ec6042139b14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-08-25T12:22:32.874Z">
+<meta property="og:updated_time" content="2017-08-26T03:58:18.787Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从输入 URL 到页面展示发生了什么事情">
 <meta name="twitter:description" content="这是一道经典的前端面试题，在学习的过程中，我想如果通过自己的语言来描述出来印象会更加深刻。 什么是URL URL(Uniform / Universal Resource Locator)统一资源定位符，如同在网络上的门牌，是因特网上标准的资源的地址。URL的标准格式如下：协议类型://服务器地址（必要时需加上端口号）/路径/文件名  例如：http://www.jianshu.com/users">
@@ -473,7 +473,8 @@
 3. 路由器缓存 – 一般路由器也会缓存域名信息。
 4. ISP DNS 缓存（互联网服务提供商的DNS缓存） – 比如到电信的 DNS 上查找缓存。
 5. 如果都没有找到，则向根域名服务器查找域名对应 IP，根域名服务器把请求转发到下一级，直到找到 IP
-</code></pre><h2 id="浏览器发送一个HTTP请求到web服务器"><a href="#浏览器发送一个HTTP请求到web服务器" class="headerlink" title="浏览器发送一个HTTP请求到web服务器"></a>浏览器发送一个HTTP请求到web服务器</h2><h2 id="服务器处理"><a href="#服务器处理" class="headerlink" title="服务器处理"></a>服务器处理</h2><ul>
+</code></pre><a id="more"></a>
+<h2 id="浏览器发送一个HTTP请求到web服务器"><a href="#浏览器发送一个HTTP请求到web服务器" class="headerlink" title="浏览器发送一个HTTP请求到web服务器"></a>浏览器发送一个HTTP请求到web服务器</h2><h2 id="服务器处理"><a href="#服务器处理" class="headerlink" title="服务器处理"></a>服务器处理</h2><ul>
 <li>常见的 web服务器有 Apache、Nginx、IIS、Lighttpd</li>
 <li>web服务器接收用户的Request 交给网站代码，或者接受请求反向代理到其他 web服务器<br><img src="http://upload-images.jianshu.io/upload_images/5419891-1c36c3af5c589a7b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="web服务器.png"><h2 id="网站处理"><a href="#网站处理" class="headerlink" title="网站处理"></a>网站处理</h2><img src="http://upload-images.jianshu.io/upload_images/5419891-e932ec6042139b14.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>URL中的文件地址部分经过服务器上的路由程序重定向到对应的控制器(controller)对象,控制器对象根据URL中指定的操作执行相关的逻辑并调用目标数据的模型(Model)对象,模型对象与数据库交互完成目标操作后,控制器将模型中反馈的数据填充到视图中。<br>视图部分(通常是HTML页面)作为HTTP响应发送到浏览器端。<h2 id="浏览器处理"><a href="#浏览器处理" class="headerlink" title="浏览器处理"></a>浏览器处理</h2>HTML字符串被浏览器接受后被一句句读取解析<br>解析到link 标签后重新发送请求获取css<br>解析到 script标签后发送请求获取 js，并执行代码<br>解析到img 标签后发送请求获取图片资源<h2 id="绘制网页"><a href="#绘制网页" class="headerlink" title="绘制网页"></a>绘制网页</h2>将渲染好的页面图像显示出来，并开始响应用户的操作。</li>
 </ul>
@@ -632,7 +633,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -643,7 +644,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -654,7 +655,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
