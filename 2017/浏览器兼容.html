@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="kmac007">
 <meta property="og:description" content="CSS hackCSS hack由于不同厂商的浏览器，比如IE, Safari, firefox, chorme，或同一厂商不同版本，如IE6和IE7，对CSS的解析认识不完全一样，因此能够导致生成页面效果不一样，得不到所需要的效果。这个时候我们需要针对不同浏览器写不同的CSS，让它能够同时兼容不同的浏览器，能在不同浏览器中也能得到我们想要的页面效果。 浏览器兼容的思路要不要做 产品的角度（产品的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-26T03:57:39.626Z">
+<meta property="og:updated_time" content="2017-08-26T05:52:18.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器兼容">
 <meta name="twitter:description" content="CSS hackCSS hack由于不同厂商的浏览器，比如IE, Safari, firefox, chorme，或同一厂商不同版本，如IE6和IE7，对CSS的解析认识不完全一样，因此能够导致生成页面效果不一样，得不到所需要的效果。这个时候我们需要针对不同浏览器写不同的CSS，让它能够同时兼容不同的浏览器，能在不同浏览器中也能得到我们想要的页面效果。 浏览器兼容的思路要不要做 产品的角度（产品的">
@@ -423,7 +423,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,088
+                  1,089
                 </span>
               
 
@@ -471,10 +471,10 @@
 <h2 id="如何做"><a href="#如何做" class="headerlink" title="如何做"></a>如何做</h2><ul>
 <li>根据兼容需求选择技术框架/库(jquery)</li>
 <li>根据兼容需求选择兼容工具(html5shiv.js、repond.js、css reset、normalize.css、Modernizr)、postCSS</li>
-<li>条件注释、CSS hack、js能力检测做一些修补<a id="more"></a>
-<h1 id="列举5种以上浏览器兼容的写法"><a href="#列举5种以上浏览器兼容的写法" class="headerlink" title="列举5种以上浏览器兼容的写法"></a>列举5种以上浏览器兼容的写法</h1></li>
+<li>条件注释、CSS hack、js能力检测做一些修补</li>
 </ul>
-<ol>
+<a id="more"></a>
+<h1 id="列举5种以上浏览器兼容的写法"><a href="#列举5种以上浏览器兼容的写法" class="headerlink" title="列举5种以上浏览器兼容的写法"></a>列举5种以上浏览器兼容的写法</h1><ol>
 <li><p>条件注释<br>条件注释（Conditional comments）对IE的版本和IE非IE有优秀的区分能力，是WEB设计中常用的hack方法。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--[if IE]&gt;用于 IE &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if IE 6]&gt;用于 IE6 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if IE 7]&gt;用于 IE7 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if IE 8]&gt;用于 IE8 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if IE 9]&gt;用于 IE9 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if gt IE 6]&gt; 用于 IE6 以上版本&lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if lte IE 7]&gt; 用于 IE7或更低版本 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if gte IE 8]&gt;用于 IE8 或更高版本 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if lt IE 9]&gt;用于 IE9 以下版本&lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if !IE]&gt; --&gt;</span>用于非 IE <span class="comment">&lt;!-- &lt;![endif]--&gt;</span></div><div class="line">使用了条件注释的页面在 Windows Internet Explorer 9 中可正常工作，但在 Internet Explorer 10 中无法正常工作。 IE10不再支持条件注释</div></pre></td></tr></table></figure>
 </li>
