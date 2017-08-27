@@ -4,8 +4,104 @@
 
     
   <url>
+    <loc>https://www.kmac007.com/2017/jQuery%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0.html</loc>
+    <lastmod>2017-08-27T13:35:51.689Z</lastmod>
+    <data>
+        <display>
+        <title>jQuery学习使用笔记</title>
+        <pubTime>2017-04-13T10:20:14.000Z</pubTime>
+        
+        <tag>Ajax</tag>
+         
+        <tag>jQuery</tag>
+         
+        <tag>动画</tag>
+         
+         
+           
+             
+              <breadCrumb title="jQuery" url="https://www.kmac007.com/categories/jQuery/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.kmac007.com/2017/%E8%B7%A8%E5%9F%9F%E7%9A%84%E7%9A%84%E5%87%A0%E7%A7%8D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html</loc>
+    <lastmod>2017-08-27T12:21:50.535Z</lastmod>
+    <data>
+        <display>
+        <title>跨域的几种解决方案</title>
+        <pubTime>2017-04-10T06:10:14.000Z</pubTime>
+        
+        <tag>JavsScript</tag>
+         
+        <tag>Ajax</tag>
+         
+        <tag>跨域</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://www.kmac007.com/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.kmac007.com/2017/Ajax.html</loc>
+    <lastmod>2017-08-27T09:13:42.044Z</lastmod>
+    <data>
+        <display>
+        <title>Ajax</title>
+        <pubTime>2017-04-07T03:10:26.000Z</pubTime>
+        
+        <tag>JavsScript</tag>
+         
+        <tag>Ajax</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://www.kmac007.com/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.kmac007.com/2017/%E9%97%AD%E5%8C%85%E3%80%81%E5%AE%9A%E6%97%B6%E5%99%A8%E4%B8%8EBOM.html</loc>
+    <lastmod>2017-08-27T08:21:08.662Z</lastmod>
+    <data>
+        <display>
+        <title>闭包、定时器与BOM</title>
+        <pubTime>2017-04-05T04:36:21.000Z</pubTime>
+        
+        <tag>JavsScript</tag>
+         
+        <tag>BOM</tag>
+         
+        <tag>闭包</tag>
+         
+        <tag>定时器</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://www.kmac007.com/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.kmac007.com/2017/DOM%E4%BA%8B%E4%BB%B6.html</loc>
-    <lastmod>2017-08-26T14:15:34.924Z</lastmod>
+    <lastmod>2017-08-27T02:46:09.631Z</lastmod>
     <data>
         <display>
         <title>DOM事件</title>
