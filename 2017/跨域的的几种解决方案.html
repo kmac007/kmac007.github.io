@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="kmac007">
 <meta property="og:description" content="同源策略浏览器出于安全方面的考虑，只允许与本域下的接口交互。不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。所谓的同源策略指的是三个相同：  协议相同 域名相同 端口相同  例如: https://www.kmac007.com/2017/index.html 这个网址，协议是https，域名是kmac007.com，端口是80（默认端口可以省略）对于如下网址：  http://ww">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-27T12:21:50.535Z">
+<meta property="og:updated_time" content="2017-08-28T02:08:12.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域的几种解决方案">
 <meta name="twitter:description" content="同源策略浏览器出于安全方面的考虑，只允许与本域下的接口交互。不同源的客户端脚本在没有明确授权的情况下，不能读写对方的资源。所谓的同源策略指的是三个相同：  协议相同 域名相同 端口相同  例如: https://www.kmac007.com/2017/index.html 这个网址，协议是https，域名是kmac007.com，端口是80（默认端口可以省略）对于如下网址：  http://ww">
@@ -489,9 +489,9 @@
 <p>跨域有如下几种实现方式：</p>
 <ol>
 <li>JSONP</li>
-<li>CORS：跨域资源共享（Cross-origin resource sharing）</li>
 <li>document.domain</li>
-<li>window.postMessage<br>等</li>
+<li>window.postMessage</li>
+<li>CORS：跨域资源共享（Cross-origin resource sharing）<br>等</li>
 </ol>
 <h2 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h2><p>在JS中我们直接用XMLHttpRequest请求不同域上的数据时，是不可以的。由于script标签不受同源策略的限制，可以通过script标签向服务器请求数据。而JSONP就是通过这个特性来实现的。</p>
 <p>JSONP的原理是，在网页中动态添加一个script标签，src指向接口地址，向服务器请求JSON数据，这种做法不受同源政策限制；服务器收到请求后，将数据包裹在一个指定名字的回调函数里传回来。</p>
@@ -696,7 +696,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -718,7 +718,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">40</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
