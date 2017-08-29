@@ -110,7 +110,7 @@
 <meta property="og:description" content="prototype首先如下代码所示，声明一个构造函数，并实例化12345function Person(name)&amp;#123;&amp;#125;Person.prototype.name = &quot;kmac007&quot;var person = new Person() 如上作为构造函数Person的实例person1person.name //kmac007 person实例上并没有这个属性，而这个属性从何而来">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ovdfwd2hf.bkt.clouddn.com/prototypeprototype.png">
-<meta property="og:updated_time" content="2017-08-28T13:05:48.350Z">
+<meta property="og:updated_time" content="2017-08-29T01:18:36.133Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原型链、this与new操作符">
 <meta name="twitter:description" content="prototype首先如下代码所示，声明一个构造函数，并实例化12345function Person(name)&amp;#123;&amp;#125;Person.prototype.name = &quot;kmac007&quot;var person = new Person() 如上作为构造函数Person的实例person1person.name //kmac007 person实例上并没有这个属性，而这个属性从何而来">
@@ -434,7 +434,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,236
+                  1,237
                 </span>
               
 
@@ -477,7 +477,7 @@
 <p>每个函数都有一个prototype属性，就是上面看到的prototype,Person.prototype则表示实例的原型</p>
 <p>那么person这个实例与Person.prototype的关系又是怎么样的呢，接下来就有了<code>__proto__</code></p>
 <a id="more"></a>
-<h1 id="proto"><a href="#proto" class="headerlink" title="__proto__"></a><code>__proto__</code></h1><p>每个JavaScript对象（除了null）都有一个隐式原型属性<code>__proto__</code>,这个属性指向创建该对象的函数的prototype,而构造函数原型的constructor属性指向构造函数本身<br>如下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>)</span>&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">Person.prototype.name = <span class="string">"kmac007"</span></div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person()</div><div class="line"></div><div class="line">person.__proto__ === Person.prototype <span class="comment">//true</span></div><div class="line">Person.prototype.constructor === Person <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
+<h1 id="proto"><a href="#proto" class="headerlink" title="__proto__"></a><code>__proto__</code></h1><p>每个JavaScript对象（除了null）都有一个隐式原型属性<code>__proto__</code>,这个属性指向创建该对象构造函数的prototype,而构造函数原型的constructor属性指向构造函数本身<br>如下<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>)</span>&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">Person.prototype.name = <span class="string">"kmac007"</span></div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person()</div><div class="line"></div><div class="line">person.__proto__ === Person.prototype <span class="comment">//true</span></div><div class="line">Person.prototype.constructor === Person <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
 <p>那么Person.prototype对象的<code>__proto__</code>又是什么呢<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Person.prototype.__proto__ === <span class="built_in">Object</span>.prototype <span class="comment">//true</span></div><div class="line"><span class="built_in">Object</span>.prototype.__proto__ === <span class="literal">null</span> <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
 <p>由上可知实例对象通过<code>__proto__</code>与原型对象一层一层的连接<br>当我们使用person.toString()方法时，实例对象本身没有，因此通过<code>person.__proto__</code>向它的原型对象查找，如再找不到，则继续往它原型对象的原型对象查找<code>person.__proto__.__proto__</code>，最终在Object.prototype上找到了toString()方法。</p>
 <p>而这种由<code>__proto__</code>相互关联的原型组成的链式结构就称作原型链。如下蓝色线条所示。</p>
@@ -678,7 +678,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -700,7 +700,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">40</span>
+                <span class="site-state-item-count">44</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

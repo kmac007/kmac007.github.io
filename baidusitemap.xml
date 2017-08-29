@@ -4,8 +4,36 @@
 
     
   <url>
+    <loc>https://www.kmac007.com/2017/%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E8%A7%84%E8%8C%83%E6%B5%85%E6%9E%90.html</loc>
+    <lastmod>2017-08-29T08:30:26.175Z</lastmod>
+    <data>
+        <display>
+        <title>前端模块化规范CommonJS,AMD,CMD浅析</title>
+        <pubTime>2017-04-30T07:24:31.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>模块化</tag>
+         
+        <tag>CommonJS</tag>
+         
+        <tag>AMD</tag>
+         
+        <tag>CMD</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://www.kmac007.com/categories/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.kmac007.com/2017/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8A%E5%87%A0%E7%A7%8D%E7%BB%A7%E6%89%BF%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F.html</loc>
-    <lastmod>2017-08-28T15:28:48.637Z</lastmod>
+    <lastmod>2017-08-29T02:31:06.446Z</lastmod>
     <data>
         <display>
         <title>面向对象以及几种继承的实现方式</title>
@@ -29,7 +57,7 @@
     
   <url>
     <loc>https://www.kmac007.com/2017/%E5%8E%9F%E5%9E%8B%E9%93%BE%E3%80%81this%E4%B8%8Enew%E6%93%8D%E4%BD%9C%E7%AC%A6.html</loc>
-    <lastmod>2017-08-28T13:05:48.350Z</lastmod>
+    <lastmod>2017-08-29T01:18:36.133Z</lastmod>
     <data>
         <display>
         <title>原型链、this与new操作符</title>
