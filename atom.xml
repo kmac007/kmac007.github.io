@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.kmac007.com/"/>
-  <updated>2017-09-05T13:45:52.053Z</updated>
+  <updated>2017-09-05T13:48:09.778Z</updated>
   <id>https://www.kmac007.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://www.kmac007.com/2017/MongoDB%E4%B8%8EMongoose%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.html"/>
     <id>https://www.kmac007.com/2017/MongoDB与Mongoose学习总结.html</id>
     <published>2017-08-25T15:02:31.000Z</published>
-    <updated>2017-09-05T13:45:52.053Z</updated>
+    <updated>2017-09-05T13:48:09.778Z</updated>
     
     <content type="html"><![CDATA[<p>为了能够使用Node.js实现前后端分离，MongoDB是必学的，Mongodb是基于文档的非关系型数据库，文档是按BSON（JSON的轻量化二进制格式）存储的，增删改查等管理数据库的命令和JavaScript语法很像。以下是我的学习笔记。</p>
 <h1 id="NoSQL简介"><a href="#NoSQL简介" class="headerlink" title="NoSQL简介"></a>NoSQL简介</h1><blockquote>
@@ -60,14 +60,15 @@
 <li>MongoDB安装简单。</li>
 </ul>
 <h2 id="启动方法"><a href="#启动方法" class="headerlink" title="启动方法"></a>启动方法</h2><ol>
-<li><p>设置dbpath参数值为自定义的目录路径，如:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod --dbpath=C:/data/db</div></pre></td></tr></table></figure>
-</li>
-<li><p>在test文件夹中新建一个mongod.conf文件，在这个文件中设置mongodb启动的配置参数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//mongod.conf</span></div><div class="line">dbpath = data</div><div class="line">logpath = log/mongod.log</div></pre></td></tr></table></figure>
-</li>
+<li>设置dbpath参数值为自定义的目录路径，如:</li>
 </ol>
-<p>启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod -f conf/mongod.conf</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod --dbpath=C:/data/db</div></pre></td></tr></table></figure>
+<ol>
+<li>在test文件夹中新建一个mongod.conf文件，在这个文件中设置mongodb启动的配置参数</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//mongod.conf</span></div><div class="line">dbpath = data</div><div class="line">logpath = log/mongod.log</div></pre></td></tr></table></figure>
+<p>启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod -f conf/mongod.conf</div></pre></td></tr></table></figure>
 <p>执行后命令行工具中没有任何提示，记录保存到日志文件中，mongodb服务已正常开启</p>
 <ol>
 <li>windows用户可以直接执行mongod.exe可执行文件来直接启动服务器</li>
@@ -230,17 +231,19 @@
 <h4 id="updateMany"><a href="#updateMany" class="headerlink" title="updateMany()"></a>updateMany()</h4><p>updateMany()与update()方法唯一的区别就是默认更新多个文档，即使设置{multi: false}也无法只更新第一个文档</p>
 <h4 id="find-save"><a href="#find-save" class="headerlink" title="find() + save()"></a>find() + save()</h4><p>如果需要更新的操作比较复杂，可以使用find() + save()方法来处理，先找到与条件匹配的文档，再通过forEach遍历，然后通过save()方法更新数据</p>
 <h4 id="updateOne"><a href="#updateOne" class="headerlink" title="updateOne()"></a>updateOne()</h4><p>默认更新一个文档，即使设置{multi: true}也无法更新多个</p>
-<h4 id="findOne-save"><a href="#findOne-save" class="headerlink" title="findOne()+save()"></a>findOne()+save()</h4><h4 id="findOneAndUpdate"><a href="#findOneAndUpdate" class="headerlink" title="findOneAndUpdate()"></a>findOneAndUpdate()</h4><h4 id="findByIdAndUpdate"><a href="#findByIdAndUpdate" class="headerlink" title="findByIdAndUpdate"></a>findByIdAndUpdate</h4><h3 id="文档删除"><a href="#文档删除" class="headerlink" title="文档删除"></a>文档删除</h3><p>有三种方法用于文档删除<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">remove()</div><div class="line">findOneAndRemove()</div><div class="line">findByIdAndRemove()</div></pre></td></tr></table></figure></p>
+<h4 id="findOne-save"><a href="#findOne-save" class="headerlink" title="findOne()+save()"></a>findOne()+save()</h4><h4 id="findOneAndUpdate"><a href="#findOneAndUpdate" class="headerlink" title="findOneAndUpdate()"></a>findOneAndUpdate()</h4><h4 id="findByIdAndUpdate"><a href="#findByIdAndUpdate" class="headerlink" title="findByIdAndUpdate"></a>findByIdAndUpdate</h4><h3 id="文档删除"><a href="#文档删除" class="headerlink" title="文档删除"></a>文档删除</h3><p>有三种方法用于文档删除</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">remove()</div><div class="line">findOneAndRemove()</div><div class="line">findByIdAndRemove()</div></pre></td></tr></table></figure>
 <h4 id="remove-1"><a href="#remove-1" class="headerlink" title="remove()"></a>remove()</h4><p>remove()有两种形式，一种是文档的remove()方法，一种是Model的remove()方法</p>
 <ol>
-<li>Model的remove()方法<br>该方法的第一个参数conditions为查询条件，第二个参数回调函数的形式如下function(err){}<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">model.remove(conditions, [callback])</div></pre></td></tr></table></figure>
-</li>
+<li>Model的remove()方法<br>该方法的第一个参数conditions为查询条件，第二个参数回调函数的形式如下function(err){}</li>
 </ol>
-<p><strong>注意：remove()方法中的回调函数不能省略，否则数据不会被删除。当然，可以使用exec()方法来简写代码</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">model.remove(&#123;<span class="attr">x</span>:<span class="number">1</span>&#125;).exec()</div></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">model.remove(conditions, [callback])</div></pre></td></tr></table></figure>
+<p><strong>注意：remove()方法中的回调函数不能省略，否则数据不会被删除。当然，可以使用exec()方法来简写代码</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">model.remove(&#123;<span class="attr">x</span>:<span class="number">1</span>&#125;).exec()</div></pre></td></tr></table></figure>
 <ol>
-<li>文档的remove()方法<br>该方法的参数回调函数的形式如下function(err, doc){}<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.remove([callback])</div><div class="line"><span class="comment">//这里的callback可以省略</span></div></pre></td></tr></table></figure>
-</li>
+<li>文档的remove()方法<br>该方法的参数回调函数的形式如下function(err, doc){}</li>
 </ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.remove([callback])</div><div class="line"><span class="comment">//这里的callback可以省略</span></div></pre></td></tr></table></figure>
 <h4 id="findOneAndRemove"><a href="#findOneAndRemove" class="headerlink" title="findOneAndRemove()"></a>findOneAndRemove()</h4><h4 id="findByIdAndRemove"><a href="#findByIdAndRemove" class="headerlink" title="findByIdAndRemove()"></a>findByIdAndRemove()</h4><h1 id="参考"><a href="#参考" class="headerlink" title="参考:"></a>参考:</h1><ol>
 <li><a href="http://mongoosejs.com/index.html" target="_blank" rel="external">mongoose docs</a></li>
 <li><a href="http://www.cnblogs.com/xiaohuochai/p/7215067.html" target="_blank" rel="external">Mongoose入门基础</a></li>
@@ -1493,11 +1496,11 @@
       <category term="JavaScript" scheme="https://www.kmac007.com/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="https://www.kmac007.com/tags/JavaScript/"/>
-    
       <category term="函数" scheme="https://www.kmac007.com/tags/%E5%87%BD%E6%95%B0/"/>
     
       <category term="作用域" scheme="https://www.kmac007.com/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    
+      <category term="JavaScript" scheme="https://www.kmac007.com/tags/JavaScript/"/>
     
   </entry>
   
