@@ -337,6 +337,802 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/几种方式实现元素的垂直居中.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/几种方式实现元素的垂直居中.html" itemprop="url">几种方式实现元素的垂直居中</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-12T20:10:06+08:00">
+                2017-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/几种方式实现元素的垂直居中.html" class="leancloud_visitors" data-flag-title="几种方式实现元素的垂直居中">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  269
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>HTML结构</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span>垂直居中<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="flexbox布局"><a href="#flexbox布局" class="headerlink" title="flexbox布局"></a>flexbox布局</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: red;</div><div class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">display</span>: flex;</div><div class="line">  <span class="attribute">justify-content</span>: center;</div><div class="line">  <span class="attribute">align-items</span>: center;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#000</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="table-cell"><a href="#table-cell" class="headerlink" title="table-cell"></a>table-cell</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: red;</div><div class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">  <span class="attribute">display</span>: table-cell;</div><div class="line">  <span class="attribute">vertical-align</span>: middle;</div><div class="line">  <span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#000</span>;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/几种方式实现元素的垂直居中.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/浏览器兼容.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/浏览器兼容.html" itemprop="url">浏览器兼容</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-10T19:15:04+08:00">
+                2017-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/兼容性/" itemprop="url" rel="index">
+                    <span itemprop="name">兼容性</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/浏览器兼容.html" class="leancloud_visitors" data-flag-title="浏览器兼容">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,089
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="CSS-hack"><a href="#CSS-hack" class="headerlink" title="CSS hack"></a>CSS hack</h1><p>CSS hack由于不同厂商的浏览器，比如IE, Safari, firefox, chorme，或同一厂商不同版本，如IE6和IE7，对CSS的解析认识不完全一样，因此能够导致生成页面效果不一样，得不到所需要的效果。这个时候我们需要针对不同浏览器写不同的CSS，让它能够同时兼容不同的浏览器，能在不同浏览器中也能得到我们想要的页面效果。</p>
+<h1 id="浏览器兼容的思路"><a href="#浏览器兼容的思路" class="headerlink" title="浏览器兼容的思路"></a>浏览器兼容的思路</h1><h2 id="要不要做"><a href="#要不要做" class="headerlink" title="要不要做"></a>要不要做</h2><ul>
+<li>产品的角度（产品的受众、受众的浏览器比例、效果优先还是基本功能优先）</li>
+<li>成本角度（有无必要做某件事情）</li>
+</ul>
+<h2 id="做到什么程度"><a href="#做到什么程度" class="headerlink" title="做到什么程度"></a>做到什么程度</h2><ul>
+<li>让哪些浏览器支持哪些效果</li>
+</ul>
+<h2 id="如何做"><a href="#如何做" class="headerlink" title="如何做"></a>如何做</h2><ul>
+<li>根据兼容需求选择技术框架/库(jquery)</li>
+<li>根据兼容需求选择兼容工具(html5shiv.js、repond.js、css reset、normalize.css、Modernizr)、postCSS</li>
+<li>条件注释、CSS hack、js能力检测做一些修补</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/浏览器兼容.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/CSS常见布局.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/CSS常见布局.html" itemprop="url">常见的CSS布局</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-07T17:20:34+08:00">
+                2017-03-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/CSS常见布局.html" class="leancloud_visitors" data-flag-title="常见的CSS布局">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  303
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="五种方式实现三栏布局"><a href="#五种方式实现三栏布局" class="headerlink" title="五种方式实现三栏布局"></a>五种方式实现三栏布局</h1><p>采用五种方式实现横向左右定宽，中间自适应的三栏布局</p>
+<h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><script async src="//jsfiddle.net/kmac007/pgd5xo51/embed/css,result,html/dark/"></script>
+
+<p>左右模块各自向左右浮动，并设置中间部分的左右margin值<br>缺点是要按照left,right,main这样的顺序写HTML。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/CSS常见布局.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/浅析浮动定位BFC边距合并.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/浅析浮动定位BFC边距合并.html" itemprop="url">浅析浮动定位BFC边距合并</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-05T15:00:55+08:00">
+                2017-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/浅析浮动定位BFC边距合并.html" class="leancloud_visitors" data-flag-title="浅析浮动定位BFC边距合并">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,330
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响"><a href="#浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响" class="headerlink" title="浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响?"></a>浮动元素有什么特征？对父容器、其他浮动元素、普通元素、文字分别有什么影响?</h1><p>浮动的特征是使元素脱离普通流，按照指定方向发生移动，遇到父级边界或者相邻的浮动元素才停下来；</p>
+<p><strong>对父容器的影响:</strong> 父容器中的元素浮动后，脱离普通流会使得父容器失去高度；</p>
+<p><strong>对其他浮动元素的影响：</strong> 如果是同一方向浮动，相邻的浮动元素会并列在同一行，空间不够，会换到下一行</p>
+<p><strong>对普通元素的影响</strong>： 浮动元素会脱离普通流，普通元素会占据它原有的空间，从而会出现浮动元素覆盖普通元素</p>
+<p><strong>对文字的影响：</strong> 文字可以感知的浮动元素的存在，文字会在浮动元素周围形成环绕效果</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/浅析浮动定位BFC边距合并.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/CSS常见样式.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1614,7 +2410,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1625,7 +2421,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1636,7 +2432,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-count">57</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
