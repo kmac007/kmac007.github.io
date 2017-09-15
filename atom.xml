@@ -603,7 +603,7 @@
     <link href="https://www.kmac007.com/2017/ES6%20Class%E6%B5%85%E6%9E%90.html"/>
     <id>https://www.kmac007.com/2017/ES6 Class浅析.html</id>
     <published>2017-07-30T13:23:42.000Z</published>
-    <updated>2017-09-14T15:07:20.408Z</updated>
+    <updated>2017-09-15T01:19:15.409Z</updated>
     
     <content type="html"><![CDATA[<p>最近在学习React.js，发现React.js中模块可以直接定义类的方式生成模块。用子类来继承<code>React.Component</code>生成模块的方式，简洁明了。<br>如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// react.js组件</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Add</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">   <span class="comment">//something...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>下面，将详细介绍ES6的Class。</p>
@@ -664,6 +664,9 @@
 </li>
 </ol>
 <p>这种情况与第二种情况非常像。<code>A</code>也是一个普通函数，所以直接继承<code>Function.prototype</code>。但是，<code>A</code>调用后返回的对象不继承任何方法，所以它的<code>__proto__</code>指向<code>Function.prototype</code>。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6 入门</a></li>
+</ol>
 ]]></content>
     
     <summary type="html">
@@ -683,6 +686,109 @@
       <category term="ES6" scheme="https://www.kmac007.com/tags/ES6/"/>
     
       <category term="Class" scheme="https://www.kmac007.com/tags/Class/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6 Modules浅析</title>
+    <link href="https://www.kmac007.com/2017/ES6%20Modules%E6%B5%85%E6%9E%90.html"/>
+    <id>https://www.kmac007.com/2017/ES6 Modules浅析.html</id>
+    <published>2017-07-26T11:33:22.000Z</published>
+    <updated>2017-09-15T03:56:13.888Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前写了一个Vue.js小项目<a href="https://github.com/kmac007/vue-resume" target="_blank" rel="external">vue-resume</a>，在写这个项目的过程中发现ES6的语法非常好用。印象最深的就是ES6的模块化，模块的导入直接用<code>import</code>，而导出使用<code>export</code>，非常的简单易读，对比之前AMD规范，ES6 Modules写法相当的简单。</p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>在ES6之前，社区制定了一些模块加载方案，最主要的有CommonJS和AMD两种。前者用于服务器，后者用于浏览器。ES6在语言标准的层面上，实现了模块加载功能，而且实现得相当简单，完全可以取代CommonJS和AMD规范，成为浏览器和服务器通用的模块解决方案。</p>
+<p>ES6模块的设计思想，是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量。CommonJS和AMD模块，都只能在运行时确定这些东西。比如，CommonJS模块就是对象，输入时必须查找对象的属性。</p>
+<a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// CommonJS模块</span></div><div class="line"><span class="keyword">let</span> &#123; stat, exists, readFile &#125; = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 等同于</span></div><div class="line"><span class="keyword">let</span> _fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</div><div class="line"><span class="keyword">let</span> stat = _fs.stat;</div><div class="line"><span class="keyword">let</span> exists = _fs.exists;</div><div class="line"><span class="keyword">let</span> readfile = _fs.readfile;</div></pre></td></tr></table></figure>
+<p>上面代码的实质是整体加载<code>fs</code>模块（即加载<code>fs</code>的所有方法），生成一个对象（<code>_fs</code>），然后再从这个对象上面读取3个方法。这种加载称为“<code>运行时加载</code>”，因为只有运行时才能得到这个对象，导致完全没办法在编译时做“<code>静态优化</code>”。</p>
+<p>ES6模块不是对象，而是通过<code>export</code>命令显示指定输出的代码，再通过<code>import</code>命令输入。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//ES6模块</span></div><div class="line"><span class="keyword">import</span> &#123; stat, exists, readfile &#125; <span class="keyword">from</span> <span class="string">'fs'</span></div></pre></td></tr></table></figure></p>
+<p>上面代码的实质是从<code>fs</code>模块加载3个方法，其他方法不加载。这种加载称为“<code>编译时加载</code>”或者静态加载，即ES6可以在编译时就完成模块加载，效率要比CommonJS模块的加载方式高。当然，这也导致了没法引用ES6模块本身，因为它不是对象。</p>
+<h1 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h1><p>ES6的模块自动采用严格模式，不管你有没有在模块头部加上”use strict”</p>
+<p>严格模式主要有以下限制：</p>
+<ul>
+<li>变量必须声明后使用</li>
+<li>函数的参数不能有同名，否则报错</li>
+<li>不能使用<code>with</code>语句</li>
+<li>不能对只读属性赋值，否则报错</li>
+<li>不能使用前缀0表示八进制数，否则报错</li>
+<li>不能删除不可删除的属性，否则报错</li>
+<li>不能删除变量<code>delete prop</code>，会报错，只能删除属性<code>delete global[prop]</code></li>
+<li><code>eval</code>不会在它的外层作用域引入变量</li>
+<li><code>eval</code>和<code>arguments</code>不能被重新赋值</li>
+<li><code>arguments</code>不会自动反映函数参数的变化</li>
+<li>不能使用<code>arguments.callee</code></li>
+<li>不能使用<code>arguments.caller</code></li>
+<li>禁止<code>this</code>指向全局对象</li>
+<li>不能使用<code>fn.caller</code>和<code>fn.argumens</code>获取函数调用的堆栈</li>
+<li>增加了保留字（如<code>protected</code>、<code>static</code>、<code>interface</code>）</li>
+</ul>
+<p><strong>注意：ES6模块之中，顶层的<code>this</code> 指向<code>undefined</code>，即不应该在顶层代码使用<code>this</code></strong></p>
+<h1 id="export命令"><a href="#export命令" class="headerlink" title="export命令"></a>export命令</h1><p>模块功能主要由两个命令构成：<code>export</code>和<code>import</code>。<code>export</code>命令用于规定模块对外的接口，<code>import</code>用于输入其他模块提供的功能。</p>
+<p>一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。要使外部能读取模块内部的某个变量，必须用<code>export</code>关键字输出该变量。</p>
+<h2 id="输出变量"><a href="#输出变量" class="headerlink" title="输出变量"></a>输出变量</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//a.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> firstName = <span class="string">'dk'</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> lastName = <span class="string">'robb'</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> year = <span class="number">1847</span></div></pre></td></tr></table></figure>
+<p>上面通过<code>export</code>输出了三个变量，上面也可以写为<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//a.js</span></div><div class="line"><span class="keyword">var</span> firstName = <span class="string">'dk'</span></div><div class="line"><span class="keyword">var</span> lastName = <span class="string">'robb'</span></div><div class="line"><span class="keyword">var</span> year = <span class="number">1847</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> &#123;firstName, lastName, year&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="输出函数或类并可以重命名"><a href="#输出函数或类并可以重命名" class="headerlink" title="输出函数或类并可以重命名"></a>输出函数或类并可以重命名</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a1</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a2</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> &#123;a1 <span class="keyword">as</span> add1, a2 <span class="keyword">as</span> add2&#125;</div></pre></td></tr></table></figure>
+<p>通过使用<code>as</code>关键字，重命名了函数<code>a1</code>、<code>a2</code>的对外接口。</p>
+<h2 id="对外的接口"><a href="#对外的接口" class="headerlink" title="对外的接口"></a>对外的接口</h2><p><code>export</code>命令规定的是对外的接口，必须与模块内部变量建立一一对应关系。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//报错</span></div><div class="line"><span class="keyword">export</span> <span class="number">1</span></div><div class="line"></div><div class="line"><span class="comment">//报错</span></div><div class="line"><span class="keyword">var</span> m = <span class="number">1</span></div><div class="line"><span class="keyword">export</span> m</div></pre></td></tr></table></figure></p>
+<p>上述两种写法都只是输出了一个值。正确的写法：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//写法一</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> m = <span class="number">1</span></div><div class="line"></div><div class="line"><span class="comment">//写法二</span></div><div class="line"><span class="keyword">var</span> m = <span class="number">1</span></div><div class="line"><span class="keyword">export</span> &#123;m&#125;</div><div class="line"></div><div class="line"><span class="comment">//写法三</span></div><div class="line"><span class="keyword">var</span> n = <span class="number">1</span></div><div class="line"><span class="keyword">export</span> &#123;n <span class="keyword">as</span> m&#125;</div></pre></td></tr></table></figure></p>
+<p>上述三种写法都是正确的，规定了对外的接口<code>m</code>。其他脚本可以通过这个接口，取到值<code>1</code>。它们的实质是，在接口名与模块内部变量之间，建立了一一对应的关系。</p>
+<h1 id="Module动态加载"><a href="#Module动态加载" class="headerlink" title="Module动态加载"></a>Module动态加载</h1><p><code>export</code>语句输出的接口，与其对应的值是动态绑定关系，即通过该接口，可以取到模块内部实时的值。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> foo = <span class="string">'bar'</span></div><div class="line">setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>foo = <span class="string">'baz'</span>, <span class="number">500</span>)</div></pre></td></tr></table></figure></p>
+<p>上面代码输出变量<code>foo</code>，值为<code>bar</code>，500毫秒后变为<code>baz</code></p>
+<h1 id="import命令"><a href="#import命令" class="headerlink" title="import命令"></a>import命令</h1><p>使用<code>export</code>命令定义了模块的对外接口以后，其他JS文件就可以通过<code>import</code>命令加载这个模块。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//main.js</div><div class="line">import &#123;firstName, lastName, year&#125; from &apos;./a.js&apos;;</div><div class="line"></div><div class="line">function setName(element) &#123;</div><div class="line">  element.textContent = firstName + &apos; &apos; + lastName;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果向为输入的变量重新取一个名字，<code>import</code>命令可以使用<code>as</code>关键字，将输入的变量重命名。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; lastName <span class="keyword">as</span> name &#125; <span class="keyword">from</span> <span class="string">'./a.js'</span></div></pre></td></tr></table></figure></p>
+<h2 id="提升"><a href="#提升" class="headerlink" title="提升"></a>提升</h2><p>注意，<code>import</code>命令具有提升效果，会提升到整个模块的头部，首先执行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">foo()</div><div class="line"></div><div class="line">import &#123; foo &#125; from &apos;my_module&apos;</div></pre></td></tr></table></figure></p>
+<p>不会报错，原因是<code>import</code>的执行早于<code>foo</code>的调用。这种行为的本质是<code>import</code>命令是编译阶段执行的，在代码运行之前。</p>
+<h2 id="整体加载"><a href="#整体加载" class="headerlink" title="整体加载 *"></a>整体加载 <code>*</code></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> circle <span class="keyword">from</span> <span class="string">'./my_module'</span></div></pre></td></tr></table></figure>
+<h1 id="export-default命令"><a href="#export-default命令" class="headerlink" title="export default命令"></a>export default命令</h1><p>从上面的例子可以看出，使用<code>import</code>命令时，用户需要知道所要加载的变量名或者函数名，否则无法加载。</p>
+<p>对于这个问题，我们可以使用<code>export default</code>命令，为模块指定默认输出。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//b.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'foo'</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p> 默认输出的是一个函数，当其他模块加载该模块时，<code>import</code>命令可以为该匿名函数指定任意名字。如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//index.js</span></div><div class="line"><span class="keyword">import</span> dk <span class="keyword">from</span> <span class="string">'./b.js'</span></div><div class="line">dk() <span class="comment">//foo</span></div></pre></td></tr></table></figure></p>
+<p>上面代码的<code>import</code>命令，可以用任意名称指向b.js输出的方法，这时候就不需要知道原模块的函数名。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6 入门</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前写了一个Vue.js小项目&lt;a href=&quot;https://github.com/kmac007/vue-resume&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;vue-resume&lt;/a&gt;，在写这个项目的过程中发现ES6的语法非常好用。印象最深的就是ES6的模块化，模块的导入直接用&lt;code&gt;import&lt;/code&gt;，而导出使用&lt;code&gt;export&lt;/code&gt;，非常的简单易读，对比之前AMD规范，ES6 Modules写法相当的简单。&lt;/p&gt;
+&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;在ES6之前，社区制定了一些模块加载方案，最主要的有CommonJS和AMD两种。前者用于服务器，后者用于浏览器。ES6在语言标准的层面上，实现了模块加载功能，而且实现得相当简单，完全可以取代CommonJS和AMD规范，成为浏览器和服务器通用的模块解决方案。&lt;/p&gt;
+&lt;p&gt;ES6模块的设计思想，是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量。CommonJS和AMD模块，都只能在运行时确定这些东西。比如，CommonJS模块就是对象，输入时必须查找对象的属性。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="ECMAScript" scheme="https://www.kmac007.com/categories/ECMAScript/"/>
+    
+    
+      <category term="ES2015" scheme="https://www.kmac007.com/tags/ES2015/"/>
+    
+      <category term="ECMAScript" scheme="https://www.kmac007.com/tags/ECMAScript/"/>
+    
+      <category term="ES6" scheme="https://www.kmac007.com/tags/ES6/"/>
+    
+      <category term="Modules" scheme="https://www.kmac007.com/tags/Modules/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端性能优化</title>
+    <link href="https://www.kmac007.com/2017/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html"/>
+    <id>https://www.kmac007.com/2017/前端性能优化.html</id>
+    <published>2017-05-13T06:22:34.000Z</published>
+    <updated>2017-09-15T09:13:19.864Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="http://ovdfwd2hf.bkt.clouddn.com/performanceperformance.png" alt="性能优化"></center>]]></content>
+    
+    <summary type="html">
+    
+      &lt;center&gt;&lt;img src=&quot;http://ovdfwd2hf.bkt.clouddn.com/performanceperformance.png&quot; alt=&quot;性能优化&quot;&gt;&lt;/center&gt;
+    
+    </summary>
+    
+      <category term="性能优化" scheme="https://www.kmac007.com/categories/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+    
+      <category term="性能优化" scheme="https://www.kmac007.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
@@ -1856,201 +1962,6 @@
       <category term="引用类型" scheme="https://www.kmac007.com/tags/%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/"/>
     
       <category term="对象拷贝" scheme="https://www.kmac007.com/tags/%E5%AF%B9%E8%B1%A1%E6%8B%B7%E8%B4%9D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>正则表达式</title>
-    <link href="https://www.kmac007.com/2017/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html"/>
-    <id>https://www.kmac007.com/2017/正则表达式.html</id>
-    <published>2017-03-22T11:36:21.000Z</published>
-    <updated>2017-08-26T10:53:08.447Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="正则表达式常用字符及其含义"><a href="#正则表达式常用字符及其含义" class="headerlink" title="正则表达式常用字符及其含义"></a>正则表达式常用字符及其含义</h2><table>
-<thead>
-<tr>
-<th>字符</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\d</td>
-<td>数字字符</td>
-</tr>
-<tr>
-<td>\w</td>
-<td>单词字符，字母、数字下划线</td>
-</tr>
-<tr>
-<td>\s</td>
-<td>空白符</td>
-</tr>
-<tr>
-<td>[a-zA-Z0-9]]</td>
-<td>任意字母a-z,A-Z和数字</td>
-</tr>
-<tr>
-<td>\b</td>
-<td>单词边界</td>
-</tr>
-<tr>
-<td>.</td>
-<td>除了回车符和换行符之外的所有字符</td>
-</tr>
-<tr>
-<td>*</td>
-<td>出现零次或多次（任意次）</td>
-</tr>
-<tr>
-<td>+</td>
-<td>出现一次或多次（至少出现一次）</td>
-</tr>
-<tr>
-<td>?</td>
-<td>出现零次或一次（最多出现一次）</td>
-</tr>
-<tr>
-<td>x{3}</td>
-<td>x出现3次</td>
-</tr>
-<tr>
-<td>^</td>
-<td>以XXX开头</td>
-</tr>
-<tr>
-<td>$</td>
-<td>以XXX结尾</td>
-</tr>
-</tbody>
-</table>
-<a id="more"></a>
-<h2 id="写一个函数trim-str-，去除字符串两边的空白字符"><a href="#写一个函数trim-str-，去除字符串两边的空白字符" class="headerlink" title="写一个函数trim(str)，去除字符串两边的空白字符"></a>写一个函数trim(str)，去除字符串两边的空白字符</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">trim</span>(<span class="params">str</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> str.replace(<span class="regexp">/^\s+|\s+$/g</span>,<span class="string">''</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="写一个函数isEmail-str-，判断用户输入的是不是邮箱"><a href="#写一个函数isEmail-str-，判断用户输入的是不是邮箱" class="headerlink" title="写一个函数isEmail(str)，判断用户输入的是不是邮箱"></a>写一个函数isEmail(str)，判断用户输入的是不是邮箱</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isEmail</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> reg = <span class="regexp">/^\w+@\w+\.\w+$/</span></div><div class="line">  <span class="keyword">return</span> reg.test(str)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="写一个函数isPhoneNum-str-，判断用户输入的是不是手机号"><a href="#写一个函数isPhoneNum-str-，判断用户输入的是不是手机号" class="headerlink" title="写一个函数isPhoneNum(str)，判断用户输入的是不是手机号"></a>写一个函数isPhoneNum(str)，判断用户输入的是不是手机号</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isPhoneNum</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> reg = <span class="regexp">/^1[35789]\d&#123;9&#125;$/</span></div><div class="line">  <span class="keyword">return</span> reg.test(str)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="写一个函数isValidUsername-str-，判断用户输入的是不是合法的用户名（长度6-20个字符，只能包括字母、数字、下划线）"><a href="#写一个函数isValidUsername-str-，判断用户输入的是不是合法的用户名（长度6-20个字符，只能包括字母、数字、下划线）" class="headerlink" title="写一个函数isValidUsername(str)，判断用户输入的是不是合法的用户名（长度6-20个字符，只能包括字母、数字、下划线）"></a>写一个函数isValidUsername(str)，判断用户输入的是不是合法的用户名（长度6-20个字符，只能包括字母、数字、下划线）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isValidUsername</span>(<span class="params">str</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> reg = <span class="regexp">/^\w&#123;6,20&#125;$/</span></div><div class="line">  <span class="keyword">return</span> reg.test(str)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="写一个函数isValidPassword-str-判断用户输入的是不是合法密码（长度6-20个字符，只包括大写字母、小写字母、数字、下划线，且至少至少包括两种）"><a href="#写一个函数isValidPassword-str-判断用户输入的是不是合法密码（长度6-20个字符，只包括大写字母、小写字母、数字、下划线，且至少至少包括两种）" class="headerlink" title="写一个函数isValidPassword(str), 判断用户输入的是不是合法密码（长度6-20个字符，只包括大写字母、小写字母、数字、下划线，且至少至少包括两种）"></a>写一个函数isValidPassword(str), 判断用户输入的是不是合法密码（长度6-20个字符，只包括大写字母、小写字母、数字、下划线，且至少至少包括两种）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isValidPassword</span>(<span class="params">str</span>)</span>&#123;</div><div class="line">  <span class="keyword">if</span>(str.length&lt;<span class="number">6</span>||str.length&gt;<span class="number">20</span>||<span class="regexp">/[\W]/</span>.test(str)) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">  &#125;<span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">var</span> count = <span class="number">0</span></div><div class="line">    <span class="keyword">if</span>(<span class="regexp">/[a-z]/</span>.test(str)) count++</div><div class="line">    <span class="keyword">if</span>(<span class="regexp">/[A-Z]/</span>.test(str)) count++</div><div class="line">    <span class="keyword">if</span>(<span class="regexp">/[0-9]/</span>.test(str)) count++</div><div class="line">    <span class="keyword">if</span>(<span class="regexp">/[_]/</span>.test(str)) count++</div><div class="line">    <span class="keyword">if</span>(count&gt;=<span class="number">2</span>)&#123;</div><div class="line">      <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">      <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="写一个正则表达式，得到如下字符串里所有的颜色"><a href="#写一个正则表达式，得到如下字符串里所有的颜色" class="headerlink" title="写一个正则表达式，得到如下字符串里所有的颜色"></a>写一个正则表达式，得到如下字符串里所有的颜色</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> reg = <span class="regexp">/#[a-fA-F0-9]&#123;6&#125;/g</span></div><div class="line"><span class="keyword">var</span> subj = <span class="string">"color: #121212; background-color: #AA00ef; width: 12px; bad-colors: f#fddee "</span></div><div class="line"><span class="built_in">console</span>.log( subj.match(reg) )  <span class="comment">// ['#121212', '#AA00ef']</span></div></pre></td></tr></table></figure>
-<h2 id="下面代码输出什么-为什么-改写代码，让其输出-“”hunger””-“”world””"><a href="#下面代码输出什么-为什么-改写代码，让其输出-“”hunger””-“”world””" class="headerlink" title="下面代码输出什么? 为什么? 改写代码，让其输出[“”hunger””, “”world””]."></a>下面代码输出什么? 为什么? 改写代码，让其输出[“”hunger””, “”world””].</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'hello  "hunger" , hello "world"'</span>;</div><div class="line"><span class="keyword">var</span> pat =  <span class="regexp">/".*"/g</span>;</div><div class="line">str.match(pat);<span class="comment">//[""hunger" , hello "world""]</span></div><div class="line"><span class="comment">//原因是贪婪模式，量词在默认下尽可能多的匹配</span></div><div class="line"><span class="comment">//修改如下：</span></div><div class="line"><span class="keyword">var</span> str = <span class="string">'hello  "hunger" , hello "world"'</span>;</div><div class="line"><span class="keyword">var</span> pat =  <span class="regexp">/".*?"/g</span>;</div><div class="line">str.match(pat);</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;正则表达式常用字符及其含义&quot;&gt;&lt;a href=&quot;#正则表达式常用字符及其含义&quot; class=&quot;headerlink&quot; title=&quot;正则表达式常用字符及其含义&quot;&gt;&lt;/a&gt;正则表达式常用字符及其含义&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;字符&lt;/th&gt;
-&lt;th&gt;含义&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;\d&lt;/td&gt;
-&lt;td&gt;数字字符&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;\w&lt;/td&gt;
-&lt;td&gt;单词字符，字母、数字下划线&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;\s&lt;/td&gt;
-&lt;td&gt;空白符&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;[a-zA-Z0-9]]&lt;/td&gt;
-&lt;td&gt;任意字母a-z,A-Z和数字&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;\b&lt;/td&gt;
-&lt;td&gt;单词边界&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;.&lt;/td&gt;
-&lt;td&gt;除了回车符和换行符之外的所有字符&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;*&lt;/td&gt;
-&lt;td&gt;出现零次或多次（任意次）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;+&lt;/td&gt;
-&lt;td&gt;出现一次或多次（至少出现一次）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;?&lt;/td&gt;
-&lt;td&gt;出现零次或一次（最多出现一次）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;x{3}&lt;/td&gt;
-&lt;td&gt;x出现3次&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;^&lt;/td&gt;
-&lt;td&gt;以XXX开头&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;$&lt;/td&gt;
-&lt;td&gt;以XXX结尾&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="https://www.kmac007.com/categories/JavaScript/"/>
-    
-    
-      <category term="JavsScript" scheme="https://www.kmac007.com/tags/JavsScript/"/>
-    
-      <category term="正则表达式" scheme="https://www.kmac007.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Math数组及Date相关操作</title>
-    <link href="https://www.kmac007.com/2017/Math%E6%95%B0%E7%BB%84%E5%8F%8ADate%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C.html"/>
-    <id>https://www.kmac007.com/2017/Math数组及Date相关操作.html</id>
-    <published>2017-03-20T10:56:51.000Z</published>
-    <updated>2017-08-26T10:44:56.836Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h1><h2 id="写一个函数，返回从min到max之间的随机整数，包括min不包括max"><a href="#写一个函数，返回从min到max之间的随机整数，包括min不包括max" class="headerlink" title="写一个函数，返回从min到max之间的随机整数，包括min不包括max"></a>写一个函数，返回从min到max之间的随机整数，包括min不包括max</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandom</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(min + <span class="built_in">Math</span>.random() * (max - min))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="写一个函数，返回从min都max之间的-随机整数，包括min包括max"><a href="#写一个函数，返回从min都max之间的-随机整数，包括min包括max" class="headerlink" title="写一个函数，返回从min都max之间的 随机整数，包括min包括max"></a>写一个函数，返回从min都max之间的 随机整数，包括min包括max</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandom</span>(<span class="params">min, max</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.floor(min + <span class="built_in">Math</span>.random() * (max - min + <span class="number">1</span>))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="写一个函数，生成一个长度为-n-的随机字符串，字符串字符的取值范围包括0到9，a到-z，A到Z。"><a href="#写一个函数，生成一个长度为-n-的随机字符串，字符串字符的取值范围包括0到9，a到-z，A到Z。" class="headerlink" title="写一个函数，生成一个长度为 n 的随机字符串，字符串字符的取值范围包括0到9，a到 z，A到Z。"></a>写一个函数，生成一个长度为 n 的随机字符串，字符串字符的取值范围包括0到9，a到 z，A到Z。</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oldStr = <span class="string">"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandStr</span>(<span class="params">len</span>) </span>&#123;</div><div class="line">  <span class="comment">//补全函数</span></div><div class="line">  <span class="keyword">var</span> strArr = oldStr.split(<span class="string">''</span>)</div><div class="line">  <span class="keyword">var</span> randStr = <span class="string">''</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</div><div class="line">    <span class="keyword">var</span> strKey = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * oldStr.length)</div><div class="line">    randStr += strArr[strKey]</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> randStr</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> str = getRandStr(<span class="number">10</span>); <span class="comment">// 0a3iJiRZap</span></div></pre></td></tr></table></figure>
-<h2 id="写一个函数，生成一个随机-IP-地址，一个合法的-IP-地址为-0-0-0-0-255-255-255-255"><a href="#写一个函数，生成一个随机-IP-地址，一个合法的-IP-地址为-0-0-0-0-255-255-255-255" class="headerlink" title="写一个函数，生成一个随机 IP 地址，一个合法的 IP 地址为 0.0.0.0~255.255.255.255"></a>写一个函数，生成一个随机 IP 地址，一个合法的 IP 地址为 0.0.0.0~255.255.255.255</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandIp</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> ipArr = []</div><div class="line">  <span class="keyword">var</span> len = <span class="number">4</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</div><div class="line">    ipArr[i] = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (<span class="number">255</span> + <span class="number">1</span>))</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ipArr.join(<span class="string">'.'</span>)</div><div class="line">  &#125;</div><div class="line">  getRandIp()</div></pre></td></tr></table></figure>
-<h2 id="写一个函数，生成一个随机颜色字符串，合法的颜色为-000000-ffffff"><a href="#写一个函数，生成一个随机颜色字符串，合法的颜色为-000000-ffffff" class="headerlink" title="写一个函数，生成一个随机颜色字符串，合法的颜色为#000000~ #ffffff"></a>写一个函数，生成一个随机颜色字符串，合法的颜色为#000000~ #ffffff</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getRandColor</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> str = <span class="string">"ABCDEF0123456789"</span></div><div class="line">  <span class="keyword">var</span> colorArr = str.split(<span class="string">''</span>)</div><div class="line">  <span class="keyword">var</span> len = <span class="number">6</span></div><div class="line">  <span class="keyword">var</span> colorStr = <span class="string">''</span></div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</div><div class="line">    colorStr += colorArr[<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (colorArr.length))]</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> <span class="string">'#'</span> + colorStr</div><div class="line">&#125;</div><div class="line">getRandColor()</div></pre></td></tr></table></figure>
-<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="数组方法里push、pop、shift、unshift、join、splice分别是什么作用？用-splice函数分别实现push、pop、shift、unshift方法"><a href="#数组方法里push、pop、shift、unshift、join、splice分别是什么作用？用-splice函数分别实现push、pop、shift、unshift方法" class="headerlink" title="数组方法里push、pop、shift、unshift、join、splice分别是什么作用？用 splice函数分别实现push、pop、shift、unshift方法"></a>数组方法里push、pop、shift、unshift、join、splice分别是什么作用？用 splice函数分别实现push、pop、shift、unshift方法</h2><p>push: 向数组的末尾添加一个或更多元素，并返回新的数组长度。</p>
-<p>pop: 删除并返回数组的最后一个元素</p>
-<p>shift: 删除并返回数组的第一个元素</p>
-<p>unshift: 向数组的开头添加一个或更多元素，并返回新的长度。</p>
-<p>join: 把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。</p>
-<p>splice: 删除元素，并向数组添加新元素。</p>
-<p>用splice实现push:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.splice(arr.length,<span class="number">0</span>,item)</div></pre></td></tr></table></figure></p>
-<p>用splice实现pop:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.splice(arr.length<span class="number">-1</span>,<span class="number">1</span>)</div></pre></td></tr></table></figure></p>
-<p>用slice实现unshift:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.splice(<span class="number">0</span>,<span class="number">0</span>,item)</div></pre></td></tr></table></figure></p>
-<p>用slice实现shift:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.splice(<span class="number">0</span>,<span class="number">1</span>)</div></pre></td></tr></table></figure></p>
-<h2 id="写一个函数，操作数组，数组中的每一项变为原来的平方，在原数组上操作"><a href="#写一个函数，操作数组，数组中的每一项变为原来的平方，在原数组上操作" class="headerlink" title="写一个函数，操作数组，数组中的每一项变为原来的平方，在原数组上操作"></a>写一个函数，操作数组，数组中的每一项变为原来的平方，在原数组上操作</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">squareArr</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">    arr[i] = arr[i] * arr[i]</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> arr</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>]</div><div class="line">squareArr(arr)</div><div class="line"><span class="built_in">console</span>.log(arr) <span class="comment">// [4, 16, 36]</span></div></pre></td></tr></table></figure>
-<h2 id="写一个函数，操作数组，返回一个新数组，新数组中只包含正数，原数组不变"><a href="#写一个函数，操作数组，返回一个新数组，新数组中只包含正数，原数组不变" class="headerlink" title="写一个函数，操作数组，返回一个新数组，新数组中只包含正数，原数组不变"></a>写一个函数，操作数组，返回一个新数组，新数组中只包含正数，原数组不变</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">filterPositive</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> newArr = []</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> arr[i] === <span class="string">"number"</span> &amp;&amp; arr[i] &gt; <span class="number">0</span>) &#123;</div><div class="line">      newArr.push(arr[i])</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> newArr</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">-1</span>, <span class="number">2</span>, <span class="string">'hello'</span>, <span class="literal">true</span>]</div><div class="line"><span class="keyword">var</span> newArr = filterPositive(arr)</div><div class="line"><span class="built_in">console</span>.log(newArr) <span class="comment">//[3, 2]</span></div><div class="line"><span class="built_in">console</span>.log(arr) <span class="comment">//[3, -1,  2,  'hello', true]</span></div></pre></td></tr></table></figure>
-<h1 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h1><h2 id="写一个函数getChIntv，获取从当前时间到指定日期的间隔时间"><a href="#写一个函数getChIntv，获取从当前时间到指定日期的间隔时间" class="headerlink" title="写一个函数getChIntv，获取从当前时间到指定日期的间隔时间"></a>写一个函数getChIntv，获取从当前时间到指定日期的间隔时间</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> timeStr = getChIntv(<span class="string">"2017-05-01"</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getChIntv</span>(<span class="params">timeStr</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> targetTime = <span class="keyword">new</span> <span class="built_in">Date</span>(timeStr).getTime() - <span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">8</span></div><div class="line">  <span class="keyword">var</span> currentTime = <span class="built_in">Date</span>.now()</div><div class="line">  <span class="keyword">var</span> offsetTime = targetTime - currentTime</div><div class="line">  <span class="keyword">var</span> days = <span class="built_in">parseInt</span>(offsetTime / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>))</div><div class="line">  <span class="keyword">var</span> hours = <span class="built_in">parseInt</span>(offsetTime % (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>) / (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span>))</div><div class="line">  <span class="keyword">var</span> mins = <span class="built_in">parseInt</span>(offsetTime % (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>) % (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span>) / (<span class="number">1000</span> * <span class="number">60</span>))</div><div class="line">  <span class="keyword">var</span> seconds = <span class="built_in">parseInt</span>(offsetTime % (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>) % (<span class="number">1000</span> * <span class="number">60</span> * <span class="number">60</span>) % (<span class="number">1000</span> * <span class="number">60</span>) / <span class="number">1000</span>)</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="string">"距五一还有:"</span> + days + <span class="string">"天"</span> + hours + <span class="string">"小时"</span> + mins + <span class="string">"分"</span> + seconds + <span class="string">"秒"</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(timeStr); <span class="comment">// 距五一还有:11天7小时26分28秒</span></div></pre></td></tr></table></figure>
-<h2 id="把hh-mm-dd格式数字日期改成中文日期"><a href="#把hh-mm-dd格式数字日期改成中文日期" class="headerlink" title="把hh-mm-dd格式数字日期改成中文日期"></a>把hh-mm-dd格式数字日期改成中文日期</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = getChsDate(<span class="string">'2015-01-08'</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getChsDate</span>(<span class="params">timeStr</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> dist = [<span class="string">"零"</span>, <span class="string">"一"</span>, <span class="string">"二"</span>, <span class="string">"三"</span>, <span class="string">"四"</span>, <span class="string">"五"</span>, <span class="string">"六"</span>, <span class="string">"七"</span>, <span class="string">"八"</span>, <span class="string">"九"</span>, <span class="string">"十"</span>, <span class="string">"十一"</span>, <span class="string">"十二"</span>, <span class="string">"十三"</span>, <span class="string">"十四"</span>, <span class="string">"十五"</span>, <span class="string">"十六"</span>, <span class="string">"十七"</span>, <span class="string">"十八"</span>, <span class="string">"十九"</span>, <span class="string">"二十"</span>, <span class="string">"二十一"</span>, <span class="string">"二十二"</span>, <span class="string">"二十三"</span>, <span class="string">"二十四"</span>, <span class="string">"二十五"</span>, <span class="string">"二十六"</span>, <span class="string">"二十七"</span>, <span class="string">"二十八"</span>, <span class="string">"二十九"</span>, <span class="string">"三十"</span>, <span class="string">"三十一"</span>];</div><div class="line">  <span class="keyword">var</span> arr = timeStr.split(<span class="string">'-'</span>)</div><div class="line">  <span class="keyword">var</span> year = arr[<span class="number">0</span>]</div><div class="line">  <span class="keyword">var</span> month = arr[<span class="number">1</span>]</div><div class="line">  <span class="keyword">var</span> day = arr[<span class="number">2</span>]</div><div class="line">  <span class="keyword">var</span> chYear = dist[<span class="built_in">parseInt</span>(year[<span class="number">0</span>])] + dist[<span class="built_in">parseInt</span>(year[<span class="number">1</span>])] + dist[<span class="built_in">parseInt</span>(year[<span class="number">2</span>])] + dist[<span class="built_in">parseInt</span>(year[<span class="number">3</span>])]</div><div class="line">  <span class="keyword">var</span> chMonth = dist[<span class="built_in">parseInt</span>(month)]</div><div class="line">  <span class="keyword">var</span> chDay = dist[<span class="built_in">parseInt</span>(day)]</div><div class="line">  <span class="keyword">return</span> chYear + <span class="string">"年"</span> + chMonth + <span class="string">"月"</span> + chDay + <span class="string">"日"</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(str); <span class="comment">// 二零一五年一月八日</span></div></pre></td></tr></table></figure>
-<h2 id="写一个函数，参数为时间对象毫秒数的字符串格式，返回值为字符串。假设参数为时间对象毫秒数t，根据t的时间分别返回如下字符串"><a href="#写一个函数，参数为时间对象毫秒数的字符串格式，返回值为字符串。假设参数为时间对象毫秒数t，根据t的时间分别返回如下字符串" class="headerlink" title="写一个函数，参数为时间对象毫秒数的字符串格式，返回值为字符串。假设参数为时间对象毫秒数t，根据t的时间分别返回如下字符串:"></a>写一个函数，参数为时间对象毫秒数的字符串格式，返回值为字符串。假设参数为时间对象毫秒数t，根据t的时间分别返回如下字符串:</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">friendlyDate</span>(<span class="params">time</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> now = <span class="built_in">Date</span>.now()</div><div class="line">  <span class="keyword">var</span> offsetTime = (now - time) / <span class="number">1000</span> / <span class="number">60</span></div><div class="line">  <span class="keyword">if</span> (offsetTime &lt; <span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">parseInt</span>(offsetTime * <span class="number">60</span>) + <span class="string">"刚刚"</span></div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (offsetTime &gt;= <span class="number">1</span> &amp;&amp; offsetTime &lt; <span class="number">60</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">parseInt</span>(offsetTime) + <span class="string">"分钟前"</span></div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (offsetTime &gt;= <span class="number">60</span> &amp;&amp; offsetTime &lt; <span class="number">60</span> * <span class="number">24</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">parseInt</span>(offsetTime / <span class="number">60</span>) + <span class="string">"小时前"</span></div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (offsetTime &gt;= <span class="number">60</span> * <span class="number">24</span> &amp;&amp; offsetTime &lt; <span class="number">60</span> * <span class="number">24</span> * <span class="number">30</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">parseInt</span>(offsetTime / <span class="number">60</span> / <span class="number">24</span>) + <span class="string">"天前"</span></div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (offsetTime &gt;= <span class="number">60</span> * <span class="number">24</span> * <span class="number">30</span> &amp;&amp; offsetTime &lt; <span class="number">60</span> * <span class="number">24</span> * <span class="number">39</span> * <span class="number">12</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">parseInt</span>(offsetTime / <span class="number">60</span> / <span class="number">24</span> / <span class="number">30</span>) + <span class="string">"月前"</span></div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (offsetTime &gt;= <span class="number">60</span> * <span class="number">24</span> * <span class="number">39</span> * <span class="number">12</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">parseInt</span>(offsetTime / <span class="number">60</span> / <span class="number">24</span> / <span class="number">30</span> / <span class="number">12</span>) + <span class="string">"年前"</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> str = friendlyDate(<span class="string">'1492593606284'</span>) <span class="comment">//  1分钟前</span></div><div class="line"><span class="keyword">var</span> str2 = friendlyDate(<span class="string">'1422583606284'</span>) <span class="comment">//2年前</span></div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Math&quot;&gt;&lt;a href=&quot;#Math&quot; class=&quot;headerlink&quot; title=&quot;Math&quot;&gt;&lt;/a&gt;Math&lt;/h1&gt;&lt;h2 id=&quot;写一个函数，返回从min到max之间的随机整数，包括min不包括max&quot;&gt;&lt;a href=&quot;#写一个函数，返回从min到max之间的随机整数，包括min不包括max&quot; class=&quot;headerlink&quot; title=&quot;写一个函数，返回从min到max之间的随机整数，包括min不包括max&quot;&gt;&lt;/a&gt;写一个函数，返回从min到max之间的随机整数，包括min不包括max&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getRandom&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;min, max&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.floor(min + &lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.random() * (max - min))&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;写一个函数，返回从min都max之间的-随机整数，包括min包括max&quot;&gt;&lt;a href=&quot;#写一个函数，返回从min都max之间的-随机整数，包括min包括max&quot; class=&quot;headerlink&quot; title=&quot;写一个函数，返回从min都max之间的 随机整数，包括min包括max&quot;&gt;&lt;/a&gt;写一个函数，返回从min都max之间的 随机整数，包括min包括max&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getRandom&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;min, max&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.floor(min + &lt;span class=&quot;built_in&quot;&gt;Math&lt;/span&gt;.random() * (max - min + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;))&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="JavaScript" scheme="https://www.kmac007.com/categories/JavaScript/"/>
-    
-    
-      <category term="JavsScript" scheme="https://www.kmac007.com/tags/JavsScript/"/>
-    
-      <category term="Math" scheme="https://www.kmac007.com/tags/Math/"/>
-    
-      <category term="Date" scheme="https://www.kmac007.com/tags/Date/"/>
-    
-      <category term="数组" scheme="https://www.kmac007.com/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   

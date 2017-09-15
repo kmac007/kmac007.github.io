@@ -4,8 +4,54 @@
 
     
   <url>
+    <loc>https://www.kmac007.com/2017/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</loc>
+    <lastmod>2017-09-15T09:13:19.864Z</lastmod>
+    <data>
+        <display>
+        <title>前端性能优化</title>
+        <pubTime>2017-05-13T06:22:34.000Z</pubTime>
+        
+        <tag>性能优化</tag>
+         
+         
+           
+             
+              <breadCrumb title="性能优化" url="https://www.kmac007.com/categories/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.kmac007.com/2017/ES6%20Modules%E6%B5%85%E6%9E%90.html</loc>
+    <lastmod>2017-09-15T03:56:13.888Z</lastmod>
+    <data>
+        <display>
+        <title>ES6 Modules浅析</title>
+        <pubTime>2017-07-26T11:33:22.000Z</pubTime>
+        
+        <tag>ES2015</tag>
+         
+        <tag>ECMAScript</tag>
+         
+        <tag>ES6</tag>
+         
+        <tag>Modules</tag>
+         
+         
+           
+             
+              <breadCrumb title="ECMAScript" url="https://www.kmac007.com/categories/ECMAScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.kmac007.com/2017/ES6%20Class%E6%B5%85%E6%9E%90.html</loc>
-    <lastmod>2017-09-14T15:07:20.408Z</lastmod>
+    <lastmod>2017-09-15T01:19:15.409Z</lastmod>
     <data>
         <display>
         <title>ES6 Class浅析</title>
@@ -467,11 +513,11 @@
         <title>函数与函数作用域</title>
         <pubTime>2017-03-15T11:56:07.000Z</pubTime>
         
+        <tag>JavaScript</tag>
+         
         <tag>函数</tag>
          
         <tag>作用域</tag>
-         
-        <tag>JavaScript</tag>
          
          
            

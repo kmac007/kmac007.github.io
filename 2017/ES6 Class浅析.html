@@ -109,7 +109,7 @@
 <meta property="og:site_name" content="kmac007">
 <meta property="og:description" content="最近在学习React.js，发现React.js中模块可以直接定义类的方式生成模块。用子类来继承React.Component生成模块的方式，简洁明了。如：1234// react.js组件class Add extends React.Component &amp;#123;   //something...&amp;#125; 下面，将详细介绍ES6的Class。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-14T15:07:20.408Z">
+<meta property="og:updated_time" content="2017-09-15T01:19:15.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6 Class浅析">
 <meta name="twitter:description" content="最近在学习React.js，发现React.js中模块可以直接定义类的方式生成模块。用子类来继承React.Component生成模块的方式，简洁明了。如：1234// react.js组件class Add extends React.Component &amp;#123;   //something...&amp;#125; 下面，将详细介绍ES6的Class。">
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,982
+                  1,989
                 </span>
               
 
@@ -528,6 +528,9 @@
 </li>
 </ol>
 <p>这种情况与第二种情况非常像。<code>A</code>也是一个普通函数，所以直接继承<code>Function.prototype</code>。但是，<code>A</code>调用后返回的对象不继承任何方法，所以它的<code>__proto__</code>指向<code>Function.prototype</code>。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6 入门</a></li>
+</ol>
 
       
     </div>
@@ -595,8 +598,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/什么是Promise.html" rel="next" title="什么是Promise">
-                <i class="fa fa-chevron-left"></i> 什么是Promise
+              <a href="/2017/ES6 Modules浅析.html" rel="next" title="ES6 Modules浅析">
+                <i class="fa fa-chevron-left"></i> ES6 Modules浅析
               </a>
             
           </div>
@@ -636,6 +639,8 @@
 
           
   <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDQwNi82OTYw"></div>
     
   </div>
 
@@ -688,7 +693,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -699,7 +704,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -710,7 +715,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">59</span>
+                <span class="site-state-item-count">61</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -810,7 +815,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Class"><span class="nav-number">1.</span> <span class="nav-text">Class</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">1.1.1.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prototype属性"><span class="nav-number">1.1.2.</span> <span class="nav-text">prototype属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#严格模式"><span class="nav-number">1.1.3.</span> <span class="nav-text">严格模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constructor方法"><span class="nav-number">1.2.</span> <span class="nav-text">constructor方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#class表达式"><span class="nav-number">1.3.</span> <span class="nav-text">class表达式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Class的继承"><span class="nav-number">2.</span> <span class="nav-text">Class的继承</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介-1"><span class="nav-number">2.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-getPrototypeOf"><span class="nav-number">2.2.</span> <span class="nav-text">Object.getPrototypeOf()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#super关键字"><span class="nav-number">2.3.</span> <span class="nav-text">super关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的prototype属性和proto属性"><span class="nav-number">2.4.</span> <span class="nav-text">类的prototype属性和proto属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extends的继承目标"><span class="nav-number">2.5.</span> <span class="nav-text">extends的继承目标</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Class"><span class="nav-number">1.</span> <span class="nav-text">Class</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">1.1.1.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prototype属性"><span class="nav-number">1.1.2.</span> <span class="nav-text">prototype属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#严格模式"><span class="nav-number">1.1.3.</span> <span class="nav-text">严格模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constructor方法"><span class="nav-number">1.2.</span> <span class="nav-text">constructor方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#class表达式"><span class="nav-number">1.3.</span> <span class="nav-text">class表达式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Class的继承"><span class="nav-number">2.</span> <span class="nav-text">Class的继承</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介-1"><span class="nav-number">2.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-getPrototypeOf"><span class="nav-number">2.2.</span> <span class="nav-text">Object.getPrototypeOf()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#super关键字"><span class="nav-number">2.3.</span> <span class="nav-text">super关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的prototype属性和proto属性"><span class="nav-number">2.4.</span> <span class="nav-text">类的prototype属性和proto属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extends的继承目标"><span class="nav-number">2.5.</span> <span class="nav-text">extends的继承目标</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -968,6 +973,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
