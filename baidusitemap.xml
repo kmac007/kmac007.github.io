@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://www.kmac007.com/2017/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html</loc>
-    <lastmod>2017-09-15T15:55:27.996Z</lastmod>
+    <lastmod>2017-09-16T03:21:27.035Z</lastmod>
     <data>
         <display>
         <title>前端性能优化</title>
@@ -325,9 +325,9 @@
         <title>jQuery学习使用笔记</title>
         <pubTime>2017-04-13T10:20:14.000Z</pubTime>
         
-        <tag>Ajax</tag>
-         
         <tag>jQuery</tag>
+         
+        <tag>Ajax</tag>
          
         <tag>动画</tag>
          
@@ -513,11 +513,11 @@
         <title>函数与函数作用域</title>
         <pubTime>2017-03-15T11:56:07.000Z</pubTime>
         
+        <tag>JavaScript</tag>
+         
         <tag>函数</tag>
          
         <tag>作用域</tag>
-         
-        <tag>JavaScript</tag>
          
          
            
