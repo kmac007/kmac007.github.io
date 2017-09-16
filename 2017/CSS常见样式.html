@@ -1,4 +1,1500 @@
-<!DOCTYPE html><html class="theme-next mist" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><script src="/lib/pace/pace.min.js?v=1.0.2"></script><link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css"><link href="//fonts.cat.net//css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css"><link href="https://cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css"><meta name="keywords" content="CSS,样式,"><link rel="alternate" href="/atom.xml" title="kmac007" type="application/atom+xml"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2"><meta name="description" content="块级元素和行内元素分别有哪些？ 块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等 行内元素: span, a, input, button, lable, select, textarea, em, br, img, stron"><meta name="keywords" content="CSS,样式"><meta property="og:type" content="article"><meta property="og:title" content="CSS常见样式"><meta property="og:url" content="https://www.kmac007.com/2017/CSS常见样式.html"><meta property="og:site_name" content="kmac007"><meta property="og:description" content="块级元素和行内元素分别有哪些？ 块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等 行内元素: span, a, input, button, lable, select, textarea, em, br, img, stron"><meta property="og:locale" content="zh-Hans"><meta property="og:updated_time" content="2017-08-26T05:53:32.425Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="CSS常见样式"><meta name="twitter:description" content="块级元素和行内元素分别有哪些？ 块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等 行内元素: span, a, input, button, lable, select, textarea, em, br, img, stron"><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Mist",version:"5.1.2",sidebar:{position:"left",display:"post",offset:12,offset_float:12,b2t:!1,scrollpercent:!1,onmobile:!0},fancybox:!0,tabs:!0,motion:!1,duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="https://www.kmac007.com/2017/CSS常见样式.html"><title>CSS常见样式 | kmac007</title><script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src="https://www.google-analytics.com/analytics.js",s.parentNode.insertBefore(o,s)}(window,document,"script",0,"ga"),ga("create","UA-105333685-1","auto"),ga("send","pageview")</script><script type="text/javascript">var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?cdcf44c84eb0dd51d3a8510c855fb3be";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">kmac007</span><span class="logo-line-after"><i></i></span></a></div><h1 class="site-subtitle" itemprop="description">kmac007's blog.</h1></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> 首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br> 分类</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br> 关于</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br> 归档</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br> 标签</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br> 搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i></span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"> <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/CSS常见样式.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="kmac007"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatardk.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="kmac007"></span><header class="post-header"><h2 class="post-title" itemprop="name headline">CSS常见样式</h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-03T20:06:36+08:00">2017-03-03</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/2017/CSS常见样式.html#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/CSS常见样式.html" itemprop="commentCount"></span></a></span> <span id="/2017/CSS常见样式.html" class="leancloud_visitors" data-flag-title="CSS常见样式"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数&#58;</span><span class="leancloud-visitors-count"></span></span> <span class="post-meta-divider">|</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">1,182</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">5 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><h1 id="块级元素和行内元素分别有哪些？"><a href="#块级元素和行内元素分别有哪些？" class="headerlink" title="块级元素和行内元素分别有哪些？"></a>块级元素和行内元素分别有哪些？</h1><ul><li>块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等</li><li>行内元素: span, a, input, button, lable, select, textarea, em, br, img, strong</li></ul><p>区别：</p><ol><li>行内元素只能容纳行内元素和文本。而块级可以容纳块级元素和行内元素。</li><li>块级元素可以设定宽高，而行内元素不可以。</li><li>块级元素独占一行，而行内元素可以与其它行内元素共同处在一行。</li><li>行内元素的默认宽度为内容的宽度，块级元素默认宽度与浏览器窗口宽度一致</li></ol><a id="more"></a><h1 id="什么是-CSS-继承-哪些属性能继承，哪些不能？"><a href="#什么是-CSS-继承-哪些属性能继承，哪些不能？" class="headerlink" title="什么是 CSS 继承? 哪些属性能继承，哪些不能？"></a>什么是 CSS 继承? 哪些属性能继承，哪些不能？</h1><blockquote><p>CSS继承: 子元素继承了父元素的CSS属性。</p><ul><li>不可继承属性：display, margin, border, padding, background, width, height, overflow, z-index, float, position, vertical-align</li><li>所有元素可继承：visibility和cursor</li><li>内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、 font-family、font-size、font-style、font-variant、font-weight、text- decoration、text-transform、direction。</li><li>块状元素可继承：text-indent和text-align。</li><li>列表元素可继承：list-style、list-style-type、list-style-position、list-style-image。</li><li>表格元素可继承：border-collapse。</li></ul></blockquote><h1 id="如何让块级元素水平居中？如何让行内元素水平居中"><a href="#如何让块级元素水平居中？如何让行内元素水平居中" class="headerlink" title="如何让块级元素水平居中？如何让行内元素水平居中?"></a>如何让块级元素水平居中？如何让行内元素水平居中?</h1><ul><li>块级元素水平居中：给块级元素设定宽高,margin: 0 auto;</li><li>多个块级元素可以使用inline-block和flex</li><li>行内元素: text-align: center;</li></ul><h1 id="用-CSS-实现一个三角形"><a href="#用-CSS-实现一个三角形" class="headerlink" title="用 CSS 实现一个三角形"></a>用 CSS 实现一个三角形</h1><script async src="//jsfiddle.net/kmac007/bsn964yt/embed/result,css,html/dark/"></script><h1 id="单行文本溢出加-…如何实现"><a href="#单行文本溢出加-…如何实现" class="headerlink" title="单行文本溢出加 …如何实现?"></a>单行文本溢出加 …如何实现?</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">white-space</span>: nowrap;</div><div class="line">  <span class="attribute">overflow</span>: hidden;</div><div class="line">  <span class="attribute">text-overflow</span>: ellipsis;</div><div class="line">&#125;</div></pre></td></tr></table></figure><h1 id="px-em-rem-有什么区别-如何理解dpr"><a href="#px-em-rem-有什么区别-如何理解dpr" class="headerlink" title="px, em, rem 有什么区别,如何理解dpr?"></a>px, em, rem 有什么区别,如何理解dpr?</h1><ul><li>px: 相对长度单位。像素px是相对于显示器屏幕分辨率而言的</li><li>em: 指的是相对于其父级元素的大小，即倍数。</li><li>rem: 相对于根html元素的大小，即倍数。</li><li>dpr: 设备像素比。设备像素比 = 物理像素/设备独立像素(在某一方向上，x或y)，桌面端,CSS的1个像素都是对应着电脑屏幕的1个物理像素。而如果DPR为2时，CSS的1像素就会对应2物理像素。</li></ul><h1 id="解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么"><a href="#解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么" class="headerlink" title="解释下面代码的作用?为什么要加引号?字体里\5b8b\4f53代表什么?"></a>解释下面代码的作用?为什么要加引号?字体里\5b8b\4f53代表什么?</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">  <span class="attribute">font</span>: <span class="number">12px</span>/<span class="number">1.5</span> tahoma,arial,<span class="string">'Hiragino Sans GB'</span>,<span class="string">'\5b8b\4f53'</span>,sans-serif;</div><div class="line">&#125;</div></pre></td></tr></table></figure><ul><li>字体大小：12px</li><li>字体行距：1.5倍</li><li>字体选择的优先级从高到低：tahoma -&gt; … -&gt; sans-serif</li><li>字体描述需要加引号的情况，常见有下面几种：<ol><li>字体描述使用的中文</li><li>字体描述使用英文，中间有空格</li><li>字体描述使用unicode编码<br>\5b8b\4f53 是unicode编码模式，表示“宋体”</li></ol></li></ul><p>控制台中输入：escape(“字体”)将字体中文转换为unicode编码格式</p><h1 id="常见样式"><a href="#常见样式" class="headerlink" title="常见样式"></a>常见样式</h1><h2 id="实现按钮"><a href="#实现按钮" class="headerlink" title="实现按钮"></a>实现按钮</h2><script async src="//jsfiddle.net/kmac007/4649kayL/embed/result,html,css/"></script><h2 id="三角形"><a href="#三角形" class="headerlink" title="三角形"></a>三角形</h2><script async src="//jsfiddle.net/kmac007/7wgb0Lfp/embed/result,html,css/dark/"></script><h2 id="实现Card"><a href="#实现Card" class="headerlink" title="实现Card"></a>实现Card</h2><script async src="//jsfiddle.net/kmac007/xbe9xqo0/embed/result,html,css/"></script><h1 id="text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中"><a href="#text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中" class="headerlink" title="text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中"></a>text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中</h1><p>作用是使得元素中的文本水平居中。作用在父元素上，能让行内元素以及块级元素中display为inline和inline-block元素居中。</p><h1 id="IE-盒模型和W3C盒模型有什么区别"><a href="#IE-盒模型和W3C盒模型有什么区别" class="headerlink" title="IE 盒模型和W3C盒模型有什么区别?"></a>IE 盒模型和W3C盒模型有什么区别?</h1><ul><li>IE盒模型的宽度和高度包含border,padding和content 即：box-sizing: border-box;</li><li>W3C盒模型只包含content部分的宽高 默认: box-sizing: content-box;</li></ul><h1 id="box-sizing-border-box-的作用是什么？"><a href="#box-sizing-border-box-的作用是什么？" class="headerlink" title="*{ box-sizing: border-box;}的作用是什么？"></a>*{ box-sizing: border-box;}的作用是什么？</h1><p>设置为以border,padding,content为宽高的盒模型。</p><h1 id="line-height-2和linde-height-200-有什么区别？"><a href="#line-height-2和linde-height-200-有什么区别？" class="headerlink" title="line-height: 2和linde-height: 200%有什么区别？"></a>line-height: 2和linde-height: 200%有什么区别？</h1><p>line-height: 2 表示根据子元素自己字体的大小乘以2来计算行高，而line-height: 200% 表示根据父元素的字体大小计算行高，并且子元素会继承父元素的行高。</p><h1 id="inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐"><a href="#inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐" class="headerlink" title="inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?"></a>inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?</h1><p>inline-block使元素具有内联的特性时， 内容又具有块级元素的特性，可以设置宽高等；</p><p>去除缝隙有两种方法：</p><pre><code>1.去除两元素间的空白字符，
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net//css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CSS,样式," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="kmac007" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="块级元素和行内元素分别有哪些？ 块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等 行内元素: span, a, input, button, lable, select, textarea, em, br, img, stron">
+<meta name="keywords" content="CSS,样式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS常见样式">
+<meta property="og:url" content="https://www.kmac007.com/2017/CSS常见样式.html">
+<meta property="og:site_name" content="kmac007">
+<meta property="og:description" content="块级元素和行内元素分别有哪些？ 块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等 行内元素: span, a, input, button, lable, select, textarea, em, br, img, stron">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-26T05:53:32.425Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS常见样式">
+<meta name="twitter:description" content="块级元素和行内元素分别有哪些？ 块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等 行内元素: span, a, input, button, lable, select, textarea, em, br, img, stron">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.kmac007.com/2017/CSS常见样式.html"/>
+
+
+
+
+
+  <title>CSS常见样式 | kmac007</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-105333685-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cdcf44c84eb0dd51d3a8510c855fb3be";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">kmac007</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">kmac007's blog.</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/CSS常见样式.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">CSS常见样式</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-03T20:06:36+08:00">
+                2017-03-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/CSS常见样式.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/CSS常见样式.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/CSS常见样式.html" class="leancloud_visitors" data-flag-title="CSS常见样式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,182
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="块级元素和行内元素分别有哪些？"><a href="#块级元素和行内元素分别有哪些？" class="headerlink" title="块级元素和行内元素分别有哪些？"></a>块级元素和行内元素分别有哪些？</h1><ul>
+<li>块级元素：div, p, h1-h6, table, form, ul, li, ol, address, article, aside, audio, blockquote, canvas,header,footer等</li>
+<li>行内元素: span, a, input, button, lable, select, textarea, em, br, img, strong</li>
+</ul>
+<p>区别：</p>
+<ol>
+<li>行内元素只能容纳行内元素和文本。而块级可以容纳块级元素和行内元素。</li>
+<li>块级元素可以设定宽高，而行内元素不可以。</li>
+<li>块级元素独占一行，而行内元素可以与其它行内元素共同处在一行。</li>
+<li>行内元素的默认宽度为内容的宽度，块级元素默认宽度与浏览器窗口宽度一致</li>
+</ol>
+<a id="more"></a>
+<h1 id="什么是-CSS-继承-哪些属性能继承，哪些不能？"><a href="#什么是-CSS-继承-哪些属性能继承，哪些不能？" class="headerlink" title="什么是 CSS 继承? 哪些属性能继承，哪些不能？"></a>什么是 CSS 继承? 哪些属性能继承，哪些不能？</h1><blockquote>
+<p>CSS继承: 子元素继承了父元素的CSS属性。</p>
+<ul>
+<li>不可继承属性：display, margin, border, padding, background, width, height, overflow, z-index, float, position, vertical-align</li>
+<li>所有元素可继承：visibility和cursor</li>
+<li>内联元素可继承：letter-spacing、word-spacing、white-space、line-height、color、font、 font-family、font-size、font-style、font-variant、font-weight、text- decoration、text-transform、direction。</li>
+<li>块状元素可继承：text-indent和text-align。</li>
+<li>列表元素可继承：list-style、list-style-type、list-style-position、list-style-image。</li>
+<li>表格元素可继承：border-collapse。</li>
+</ul>
+</blockquote>
+<h1 id="如何让块级元素水平居中？如何让行内元素水平居中"><a href="#如何让块级元素水平居中？如何让行内元素水平居中" class="headerlink" title="如何让块级元素水平居中？如何让行内元素水平居中?"></a>如何让块级元素水平居中？如何让行内元素水平居中?</h1><ul>
+<li>块级元素水平居中：给块级元素设定宽高,margin: 0 auto;</li>
+<li>多个块级元素可以使用inline-block和flex</li>
+<li>行内元素: text-align: center;</li>
+</ul>
+<h1 id="用-CSS-实现一个三角形"><a href="#用-CSS-实现一个三角形" class="headerlink" title="用 CSS 实现一个三角形"></a>用 CSS 实现一个三角形</h1><script async src="//jsfiddle.net/kmac007/bsn964yt/embed/result,css,html/dark/"></script>
+
+<h1 id="单行文本溢出加-…如何实现"><a href="#单行文本溢出加-…如何实现" class="headerlink" title="单行文本溢出加 …如何实现?"></a>单行文本溢出加 …如何实现?</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">white-space</span>: nowrap;</div><div class="line">  <span class="attribute">overflow</span>: hidden;</div><div class="line">  <span class="attribute">text-overflow</span>: ellipsis;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="px-em-rem-有什么区别-如何理解dpr"><a href="#px-em-rem-有什么区别-如何理解dpr" class="headerlink" title="px, em, rem 有什么区别,如何理解dpr?"></a>px, em, rem 有什么区别,如何理解dpr?</h1><ul>
+<li>px: 相对长度单位。像素px是相对于显示器屏幕分辨率而言的</li>
+<li>em: 指的是相对于其父级元素的大小，即倍数。</li>
+<li>rem: 相对于根html元素的大小，即倍数。</li>
+<li>dpr: 设备像素比。设备像素比 = 物理像素/设备独立像素(在某一方向上，x或y)，桌面端,CSS的1个像素都是对应着电脑屏幕的1个物理像素。而如果DPR为2时，CSS的1像素就会对应2物理像素。</li>
+</ul>
+<h1 id="解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么"><a href="#解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么" class="headerlink" title="解释下面代码的作用?为什么要加引号?字体里\5b8b\4f53代表什么?"></a>解释下面代码的作用?为什么要加引号?字体里\5b8b\4f53代表什么?</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">  <span class="attribute">font</span>: <span class="number">12px</span>/<span class="number">1.5</span> tahoma,arial,<span class="string">'Hiragino Sans GB'</span>,<span class="string">'\5b8b\4f53'</span>,sans-serif;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>字体大小：12px</li>
+<li>字体行距：1.5倍</li>
+<li>字体选择的优先级从高到低：tahoma -&gt; … -&gt; sans-serif</li>
+<li>字体描述需要加引号的情况，常见有下面几种：<ol>
+<li>字体描述使用的中文</li>
+<li>字体描述使用英文，中间有空格</li>
+<li>字体描述使用unicode编码<br>\5b8b\4f53 是unicode编码模式，表示“宋体”</li>
+</ol>
+</li>
+</ul>
+<p>控制台中输入：escape(“字体”)将字体中文转换为unicode编码格式</p>
+<h1 id="常见样式"><a href="#常见样式" class="headerlink" title="常见样式"></a>常见样式</h1><h2 id="实现按钮"><a href="#实现按钮" class="headerlink" title="实现按钮"></a>实现按钮</h2><script async src="//jsfiddle.net/kmac007/4649kayL/embed/result,html,css/"></script>
+
+<h2 id="三角形"><a href="#三角形" class="headerlink" title="三角形"></a>三角形</h2><script async src="//jsfiddle.net/kmac007/7wgb0Lfp/embed/result,html,css/dark/"></script>
+
+<h2 id="实现Card"><a href="#实现Card" class="headerlink" title="实现Card"></a>实现Card</h2><script async src="//jsfiddle.net/kmac007/xbe9xqo0/embed/result,html,css/"></script>
+
+<h1 id="text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中"><a href="#text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中" class="headerlink" title="text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中"></a>text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中</h1><p>作用是使得元素中的文本水平居中。作用在父元素上，能让行内元素以及块级元素中display为inline和inline-block元素居中。</p>
+<h1 id="IE-盒模型和W3C盒模型有什么区别"><a href="#IE-盒模型和W3C盒模型有什么区别" class="headerlink" title="IE 盒模型和W3C盒模型有什么区别?"></a>IE 盒模型和W3C盒模型有什么区别?</h1><ul>
+<li>IE盒模型的宽度和高度包含border,padding和content 即：box-sizing: border-box;</li>
+<li>W3C盒模型只包含content部分的宽高 默认: box-sizing: content-box;</li>
+</ul>
+<h1 id="box-sizing-border-box-的作用是什么？"><a href="#box-sizing-border-box-的作用是什么？" class="headerlink" title="*{ box-sizing: border-box;}的作用是什么？"></a>*{ box-sizing: border-box;}的作用是什么？</h1><p>设置为以border,padding,content为宽高的盒模型。</p>
+<h1 id="line-height-2和linde-height-200-有什么区别？"><a href="#line-height-2和linde-height-200-有什么区别？" class="headerlink" title="line-height: 2和linde-height: 200%有什么区别？"></a>line-height: 2和linde-height: 200%有什么区别？</h1><p>line-height: 2 表示根据子元素自己字体的大小乘以2来计算行高，而line-height: 200% 表示根据父元素的字体大小计算行高，并且子元素会继承父元素的行高。</p>
+<h1 id="inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐"><a href="#inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐" class="headerlink" title="inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?"></a>inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?</h1><p>inline-block使元素具有内联的特性时， 内容又具有块级元素的特性，可以设置宽高等；</p>
+<p>去除缝隙有两种方法：</p>
+<pre><code>1.去除两元素间的空白字符，
 
 2.将父元素的字体大小设置为0，再分别设置它们的字体大小；
-</code></pre><p>高度不一样时，对具有inline-block属性的元素使用vertical-align: top使其对其。</p><h1 id="CSS-sprite-是什么"><a href="#CSS-sprite-是什么" class="headerlink" title="CSS sprite 是什么?"></a>CSS sprite 是什么?</h1><p>CSS精灵，指的是将多张图片拼接在一起，通过改变background-position来改变显示出来的图片，达到减少HTTP请求，提高页面性能的效果。</p><h1 id="让一个元素”看不见”有几种方式？有什么区别"><a href="#让一个元素”看不见”有几种方式？有什么区别" class="headerlink" title="让一个元素”看不见”有几种方式？有什么区别?"></a>让一个元素”看不见”有几种方式？有什么区别?</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">opacity: 0;  使元素变得透明，仍处在页面上</div><div class="line">display: none; 使元素在页面上消失,不占用空间</div><div class="line">visibility: hidden; 使元素不可见，但仍在页面上占据空间</div><div class="line">background-color: rgba(0, 0, 0, 0.2) 只是背景色透明</div></pre></td></tr></table></figure></div><div><div><div style="text-align:center;color:#ccc;font-size:14px">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div></div></div><div></div><div><ul class="post-copyright"><li class="post-copyright-author"> <strong>本文作者：</strong> kmac007</li><li class="post-copyright-link"> <strong>本文链接：</strong> <a href="https://www.kmac007.com/2017/CSS常见样式.html" title="CSS常见样式">https://www.kmac007.com/2017/CSS常见样式.html</a></li><li class="post-copyright-license"> <strong>版权声明：</strong> 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！</li></ul></div><footer class="post-footer"><div class="post-tags"><a href="/tags/CSS/" rel="tag"><i class="fa fa-tag"></i> CSS</a><a href="/tags/样式/" rel="tag"><i class="fa fa-tag"></i> 样式</a></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/2017/CSS选择器.html" rel="next" title="CSS选择器"><i class="fa fa-chevron-left"></i> CSS选择器</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"> <a href="/2017/浅析浮动定位BFC边距合并.html" rel="prev" title="浅析浮动定位BFC边距合并">浅析浮动定位BFC边距合并<i class="fa fa-chevron-right"></i></a></div></div></footer></div></article><div class="post-spread"></div></div></div><div class="comments" id="comments"><div id="disqus_thread"><noscript> Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div id="sidebar-dimmer"></div><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap"> 文章目录</li><li class="sidebar-nav-overview" data-target="site-overview"> 站点概览</li></ul><section class="site-overview sidebar-panel"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"> <img class="site-author-image" itemprop="image" src="/images/avatardk.jpg" alt="kmac007"><p class="site-author-name" itemprop="name">kmac007</p><p class="site-description motion-element" itemprop="description"></p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives/"><span class="site-state-item-count">34</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"> <a href="/categories/index.html"><span class="site-state-item-count">11</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"> <a href="/tags/index.html"><span class="site-state-item-count">61</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/kmac007" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="http://weibo.com/cdk93" target="_blank" title="微博" rel="external nofollow"><i class="fa fa-fw fa-weibo"></i> 微博</a></span></div><div class="links-of-blogroll motion-element links-of-blogroll-inline"><div class="links-of-blogroll-title"><i class="fa fa-fw fa-globe"></i> 推荐阅读</div><ul class="links-of-blogroll-list"><li class="links-of-blogroll-item"> <a href="http://www.uisdc.com/" title="优设" target="_blank">优设</a></li><li class="links-of-blogroll-item"> <a href="http://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a></li><li class="links-of-blogroll-item"> <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a></li><li class="links-of-blogroll-item"> <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a></li><li class="links-of-blogroll-item"> <a href="http://ife.baidu.com/" title="百度前端技术学院" target="_blank">百度前端技术学院</a></li><li class="links-of-blogroll-item"> <a href="http://wf.uisdc.com/cn/" title="google前端开发基础" target="_blank">google前端开发基础</a></li></ul></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#块级元素和行内元素分别有哪些？"><span class="nav-number">1.</span> <span class="nav-text">块级元素和行内元素分别有哪些？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是-CSS-继承-哪些属性能继承，哪些不能？"><span class="nav-number">2.</span> <span class="nav-text">什么是 CSS 继承? 哪些属性能继承，哪些不能？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何让块级元素水平居中？如何让行内元素水平居中"><span class="nav-number">3.</span> <span class="nav-text">如何让块级元素水平居中？如何让行内元素水平居中?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用-CSS-实现一个三角形"><span class="nav-number">4.</span> <span class="nav-text">用 CSS 实现一个三角形</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单行文本溢出加-…如何实现"><span class="nav-number">5.</span> <span class="nav-text">单行文本溢出加 …如何实现?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#px-em-rem-有什么区别-如何理解dpr"><span class="nav-number">6.</span> <span class="nav-text">px, em, rem 有什么区别,如何理解dpr?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么"><span class="nav-number">7.</span> <span class="nav-text">解释下面代码的作用?为什么要加引号?字体里\5b8b\4f53代表什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见样式"><span class="nav-number">8.</span> <span class="nav-text">常见样式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现按钮"><span class="nav-number">8.1.</span> <span class="nav-text">实现按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三角形"><span class="nav-number">8.2.</span> <span class="nav-text">三角形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现Card"><span class="nav-number">8.3.</span> <span class="nav-text">实现Card</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中"><span class="nav-number">9.</span> <span class="nav-text">text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IE-盒模型和W3C盒模型有什么区别"><span class="nav-number">10.</span> <span class="nav-text">IE 盒模型和W3C盒模型有什么区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#box-sizing-border-box-的作用是什么？"><span class="nav-number">11.</span> <span class="nav-text">*{ box-sizing: border-box;}的作用是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#line-height-2和linde-height-200-有什么区别？"><span class="nav-number">12.</span> <span class="nav-text">line-height: 2和linde-height: 200%有什么区别？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐"><span class="nav-number">13.</span> <span class="nav-text">inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-sprite-是什么"><span class="nav-number">14.</span> <span class="nav-text">CSS sprite 是什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#让一个元素”看不见”有几种方式？有什么区别"><span class="nav-number">15.</span> <span class="nav-text">让一个元素”看不见”有几种方式？有什么区别?</span></a></li></ol></div></div></section></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="copyright"> &copy; <span itemprop="copyrightYear">2017</span><span class="with-love"><i class="fa fa-heart"></i></span> <span class="author" itemprop="copyrightHolder">kmac007</span> <span class="post-meta-divider">|</span><p class="powered-by">Hosted by <a class="theme-link" href="https://pages.coding.me" style="font-weight:700" rel="external nofollow">Coding Pages</a></p> <span class="post-meta-divider">|</span><div class="powered-by"><i class="fa fa-user-md"></i> <span id="busuanzi_container_site_uv">本站访客数:<span id="busuanzi_value_site_uv"></span></span></div></div></div></footer><div class="back-to-top"><i class="fa fa-angle-up"></i></div></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.3/jquery.min.js" data-no-instant></script><script type="text/javascript" src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js" data-no-instant></script><script type="text/javascript" src="//cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js" data-no-instant></script><script type="text/javascript" src="//cdn.bootcss.com/velocity/1.2.1/velocity.min.js" data-no-instant></script><script type="text/javascript" src="//cdn.bootcss.com/velocity/1.2.1/velocity.ui.min.js" data-no-instant></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js" data-no-instant></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script><script id="dsq-count-scr" src="https://kmac007-1.disqus.com/count.js" async></script><script type="text/javascript">var disqus_config=function(){this.page.url="https://www.kmac007.com/2017/CSS常见样式.html",this.page.identifier="2017/CSS常见样式.html",this.page.title="CSS常见样式"},d=document,s=d.createElement("script");s.src="https://kmac007-1.disqus.com/embed.js",s.setAttribute("data-timestamp",""+ +new Date),(d.head||d.body).appendChild(s)</script><script type="text/javascript">function proceedsearch(){$("body").append('<div class="search-popup-overlay local-search-pop-overlay"></div>').css("overflow","hidden"),$(".search-popup-overlay").click(onPopupClose),$(".popup").toggle();var t=$("#local-search-input");t.attr("autocapitalize","none"),t.attr("autocorrect","off"),t.focus()}var isfetched=!1,isXml=!0,search_path="search.xml";0===search_path.length?search_path="search.xml":/json$/i.test(search_path)&&(isXml=!1);var path="/"+search_path,onPopupClose=function(t){$(".popup").hide(),$("#local-search-input").val(""),$(".search-result-list").remove(),$("#no-result").remove(),$(".local-search-pop-overlay").remove(),$("body").css("overflow","")},searchFunc=function(t,e,o){"use strict";$("body").append('<div class="search-popup-overlay local-search-pop-overlay"><div id="search-loading-icon"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div></div>').css("overflow","hidden"),$("#search-loading-icon").css("margin","20% auto 0 auto").css("text-align","center"),$.ajax({url:t,dataType:isXml?"xml":"json",async:!0,success:function(t){isfetched=!0,$(".popup").detach().appendTo(".header-inner");var n=isXml?$("entry",t).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get():t,r=document.getElementById(e),s=document.getElementById(o),a=function(){var t=r.value.trim().toLowerCase(),e=t.split(/[\s\-]+/);e.length>1&&e.push(t);var o=[];if(t.length>0&&n.forEach(function(n){var r=!1,s=0,a=0,i=n.title.trim(),c=i.toLowerCase(),l=n.content.trim().replace(/<[^>]+>/g,""),h=l.toLowerCase(),p=decodeURIComponent(n.url),u=[],f=[];if(""!=i&&(e.forEach(function(t){function e(t,e,o){var n=t.length;if(0===n)return[];var r=0,s=[],a=[];for(o||(e=e.toLowerCase(),t=t.toLowerCase());(s=e.indexOf(t,r))>-1;)a.push({position:s,word:t}),r=s+n;return a}u=u.concat(e(t,c,!1)),f=f.concat(e(t,h,!1))}),(u.length>0||f.length>0)&&(r=!0,s=u.length+f.length)),r){[u,f].forEach(function(t){t.sort(function(t,e){return e.position!==t.position?e.position-t.position:t.word.length-e.word.length})});function d(e,o,n,r){for(var s=r[r.length-1],i=s.position,c=s.word,l=[],h=0;i+c.length<=n&&0!=r.length;){c===t&&h++,l.push({position:i,length:c.length});var p=i+c.length;for(r.pop();0!=r.length&&(s=r[r.length-1],i=s.position,c=s.word,p>i);)r.pop()}return a+=h,{hits:l,start:o,end:n,searchTextCount:h}}var g=[];0!=u.length&&g.push(d(0,0,i.length,u));for(var v=[];0!=f.length;){var $=f[f.length-1],C=$.position,m=$.word,x=C-20,w=C+80;x<0&&(x=0),w<C+m.length&&(w=C+m.length),w>l.length&&(w=l.length),v.push(d(0,x,w,f))}v.sort(function(t,e){return t.searchTextCount!==e.searchTextCount?e.searchTextCount-t.searchTextCount:t.hits.length!==e.hits.length?e.hits.length-t.hits.length:t.start-e.start});var y=parseInt("1");y>=0&&(v=v.slice(0,y));function T(t,e){var o="",n=e.start;return e.hits.forEach(function(e){o+=t.substring(n,e.position);var r=e.position+e.length;o+='<b class="search-keyword">'+t.substring(e.position,r)+"</b>",n=r}),o+=t.substring(n,e.end)}var b="";0!=g.length?b+="<li><a href='"+p+"' class='search-result-title'>"+T(i,g[0])+"</a>":b+="<li><a href='"+p+"' class='search-result-title'>"+i+"</a>",v.forEach(function(t){b+="<a href='"+p+'\'><p class="search-result">'+T(l,t)+"...</p></a>"}),b+="</li>",o.push({item:b,searchTextCount:a,hitCount:s,id:o.length})}}),1===e.length&&""===e[0])s.innerHTML='<div id="no-result"><i class="fa fa-search fa-5x" /></div>';else if(0===o.length)s.innerHTML='<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>';else{o.sort(function(t,e){return t.searchTextCount!==e.searchTextCount?e.searchTextCount-t.searchTextCount:t.hitCount!==e.hitCount?e.hitCount-t.hitCount:e.id-t.id});var a='<ul class="search-result-list">';o.forEach(function(t){a+=t.item}),a+="</ul>",s.innerHTML=a}};r.addEventListener("input",a),$(".local-search-pop-overlay").remove(),$("body").css("overflow",""),proceedsearch()}})};$(".popup-trigger").click(function(t){t.stopPropagation(),!1===isfetched?searchFunc(path,"local-search-input","local-search-result"):proceedsearch()}),$(".popup-btn-close").click(onPopupClose),$(".popup").click(function(t){t.stopPropagation()}),$(document).on("keyup",function(t){27===t.which&&$(".search-popup").is(":visible")&&onPopupClose()})</script><script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script><script>AV.initialize("3i6FSitcPH1XGrhvtLJMgWWu-gzGzoHsz","ri5kFD1FPm7rBRcbYFfPPmtP")</script><script>function showTime(e){var t=new AV.Query(e),n=[],o=$(".leancloud_visitors");o.each(function(){n.push($(this).attr("id").trim())}),t.containedIn("url",n),t.find().done(function(e){if(0!==e.length){for(c=0;c<e.length;c++){var t=e[c],i=t.get("url"),s=t.get("time"),l=document.getElementById(i);$(l).find(".leancloud-visitors-count").text(s)}for(var c=0;c<n.length;c++){var i=n[c],l=document.getElementById(i),r=$(l).find(".leancloud-visitors-count");""==r.text()&&r.text(0)}}else o.find(".leancloud-visitors-count").text(0)}).fail(function(e,t){console.log("Error: "+t.code+" "+t.message)})}function addCount(e){var t=$(".leancloud_visitors"),n=t.attr("id").trim(),o=t.attr("data-flag-title").trim(),i=new AV.Query(e);i.equalTo("url",n),i.find({success:function(t){if(t.length>0){var i=t[0];i.fetchWhenSave(!0),i.increment("time"),i.save(null,{success:function(e){$(document.getElementById(n)).find(".leancloud-visitors-count").text(e.get("time"))},error:function(e,t){console.log("Failed to save Visitor num, with error message: "+t.message)}})}else{var s=new e,l=new AV.ACL;l.setPublicReadAccess(!0),l.setPublicWriteAccess(!0),s.setACL(l),s.set("title",o),s.set("url",n),s.set("time",1),s.save(null,{success:function(e){$(document.getElementById(n)).find(".leancloud-visitors-count").text(e.get("time"))},error:function(e,t){console.log("Failed to create")}})}},error:function(e){console.log("Error:"+e.code+" "+e.message)}})}$(function(){var e=AV.Object.extend("Counter");1==$(".leancloud_visitors").length?addCount(e):$(".post-title-link").length>1&&showTime(e)})</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script type="text/javascript" src="//cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script><script data-no-instant>InstantClick.on("change",function(t){!1===t&&("undefined"!=typeof MathJax&&MathJax.Hub.Queue(["Typeset",MathJax.Hub]),"undefined"!=typeof prettyPrint&&prettyPrint(),"undefined"!=typeof _hmt&&_hmt.push(["_trackPageview",location.pathname+location.search]),"undefined"!=typeof ga&&ga("send","pageview",location.pathname+location.search))}),InstantClick.init()</script></body></html>
+</code></pre><p>高度不一样时，对具有inline-block属性的元素使用vertical-align: top使其对其。</p>
+<h1 id="CSS-sprite-是什么"><a href="#CSS-sprite-是什么" class="headerlink" title="CSS sprite 是什么?"></a>CSS sprite 是什么?</h1><p>CSS精灵，指的是将多张图片拼接在一起，通过改变background-position来改变显示出来的图片，达到减少HTTP请求，提高页面性能的效果。</p>
+<h1 id="让一个元素”看不见”有几种方式？有什么区别"><a href="#让一个元素”看不见”有几种方式？有什么区别" class="headerlink" title="让一个元素”看不见”有几种方式？有什么区别?"></a>让一个元素”看不见”有几种方式？有什么区别?</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">opacity: 0;  使元素变得透明，仍处在页面上</div><div class="line">display: none; 使元素在页面上消失,不占用空间</div><div class="line">visibility: hidden; 使元素不可见，但仍在页面上占据空间</div><div class="line">background-color: rgba(0, 0, 0, 0.2) 只是背景色透明</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+    <div>
+      
+        
+      
+    </div>
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    kmac007
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.kmac007.com/2017/CSS常见样式.html" title="CSS常见样式">https://www.kmac007.com/2017/CSS常见样式.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"><i class="fa fa-tag"></i> CSS</a>
+          
+            <a href="/tags/样式/" rel="tag"><i class="fa fa-tag"></i> 样式</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/CSS选择器.html" rel="next" title="CSS选择器">
+                <i class="fa fa-chevron-left"></i> CSS选择器
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/浅析浮动定位BFC边距合并.html" rel="prev" title="浅析浮动定位BFC边距合并">
+                浅析浮动定位BFC边距合并 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatardk.jpg"
+               alt="kmac007" />
+          <p class="site-author-name" itemprop="name">kmac007</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">61</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/kmac007" target="_blank" title="GitHub" rel="external nofollow">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/cdk93" target="_blank" title="微博" rel="external nofollow">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      微博
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              推荐阅读
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.uisdc.com/" title="优设" target="_blank">优设</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ife.baidu.com/" title="百度前端技术学院" target="_blank">百度前端技术学院</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wf.uisdc.com/cn/" title="google前端开发基础" target="_blank">google前端开发基础</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#块级元素和行内元素分别有哪些？"><span class="nav-number">1.</span> <span class="nav-text">块级元素和行内元素分别有哪些？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是-CSS-继承-哪些属性能继承，哪些不能？"><span class="nav-number">2.</span> <span class="nav-text">什么是 CSS 继承? 哪些属性能继承，哪些不能？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何让块级元素水平居中？如何让行内元素水平居中"><span class="nav-number">3.</span> <span class="nav-text">如何让块级元素水平居中？如何让行内元素水平居中?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用-CSS-实现一个三角形"><span class="nav-number">4.</span> <span class="nav-text">用 CSS 实现一个三角形</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单行文本溢出加-…如何实现"><span class="nav-number">5.</span> <span class="nav-text">单行文本溢出加 …如何实现?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#px-em-rem-有什么区别-如何理解dpr"><span class="nav-number">6.</span> <span class="nav-text">px, em, rem 有什么区别,如何理解dpr?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解释下面代码的作用-为什么要加引号-字体里-5b8b-4f53代表什么"><span class="nav-number">7.</span> <span class="nav-text">解释下面代码的作用?为什么要加引号?字体里\5b8b\4f53代表什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见样式"><span class="nav-number">8.</span> <span class="nav-text">常见样式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现按钮"><span class="nav-number">8.1.</span> <span class="nav-text">实现按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三角形"><span class="nav-number">8.2.</span> <span class="nav-text">三角形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现Card"><span class="nav-number">8.3.</span> <span class="nav-text">实现Card</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-align-center的作用是什么，作用在什么元素上？能让什么元素水平居中"><span class="nav-number">9.</span> <span class="nav-text">text-align: center的作用是什么，作用在什么元素上？能让什么元素水平居中</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IE-盒模型和W3C盒模型有什么区别"><span class="nav-number">10.</span> <span class="nav-text">IE 盒模型和W3C盒模型有什么区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#box-sizing-border-box-的作用是什么？"><span class="nav-number">11.</span> <span class="nav-text">*{ box-sizing: border-box;}的作用是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#line-height-2和linde-height-200-有什么区别？"><span class="nav-number">12.</span> <span class="nav-text">line-height: 2和linde-height: 200%有什么区别？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐"><span class="nav-number">13.</span> <span class="nav-text">inline-block有什么特性？如何去除缝隙？高度不一样的inline-block元素如何顶端对齐?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS-sprite-是什么"><span class="nav-number">14.</span> <span class="nav-text">CSS sprite 是什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#让一个元素”看不见”有几种方式？有什么区别"><span class="nav-number">15.</span> <span class="nav-text">让一个元素”看不见”有几种方式？有什么区别?</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kmac007  </span>
+  <span class="post-meta-divider">|</span>
+
+  <p class="powered-by">Hosted by <a class="theme-link" href="https://pages.coding.me" style="font-weight: bold" rel="external nofollow">Coding Pages</a></p>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+    本站访客数:<span id="busuanzi_value_site_uv"></span>
+  </span>
+  </div>
+
+  
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-angle-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.3/jquery.min.js" data-no-instant></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js" data-no-instant></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js" data-no-instant></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/velocity/1.2.1/velocity.min.js" data-no-instant></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/velocity/1.2.1/velocity.ui.min.js" data-no-instant></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js" data-no-instant></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://kmac007-1.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://www.kmac007.com/2017/CSS常见样式.html';
+          this.page.identifier = '2017/CSS常见样式.html';
+          this.page.title = 'CSS常见样式';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://kmac007-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("3i6FSitcPH1XGrhvtLJMgWWu-gzGzoHsz", "ri5kFD1FPm7rBRcbYFfPPmtP");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src= "//cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
+  <script data-no-instant>
+    InstantClick.on('change', function(isInitialLoad) {
+      if (isInitialLoad === false) {
+        if (typeof MathJax !== 'undefined') // support MathJax
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        if (typeof prettyPrint !== 'undefined') // support google code prettify
+          prettyPrint();
+        if (typeof _hmt !== 'undefined')  // support 百度统计
+          _hmt.push(['_trackPageview', location.pathname + location.search]);
+        if (typeof ga !== 'undefined')  // support google analytics
+            ga('send', 'pageview', location.pathname + location.search);
+      }
+    });
+    InstantClick.init();
+  </script>
+</body>
+</html>

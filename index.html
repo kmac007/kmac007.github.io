@@ -1,1 +1,3241 @@
-<!DOCTYPE html><html class="theme-next mist" lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#222"><script src="/lib/pace/pace.min.js?v=1.0.2"></script><link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css"><link href="//fonts.cat.net//css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css"><link href="https://cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css"><link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css"><meta name="keywords" content="前端,JavaScript,React,Redux,React-route,webpack,sass,Vue,Vuex,jQuery,Vscode,前端工程师"><link rel="alternate" href="/atom.xml" title="kmac007" type="application/atom+xml"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2"><meta name="description" content="Risk everything."><meta property="og:type" content="website"><meta property="og:title" content="kmac007"><meta property="og:url" content="https://www.kmac007.com/index.html"><meta property="og:site_name" content="kmac007"><meta property="og:description" content="Risk everything."><meta property="og:locale" content="zh-Hans"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="kmac007"><meta name="twitter:description" content="Risk everything."><script type="text/javascript" id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Mist",version:"5.1.2",sidebar:{position:"left",display:"post",offset:12,offset_float:12,b2t:!1,scrollpercent:!1,onmobile:!0},fancybox:!0,tabs:!0,motion:!1,duoshuo:{userId:"0",author:"博主"},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><link rel="canonical" href="https://www.kmac007.com/"><title>kmac007</title><script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src="https://www.google-analytics.com/analytics.js",s.parentNode.insertBefore(o,s)}(window,document,"script",0,"ga"),ga("create","UA-105333685-1","auto"),ga("send","pageview")</script><script type="text/javascript">var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?cdcf44c84eb0dd51d3a8510c855fb3be";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans"><div class="container sidebar-position-left page-home"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">kmac007</span><span class="logo-line-after"><i></i></span></a></div><h1 class="site-subtitle" itemprop="description">kmac007's blog.</h1></div><div class="site-nav-toggle"> <button><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br> 首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br> 分类</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br> 关于</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br> 归档</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br> 标签</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br> 搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i></span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"> <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav></div></header><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><section id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/使用Token进行身份认证.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="kmac007"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatardk.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="kmac007"></span><header class="post-header"><h2 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/2017/使用Token进行身份认证.html" itemprop="url">使用Token进行身份认证</a></h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-03T19:04:06+08:00">2017-09-03</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Token/" itemprop="url" rel="index"><span itemprop="name">Token</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/2017/使用Token进行身份认证.html#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/使用Token进行身份认证.html" itemprop="commentCount"></span></a></span> <span id="/2017/使用Token进行身份认证.html" class="leancloud_visitors" data-flag-title="使用Token进行身份认证"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数&#58;</span><span class="leancloud-visitors-count"></span></span> <span class="post-meta-divider">|</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">1,375</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">5 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><p>最近想要做一个个人博客系统，写后台管理的时候需要考虑到身份认证。之前也算是接触过Cookie和Session的验证方式，但是在网上查看各种资料的时候发现Token这个名词，并且据说很多大型网站都在用。因此，我通过查阅各种资料写下了这个学习笔记。</p><h1 id="Cookie和Session的验证方法"><a href="#Cookie和Session的验证方法" class="headerlink" title="Cookie和Session的验证方法"></a>Cookie和Session的验证方法</h1><p>HTTP是一个无状态协议，客户端每次发出请求，下一次请求无法得知上一次请求所包含的状态数据。也就是说，客户端使用用户密码通过了身份验证，但是下次客户端再次发送请求的时候，还需要再次验证。</p><p>可以使用Cookie和Session解决这个问题：当用户请求登录时，如果没有问题，服务器就在服务端生成一条Session记录用户的状态，并将这条Session的Id号存储在Cookie的相应字段中并发送给客户端。客户端下次再发送请求会将Cookie发送到服务端，服务端验证Cookie中相应的Session的id字段，如果验证成功，则说明用户已登录，将数据返回给用户。</p><p>Session可能会存储在内存，磁盘或者数据库中。我们可能需要在服务端定期清理过期的Session。</p><div class="post-button text-center"> <a class="btn" href="/2017/使用Token进行身份认证.html#more" rel="contents">阅读全文 &raquo;</a></div></div><div></div><div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/MongoDB与Mongoose学习总结.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="kmac007"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatardk.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="kmac007"></span><header class="post-header"><h2 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/2017/MongoDB与Mongoose学习总结.html" itemprop="url">MongoDB与Mongoose学习总结</a></h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-25T23:02:31+08:00">2017-08-25</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MongoDB/" itemprop="url" rel="index"><span itemprop="name">MongoDB</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/2017/MongoDB与Mongoose学习总结.html#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/MongoDB与Mongoose学习总结.html" itemprop="commentCount"></span></a></span> <span id="/2017/MongoDB与Mongoose学习总结.html" class="leancloud_visitors" data-flag-title="MongoDB与Mongoose学习总结"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数&#58;</span><span class="leancloud-visitors-count"></span></span> <span class="post-meta-divider">|</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">6,448</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">27 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><p>为了能够使用Node.js实现前后端分离，MongoDB是必学的，Mongodb是基于文档的非关系型数据库，文档是按BSON（JSON的轻量化二进制格式）存储的，增删改查等管理数据库的命令和JavaScript语法很像。以下是我的学习笔记。</p><h1 id="NoSQL简介"><a href="#NoSQL简介" class="headerlink" title="NoSQL简介"></a>NoSQL简介</h1><blockquote><p>NoSQL(NoSQL = Not Only SQL )，意即”不仅仅是SQL”。</p></blockquote><p>优点:</p><ul><li>高可扩展性</li><li>分布式计算</li><li>低成本</li><li>架构的灵活性，半结构化数据</li><li>没有复杂的关系</li></ul><p>缺点:</p><ul><li>没有标准化</li><li>有限的查询功能（到目前为止）</li><li>最终一致是不直观的程序</li></ul><h1 id="MongoDB-简介"><a href="#MongoDB-简介" class="headerlink" title="MongoDB 简介"></a>MongoDB 简介</h1><blockquote><p>MongoDB是NoSQL数据库的一种<br>MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。<br>在高负载的情况下，添加更多的节点，可以保证服务器性能。<br>MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>MongoDB 将数据存储为一个文档，数据结构由键值(key=&gt;value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。</p></blockquote><div class="post-button text-center"> <a class="btn" href="/2017/MongoDB与Mongoose学习总结.html#more" rel="contents">阅读全文 &raquo;</a></div></div><div></div><div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/Express学习笔记.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="kmac007"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatardk.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="kmac007"></span><header class="post-header"><h2 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/2017/Express学习笔记.html" itemprop="url">Express学习笔记</a></h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-20T13:02:31+08:00">2017-08-20</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Express/" itemprop="url" rel="index"><span itemprop="name">Express</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/2017/Express学习笔记.html#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/Express学习笔记.html" itemprop="commentCount"></span></a></span> <span id="/2017/Express学习笔记.html" class="leancloud_visitors" data-flag-title="Express学习笔记"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数&#58;</span><span class="leancloud-visitors-count"></span></span> <span class="post-meta-divider">|</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">5,469</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">23 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><h1 id="Express简介"><a href="#Express简介" class="headerlink" title="Express简介"></a>Express简介</h1><p>Express是一个简洁、灵活的Node.js Web应用开发框架，它提供一系列强大的特性，帮助开发者创建Web和移动设备应用。<br>它是一个基于Node.js平台，快速、开放、极简的web开发框架。优点是易上手、高性能、扩展性强。</p><ol><li>易上手：Express对web开发相关的模块进行了适度的封装，屏蔽了大量复杂繁琐的技术细节，让开发者专注于业务逻辑的开发，极大的降低了入门和学习成本。</li><li>高性能:：Express仅在web应用相关的nodejs模块上进行了适度的封装和扩展，较大程度避免了过度封装导致的性能损耗。</li><li>扩展性强：基于中间件的开发模式，使express应用的扩展、模块拆分非常简单，既灵活，扩展性又强。</li></ol><div class="post-button text-center"> <a class="btn" href="/2017/Express学习笔记.html#more" rel="contents">阅读全文 &raquo;</a></div></div><div></div><div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/ES6 Class浅析.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="kmac007"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatardk.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="kmac007"></span><header class="post-header"><h2 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/2017/ES6 Class浅析.html" itemprop="url">ES6 Class浅析</a></h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T21:23:42+08:00">2017-07-30</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ECMAScript/" itemprop="url" rel="index"><span itemprop="name">ECMAScript</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/2017/ES6 Class浅析.html#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/ES6 Class浅析.html" itemprop="commentCount"></span></a></span> <span id="/2017/ES6 Class浅析.html" class="leancloud_visitors" data-flag-title="ES6 Class浅析"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数&#58;</span><span class="leancloud-visitors-count"></span></span> <span class="post-meta-divider">|</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">1,989</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">8 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><p>最近在学习React.js，发现React.js中模块可以直接定义类的方式生成模块。用子类来继承<code>React.Component</code>生成模块的方式，简洁明了。<br>如：<br></p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// react.js组件</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Add</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">   <span class="comment">//something...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure><p></p><p>下面，将详细介绍ES6的Class。</p><div class="post-button text-center"> <a class="btn" href="/2017/ES6 Class浅析.html#more" rel="contents">阅读全文 &raquo;</a></div></div><div></div><div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/ES6 Modules浅析.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="kmac007"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatardk.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="kmac007"></span><header class="post-header"><h2 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/2017/ES6 Modules浅析.html" itemprop="url">ES6 Modules浅析</a></h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T19:33:22+08:00">2017-07-26</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ECMAScript/" itemprop="url" rel="index"><span itemprop="name">ECMAScript</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/2017/ES6 Modules浅析.html#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/ES6 Modules浅析.html" itemprop="commentCount"></span></a></span> <span id="/2017/ES6 Modules浅析.html" class="leancloud_visitors" data-flag-title="ES6 Modules浅析"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数&#58;</span><span class="leancloud-visitors-count"></span></span> <span class="post-meta-divider">|</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">1,537</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">6 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><p>之前写了一个Vue.js小项目<a href="https://github.com/kmac007/vue-resume" target="_blank" rel="external">vue-resume</a>，在写这个项目的过程中发现ES6的语法非常好用。印象最深的就是ES6的模块化，模块的导入直接用<code>import</code>，而导出使用<code>export</code>，非常的简单易读，对比之前AMD规范，ES6 Modules写法相当的简单。</p><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>在ES6之前，社区制定了一些模块加载方案，最主要的有CommonJS和AMD两种。前者用于服务器，后者用于浏览器。ES6在语言标准的层面上，实现了模块加载功能，而且实现得相当简单，完全可以取代CommonJS和AMD规范，成为浏览器和服务器通用的模块解决方案。</p><p>ES6模块的设计思想，是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量。CommonJS和AMD模块，都只能在运行时确定这些东西。比如，CommonJS模块就是对象，输入时必须查找对象的属性。</p><div class="post-button text-center"> <a class="btn" href="/2017/ES6 Modules浅析.html#more" rel="contents">阅读全文 &raquo;</a></div></div><div></div><div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/前端性能优化.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="kmac007"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatardk.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="kmac007"></span><header class="post-header"><h2 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/2017/前端性能优化.html" itemprop="url">前端性能优化</a></h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-13T14:22:34+08:00">2017-05-13</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/性能优化/" itemprop="url" rel="index"><span itemprop="name">性能优化</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/2017/前端性能优化.html#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/前端性能优化.html" itemprop="commentCount"></span></a></span> <span id="/2017/前端性能优化.html" class="leancloud_visitors" data-flag-title="前端性能优化"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数&#58;</span><span class="leancloud-visitors-count"></span></span> <span class="post-meta-divider">|</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">2,009</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">8 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><center><img src="http://ovdfwd2hf.bkt.clouddn.com/performance%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.png" alt="性能优化"></center><h1 id="资源压缩合并，减少HTTP请求"><a href="#资源压缩合并，减少HTTP请求" class="headerlink" title="资源压缩合并，减少HTTP请求"></a>资源压缩合并，减少HTTP请求</h1><p>由于HTTP是无状态协议，意味着每次HTTP请求都需要建立通信链路、进行数据传输，而在服务器端，每个HTTP请求都需要启动独立的线程处理。这些通信和服务的开销是很昂贵的，减少HTTP请求的数目可有效提高访问性能。以下方法可以对资源进行压缩合并，减少HTTP请求：</p><ol><li>合并CSS，并压缩</li><li>合并JavaScript，并压缩</li><li>图片压缩合并，通过CSS的操作偏移量显示不同的图片。（CSS Sprite，即俗称：雪碧图）<h1 id="异步加载"><a href="#异步加载" class="headerlink" title="异步加载"></a>异步加载</h1><h2 id="异步加载的方式"><a href="#异步加载的方式" class="headerlink" title="异步加载的方式"></a>异步加载的方式</h2></li><li>动态脚本加载<br>通过JS动态的创建<code>&lt;script&gt;</code>标签来动态加载js文件。</li><li><code>defer</code></li></ol><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"./a.js"</span> defer&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure><ol><li><code>async</code></li></ol><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"./a.js"</span> <span class="keyword">async</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure><div class="post-button text-center"> <a class="btn" href="/2017/前端性能优化.html#more" rel="contents">阅读全文 &raquo;</a></div></div><div></div><div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/什么是Promise.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="kmac007"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatardk.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="kmac007"></span><header class="post-header"><h2 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/2017/什么是Promise.html" itemprop="url">什么是Promise</a></h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-12T19:21:52+08:00">2017-05-12</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ECMAScript/" itemprop="url" rel="index"><span itemprop="name">ECMAScript</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/2017/什么是Promise.html#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/什么是Promise.html" itemprop="commentCount"></span></a></span> <span id="/2017/什么是Promise.html" class="leancloud_visitors" data-flag-title="什么是Promise"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数&#58;</span><span class="leancloud-visitors-count"></span></span> <span class="post-meta-divider">|</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">1,422</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">6 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><p>Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。Promise 提供统一的 API，各种异步操作都可以用同样的方法进行处理。</p><h1 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h1><ol><li>对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态: <code>Pending</code>(进行中)、<code>Fulfilled</code>(已成功)、<code>Rejected</code>(已失败)。只有异步操作的结果，可以决定那个当前是哪一种状态，任何其他操作都无法改变这个状态。</li><li>一旦状态改变，就不会再变，任何时候都可以得到这个结果。有了<code>Promise</code>对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。此外，<code>Promise</code>对象提供统一的接口，使异步操作更加容易。</li></ol><div class="post-button text-center"> <a class="btn" href="/2017/什么是Promise.html#more" rel="contents">阅读全文 &raquo;</a></div></div><div></div><div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/ES6学习总结.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="kmac007"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatardk.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="kmac007"></span><header class="post-header"><h2 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/2017/ES6学习总结.html" itemprop="url">ES6学习总结</a></h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T17:43:36+08:00">2017-05-10</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ECMAScript/" itemprop="url" rel="index"><span itemprop="name">ECMAScript</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/2017/ES6学习总结.html#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/ES6学习总结.html" itemprop="commentCount"></span></a></span> <span id="/2017/ES6学习总结.html" class="leancloud_visitors" data-flag-title="ES6学习总结"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数&#58;</span><span class="leancloud-visitors-count"></span></span> <span class="post-meta-divider">|</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">4,353</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">19 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><p>一图汇总ES6新特性列表:<br><img src="http://ovdfwd2hf.bkt.clouddn.com/ES6.png" alt="enter image description here"></p><blockquote><p>图片来源： <a href="https://zhuanlan.zhihu.com/p/24570791?refer=study-fe" target="_blank" rel="external">ES 6 新特性汇总（一图全览）</a></p></blockquote><p>新时代的前端工程师怎么能不会ES6，下面记录学习与使用过程中常用的ES6语法总结。</p><div class="post-button text-center"> <a class="btn" href="/2017/ES6学习总结.html#more" rel="contents">阅读全文 &raquo;</a></div></div><div></div><div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/常见设计模式.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="kmac007"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatardk.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="kmac007"></span><header class="post-header"><h2 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/2017/常见设计模式.html" itemprop="url">常见设计模式</a></h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-04T19:28:55+08:00">2017-05-04</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/2017/常见设计模式.html#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/常见设计模式.html" itemprop="commentCount"></span></a></span> <span id="/2017/常见设计模式.html" class="leancloud_visitors" data-flag-title="常见设计模式"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数&#58;</span><span class="leancloud-visitors-count"></span></span> <span class="post-meta-divider">|</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">279</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">2 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><p>简单的记录下遇到的设计模式，后续会补充。</p><h1 id="构造函数模式"><a href="#构造函数模式" class="headerlink" title="构造函数模式"></a>构造函数模式</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name</div><div class="line">  <span class="keyword">this</span>.age = age</div><div class="line">&#125;</div><div class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> student = <span class="keyword">new</span> Person(<span class="string">'dk'</span>, <span class="number">23</span>)</div></pre></td></tr></table></figure><h1 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> person = &#123;</div><div class="line">    name: name,</div><div class="line">    sayHello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">`Hello <span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> person</div><div class="line">&#125;</div><div class="line"></div><div class="line">createPerson(<span class="string">'dk'</span>)</div></pre></td></tr></table></figure><div class="post-button text-center"> <a class="btn" href="/2017/常见设计模式.html#more" rel="contents">阅读全文 &raquo;</a></div></div><div></div><div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-block"><link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/前端模块化规范浅析.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="kmac007"><meta itemprop="description" content=""><meta itemprop="image" content="/images/avatardk.jpg"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="kmac007"></span><header class="post-header"><h2 class="post-title" itemprop="name headline"> <a class="post-title-link" href="/2017/前端模块化规范浅析.html" itemprop="url">前端模块化规范CommonJS,AMD,CMD浅析</a></h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-30T15:24:31+08:00">2017-04-30</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span></span> <span class="post-comments-count"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-comment-o"></i></span><a href="/2017/前端模块化规范浅析.html#comments" itemprop="discussionUrl"><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/前端模块化规范浅析.html" itemprop="commentCount"></span></a></span> <span id="/2017/前端模块化规范浅析.html" class="leancloud_visitors" data-flag-title="前端模块化规范CommonJS,AMD,CMD浅析"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-eye"></i></span> <span class="post-meta-item-text">阅读次数&#58;</span><span class="leancloud-visitors-count"></span></span> <span class="post-meta-divider">|</span><div class="post-wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">字数统计&#58;</span> <span title="字数统计">1,659</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">6 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><h1 id="为什么使用模块化"><a href="#为什么使用模块化" class="headerlink" title="为什么使用模块化"></a>为什么使用模块化</h1><p>在多人合作的项目中，如果每个人都定义全局变量，难免会出现命名冲突的问题，这是难以维护的。同时分工合作的过程中，如果一人写一个js文件，我的js又需要依赖于另一个js文件，当文件多了，依赖关系变得十分混乱。而模块化编程正好可以解决这些问题。</p><h2 id="模块化的目的"><a href="#模块化的目的" class="headerlink" title="模块化的目的"></a>模块化的目的</h2><ul><li>解决命名冲突</li><li>依赖管理</li><li>提高代码的可读性</li><li>代码解耦，提高复用性</li></ul><h1 id="立即执行函数写一个模块"><a href="#立即执行函数写一个模块" class="headerlink" title="立即执行函数写一个模块"></a>立即执行函数写一个模块</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> <span class="built_in">module</span> = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> _count = <span class="number">0</span></div><div class="line">  <span class="keyword">var</span> m1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">  &#125;</div><div class="line">  <span class="keyword">var</span> m2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    m1: m1,</div><div class="line">    m2: m2</div><div class="line">  &#125;</div><div class="line">&#125;)()</div></pre></td></tr></table></figure><p>这种方法达到了不暴露私有成员的目的</p><div class="post-button text-center"> <a class="btn" href="/2017/前端模块化规范浅析.html#more" rel="contents">阅读全文 &raquo;</a></div></div><div></div><div></div><footer class="post-footer"><div class="post-eof"></div></footer></div></article></section><nav class="pagination"> <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a></nav></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div id="sidebar-dimmer"></div><div class="sidebar-inner"><section class="site-overview sidebar-panel sidebar-panel-active"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"> <img class="site-author-image" itemprop="image" src="/images/avatardk.jpg" alt="kmac007"><p class="site-author-name" itemprop="name">kmac007</p><p class="site-description motion-element" itemprop="description"></p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"> <a href="/archives/"><span class="site-state-item-count">34</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"> <a href="/categories/index.html"><span class="site-state-item-count">11</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"> <a href="/tags/index.html"><span class="site-state-item-count">61</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/kmac007" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="http://weibo.com/cdk93" target="_blank" title="微博" rel="external nofollow"><i class="fa fa-fw fa-weibo"></i> 微博</a></span></div><div class="links-of-blogroll motion-element links-of-blogroll-inline"><div class="links-of-blogroll-title"><i class="fa fa-fw fa-globe"></i> 推荐阅读</div><ul class="links-of-blogroll-list"><li class="links-of-blogroll-item"> <a href="http://www.uisdc.com/" title="优设" target="_blank">优设</a></li><li class="links-of-blogroll-item"> <a href="http://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a></li><li class="links-of-blogroll-item"> <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a></li><li class="links-of-blogroll-item"> <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a></li><li class="links-of-blogroll-item"> <a href="http://ife.baidu.com/" title="百度前端技术学院" target="_blank">百度前端技术学院</a></li><li class="links-of-blogroll-item"> <a href="http://wf.uisdc.com/cn/" title="google前端开发基础" target="_blank">google前端开发基础</a></li></ul></div></section></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="copyright"> &copy; <span itemprop="copyrightYear">2017</span><span class="with-love"><i class="fa fa-heart"></i></span> <span class="author" itemprop="copyrightHolder">kmac007</span> <span class="post-meta-divider">|</span><p class="powered-by">Hosted by <a class="theme-link" href="https://pages.coding.me" style="font-weight:700" rel="external nofollow">Coding Pages</a></p> <span class="post-meta-divider">|</span><div class="powered-by"><i class="fa fa-user-md"></i> <span id="busuanzi_container_site_uv">本站访客数:<span id="busuanzi_value_site_uv"></span></span></div></div></div></footer><div class="back-to-top"><i class="fa fa-angle-up"></i></div></div><script type="text/javascript">"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.3/jquery.min.js" data-no-instant></script><script type="text/javascript" src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js" data-no-instant></script><script type="text/javascript" src="//cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js" data-no-instant></script><script type="text/javascript" src="//cdn.bootcss.com/velocity/1.2.1/velocity.min.js" data-no-instant></script><script type="text/javascript" src="//cdn.bootcss.com/velocity/1.2.1/velocity.ui.min.js" data-no-instant></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js" data-no-instant></script><script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script><script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script><script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script><script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script><script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script><script id="dsq-count-scr" src="https://kmac007-1.disqus.com/count.js" async></script><script type="text/javascript">function proceedsearch(){$("body").append('<div class="search-popup-overlay local-search-pop-overlay"></div>').css("overflow","hidden"),$(".search-popup-overlay").click(onPopupClose),$(".popup").toggle();var t=$("#local-search-input");t.attr("autocapitalize","none"),t.attr("autocorrect","off"),t.focus()}var isfetched=!1,isXml=!0,search_path="search.xml";0===search_path.length?search_path="search.xml":/json$/i.test(search_path)&&(isXml=!1);var path="/"+search_path,onPopupClose=function(t){$(".popup").hide(),$("#local-search-input").val(""),$(".search-result-list").remove(),$("#no-result").remove(),$(".local-search-pop-overlay").remove(),$("body").css("overflow","")},searchFunc=function(t,e,o){"use strict";$("body").append('<div class="search-popup-overlay local-search-pop-overlay"><div id="search-loading-icon"><i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i></div></div>').css("overflow","hidden"),$("#search-loading-icon").css("margin","20% auto 0 auto").css("text-align","center"),$.ajax({url:t,dataType:isXml?"xml":"json",async:!0,success:function(t){isfetched=!0,$(".popup").detach().appendTo(".header-inner");var n=isXml?$("entry",t).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get():t,r=document.getElementById(e),s=document.getElementById(o),a=function(){var t=r.value.trim().toLowerCase(),e=t.split(/[\s\-]+/);e.length>1&&e.push(t);var o=[];if(t.length>0&&n.forEach(function(n){var r=!1,s=0,a=0,i=n.title.trim(),c=i.toLowerCase(),l=n.content.trim().replace(/<[^>]+>/g,""),h=l.toLowerCase(),p=decodeURIComponent(n.url),u=[],f=[];if(""!=i&&(e.forEach(function(t){function e(t,e,o){var n=t.length;if(0===n)return[];var r=0,s=[],a=[];for(o||(e=e.toLowerCase(),t=t.toLowerCase());(s=e.indexOf(t,r))>-1;)a.push({position:s,word:t}),r=s+n;return a}u=u.concat(e(t,c,!1)),f=f.concat(e(t,h,!1))}),(u.length>0||f.length>0)&&(r=!0,s=u.length+f.length)),r){[u,f].forEach(function(t){t.sort(function(t,e){return e.position!==t.position?e.position-t.position:t.word.length-e.word.length})});function d(e,o,n,r){for(var s=r[r.length-1],i=s.position,c=s.word,l=[],h=0;i+c.length<=n&&0!=r.length;){c===t&&h++,l.push({position:i,length:c.length});var p=i+c.length;for(r.pop();0!=r.length&&(s=r[r.length-1],i=s.position,c=s.word,p>i);)r.pop()}return a+=h,{hits:l,start:o,end:n,searchTextCount:h}}var g=[];0!=u.length&&g.push(d(0,0,i.length,u));for(var v=[];0!=f.length;){var $=f[f.length-1],C=$.position,m=$.word,x=C-20,w=C+80;x<0&&(x=0),w<C+m.length&&(w=C+m.length),w>l.length&&(w=l.length),v.push(d(0,x,w,f))}v.sort(function(t,e){return t.searchTextCount!==e.searchTextCount?e.searchTextCount-t.searchTextCount:t.hits.length!==e.hits.length?e.hits.length-t.hits.length:t.start-e.start});var y=parseInt("1");y>=0&&(v=v.slice(0,y));function T(t,e){var o="",n=e.start;return e.hits.forEach(function(e){o+=t.substring(n,e.position);var r=e.position+e.length;o+='<b class="search-keyword">'+t.substring(e.position,r)+"</b>",n=r}),o+=t.substring(n,e.end)}var b="";0!=g.length?b+="<li><a href='"+p+"' class='search-result-title'>"+T(i,g[0])+"</a>":b+="<li><a href='"+p+"' class='search-result-title'>"+i+"</a>",v.forEach(function(t){b+="<a href='"+p+'\'><p class="search-result">'+T(l,t)+"...</p></a>"}),b+="</li>",o.push({item:b,searchTextCount:a,hitCount:s,id:o.length})}}),1===e.length&&""===e[0])s.innerHTML='<div id="no-result"><i class="fa fa-search fa-5x" /></div>';else if(0===o.length)s.innerHTML='<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>';else{o.sort(function(t,e){return t.searchTextCount!==e.searchTextCount?e.searchTextCount-t.searchTextCount:t.hitCount!==e.hitCount?e.hitCount-t.hitCount:e.id-t.id});var a='<ul class="search-result-list">';o.forEach(function(t){a+=t.item}),a+="</ul>",s.innerHTML=a}};r.addEventListener("input",a),$(".local-search-pop-overlay").remove(),$("body").css("overflow",""),proceedsearch()}})};$(".popup-trigger").click(function(t){t.stopPropagation(),!1===isfetched?searchFunc(path,"local-search-input","local-search-result"):proceedsearch()}),$(".popup-btn-close").click(onPopupClose),$(".popup").click(function(t){t.stopPropagation()}),$(document).on("keyup",function(t){27===t.which&&$(".search-popup").is(":visible")&&onPopupClose()})</script><script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script><script>AV.initialize("3i6FSitcPH1XGrhvtLJMgWWu-gzGzoHsz","ri5kFD1FPm7rBRcbYFfPPmtP")</script><script>function showTime(e){var t=new AV.Query(e),n=[],o=$(".leancloud_visitors");o.each(function(){n.push($(this).attr("id").trim())}),t.containedIn("url",n),t.find().done(function(e){if(0!==e.length){for(c=0;c<e.length;c++){var t=e[c],i=t.get("url"),s=t.get("time"),l=document.getElementById(i);$(l).find(".leancloud-visitors-count").text(s)}for(var c=0;c<n.length;c++){var i=n[c],l=document.getElementById(i),r=$(l).find(".leancloud-visitors-count");""==r.text()&&r.text(0)}}else o.find(".leancloud-visitors-count").text(0)}).fail(function(e,t){console.log("Error: "+t.code+" "+t.message)})}function addCount(e){var t=$(".leancloud_visitors"),n=t.attr("id").trim(),o=t.attr("data-flag-title").trim(),i=new AV.Query(e);i.equalTo("url",n),i.find({success:function(t){if(t.length>0){var i=t[0];i.fetchWhenSave(!0),i.increment("time"),i.save(null,{success:function(e){$(document.getElementById(n)).find(".leancloud-visitors-count").text(e.get("time"))},error:function(e,t){console.log("Failed to save Visitor num, with error message: "+t.message)}})}else{var s=new e,l=new AV.ACL;l.setPublicReadAccess(!0),l.setPublicWriteAccess(!0),s.setACL(l),s.set("title",o),s.set("url",n),s.set("time",1),s.save(null,{success:function(e){$(document.getElementById(n)).find(".leancloud-visitors-count").text(e.get("time"))},error:function(e,t){console.log("Failed to create")}})}},error:function(e){console.log("Error:"+e.code+" "+e.message)}})}$(function(){var e=AV.Object.extend("Counter");1==$(".leancloud_visitors").length?addCount(e):$(".post-title-link").length>1&&showTime(e)})</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script type="text/javascript" src="//cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script><script data-no-instant>InstantClick.on("change",function(t){!1===t&&("undefined"!=typeof MathJax&&MathJax.Hub.Queue(["Typeset",MathJax.Hub]),"undefined"!=typeof prettyPrint&&prettyPrint(),"undefined"!=typeof _hmt&&_hmt.push(["_trackPageview",location.pathname+location.search]),"undefined"!=typeof ga&&ga("send","pageview",location.pathname+location.search))}),InstantClick.init()</script></body></html>
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net//css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端,JavaScript,React,Redux,React-route,webpack,sass,Vue,Vuex,jQuery,Vscode,前端工程师" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="kmac007" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Risk everything.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="kmac007">
+<meta property="og:url" content="https://www.kmac007.com/index.html">
+<meta property="og:site_name" content="kmac007">
+<meta property="og:description" content="Risk everything.">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="kmac007">
+<meta name="twitter:description" content="Risk everything.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.kmac007.com/"/>
+
+
+
+
+
+  <title>kmac007</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-105333685-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?cdcf44c84eb0dd51d3a8510c855fb3be";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">kmac007</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">kmac007's blog.</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/使用Token进行身份认证.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/使用Token进行身份认证.html" itemprop="url">使用Token进行身份认证</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-03T19:04:06+08:00">
+                2017-09-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Token/" itemprop="url" rel="index">
+                    <span itemprop="name">Token</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/使用Token进行身份认证.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/使用Token进行身份认证.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/使用Token进行身份认证.html" class="leancloud_visitors" data-flag-title="使用Token进行身份认证">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,375
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>最近想要做一个个人博客系统，写后台管理的时候需要考虑到身份认证。之前也算是接触过Cookie和Session的验证方式，但是在网上查看各种资料的时候发现Token这个名词，并且据说很多大型网站都在用。因此，我通过查阅各种资料写下了这个学习笔记。</p>
+<h1 id="Cookie和Session的验证方法"><a href="#Cookie和Session的验证方法" class="headerlink" title="Cookie和Session的验证方法"></a>Cookie和Session的验证方法</h1><p>HTTP是一个无状态协议，客户端每次发出请求，下一次请求无法得知上一次请求所包含的状态数据。也就是说，客户端使用用户密码通过了身份验证，但是下次客户端再次发送请求的时候，还需要再次验证。</p>
+<p>可以使用Cookie和Session解决这个问题：当用户请求登录时，如果没有问题，服务器就在服务端生成一条Session记录用户的状态，并将这条Session的Id号存储在Cookie的相应字段中并发送给客户端。客户端下次再发送请求会将Cookie发送到服务端，服务端验证Cookie中相应的Session的id字段，如果验证成功，则说明用户已登录，将数据返回给用户。</p>
+<p>Session可能会存储在内存，磁盘或者数据库中。我们可能需要在服务端定期清理过期的Session。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/使用Token进行身份认证.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/MongoDB与Mongoose学习总结.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/MongoDB与Mongoose学习总结.html" itemprop="url">MongoDB与Mongoose学习总结</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-25T23:02:31+08:00">
+                2017-08-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MongoDB/" itemprop="url" rel="index">
+                    <span itemprop="name">MongoDB</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/MongoDB与Mongoose学习总结.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/MongoDB与Mongoose学习总结.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/MongoDB与Mongoose学习总结.html" class="leancloud_visitors" data-flag-title="MongoDB与Mongoose学习总结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  6,448
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  27 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>为了能够使用Node.js实现前后端分离，MongoDB是必学的，Mongodb是基于文档的非关系型数据库，文档是按BSON（JSON的轻量化二进制格式）存储的，增删改查等管理数据库的命令和JavaScript语法很像。以下是我的学习笔记。</p>
+<h1 id="NoSQL简介"><a href="#NoSQL简介" class="headerlink" title="NoSQL简介"></a>NoSQL简介</h1><blockquote>
+<p>NoSQL(NoSQL = Not Only SQL )，意即”不仅仅是SQL”。</p>
+</blockquote>
+<p>优点:</p>
+<ul>
+<li>高可扩展性</li>
+<li>分布式计算</li>
+<li>低成本</li>
+<li>架构的灵活性，半结构化数据</li>
+<li>没有复杂的关系</li>
+</ul>
+<p>缺点:</p>
+<ul>
+<li>没有标准化</li>
+<li>有限的查询功能（到目前为止）</li>
+<li>最终一致是不直观的程序</li>
+</ul>
+<h1 id="MongoDB-简介"><a href="#MongoDB-简介" class="headerlink" title="MongoDB 简介"></a>MongoDB 简介</h1><blockquote>
+<p>MongoDB是NoSQL数据库的一种<br>MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。<br>在高负载的情况下，添加更多的节点，可以保证服务器性能。<br>MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。<br>MongoDB 将数据存储为一个文档，数据结构由键值(key=&gt;value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/MongoDB与Mongoose学习总结.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/Express学习笔记.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/Express学习笔记.html" itemprop="url">Express学习笔记</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-20T13:02:31+08:00">
+                2017-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Express/" itemprop="url" rel="index">
+                    <span itemprop="name">Express</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/Express学习笔记.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/Express学习笔记.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/Express学习笔记.html" class="leancloud_visitors" data-flag-title="Express学习笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  5,469
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  23 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Express简介"><a href="#Express简介" class="headerlink" title="Express简介"></a>Express简介</h1><p>Express是一个简洁、灵活的Node.js Web应用开发框架，它提供一系列强大的特性，帮助开发者创建Web和移动设备应用。<br>它是一个基于Node.js平台，快速、开放、极简的web开发框架。优点是易上手、高性能、扩展性强。</p>
+<ol>
+<li>易上手：Express对web开发相关的模块进行了适度的封装，屏蔽了大量复杂繁琐的技术细节，让开发者专注于业务逻辑的开发，极大的降低了入门和学习成本。</li>
+<li>高性能:：Express仅在web应用相关的nodejs模块上进行了适度的封装和扩展，较大程度避免了过度封装导致的性能损耗。</li>
+<li>扩展性强：基于中间件的开发模式，使express应用的扩展、模块拆分非常简单，既灵活，扩展性又强。</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/Express学习笔记.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/ES6 Class浅析.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/ES6 Class浅析.html" itemprop="url">ES6 Class浅析</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-30T21:23:42+08:00">
+                2017-07-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/ES6 Class浅析.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/ES6 Class浅析.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/ES6 Class浅析.html" class="leancloud_visitors" data-flag-title="ES6 Class浅析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,989
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>最近在学习React.js，发现React.js中模块可以直接定义类的方式生成模块。用子类来继承<code>React.Component</code>生成模块的方式，简洁明了。<br>如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// react.js组件</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Add</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">   <span class="comment">//something...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>下面，将详细介绍ES6的Class。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/ES6 Class浅析.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/ES6 Modules浅析.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/ES6 Modules浅析.html" itemprop="url">ES6 Modules浅析</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T19:33:22+08:00">
+                2017-07-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/ES6 Modules浅析.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/ES6 Modules浅析.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/ES6 Modules浅析.html" class="leancloud_visitors" data-flag-title="ES6 Modules浅析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,537
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>之前写了一个Vue.js小项目<a href="https://github.com/kmac007/vue-resume" target="_blank" rel="external">vue-resume</a>，在写这个项目的过程中发现ES6的语法非常好用。印象最深的就是ES6的模块化，模块的导入直接用<code>import</code>，而导出使用<code>export</code>，非常的简单易读，对比之前AMD规范，ES6 Modules写法相当的简单。</p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>在ES6之前，社区制定了一些模块加载方案，最主要的有CommonJS和AMD两种。前者用于服务器，后者用于浏览器。ES6在语言标准的层面上，实现了模块加载功能，而且实现得相当简单，完全可以取代CommonJS和AMD规范，成为浏览器和服务器通用的模块解决方案。</p>
+<p>ES6模块的设计思想，是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量。CommonJS和AMD模块，都只能在运行时确定这些东西。比如，CommonJS模块就是对象，输入时必须查找对象的属性。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/ES6 Modules浅析.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/前端性能优化.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/前端性能优化.html" itemprop="url">前端性能优化</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-13T14:22:34+08:00">
+                2017-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/性能优化/" itemprop="url" rel="index">
+                    <span itemprop="name">性能优化</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/前端性能优化.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/前端性能优化.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/前端性能优化.html" class="leancloud_visitors" data-flag-title="前端性能优化">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,009
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <center><img src="http://ovdfwd2hf.bkt.clouddn.com/performance%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.png" alt="性能优化"></center>
+
+<h1 id="资源压缩合并，减少HTTP请求"><a href="#资源压缩合并，减少HTTP请求" class="headerlink" title="资源压缩合并，减少HTTP请求"></a>资源压缩合并，减少HTTP请求</h1><p>由于HTTP是无状态协议，意味着每次HTTP请求都需要建立通信链路、进行数据传输，而在服务器端，每个HTTP请求都需要启动独立的线程处理。这些通信和服务的开销是很昂贵的，减少HTTP请求的数目可有效提高访问性能。以下方法可以对资源进行压缩合并，减少HTTP请求：</p>
+<ol>
+<li>合并CSS，并压缩</li>
+<li>合并JavaScript，并压缩</li>
+<li>图片压缩合并，通过CSS的操作偏移量显示不同的图片。（CSS Sprite，即俗称：雪碧图）<h1 id="异步加载"><a href="#异步加载" class="headerlink" title="异步加载"></a>异步加载</h1><h2 id="异步加载的方式"><a href="#异步加载的方式" class="headerlink" title="异步加载的方式"></a>异步加载的方式</h2></li>
+<li>动态脚本加载<br>通过JS动态的创建<code>&lt;script&gt;</code>标签来动态加载js文件。</li>
+<li><code>defer</code></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"./a.js"</span> defer&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<ol>
+<li><code>async</code></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"./a.js"</span> <span class="keyword">async</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/前端性能优化.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/什么是Promise.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/什么是Promise.html" itemprop="url">什么是Promise</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-12T19:21:52+08:00">
+                2017-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/什么是Promise.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/什么是Promise.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/什么是Promise.html" class="leancloud_visitors" data-flag-title="什么是Promise">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,422
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。Promise 提供统一的 API，各种异步操作都可以用同样的方法进行处理。</p>
+<h1 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h1><ol>
+<li>对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态:  <code>Pending</code>(进行中)、<code>Fulfilled</code>(已成功)、<code>Rejected</code>(已失败)。只有异步操作的结果，可以决定那个当前是哪一种状态，任何其他操作都无法改变这个状态。</li>
+<li>一旦状态改变，就不会再变，任何时候都可以得到这个结果。有了<code>Promise</code>对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。此外，<code>Promise</code>对象提供统一的接口，使异步操作更加容易。</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/什么是Promise.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/ES6学习总结.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/ES6学习总结.html" itemprop="url">ES6学习总结</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T17:43:36+08:00">
+                2017-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ECMAScript/" itemprop="url" rel="index">
+                    <span itemprop="name">ECMAScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/ES6学习总结.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/ES6学习总结.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/ES6学习总结.html" class="leancloud_visitors" data-flag-title="ES6学习总结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4,353
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  19 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>一图汇总ES6新特性列表:<br><img src="http://ovdfwd2hf.bkt.clouddn.com/ES6.png" alt="enter image description here"></p>
+<blockquote>
+<p>图片来源： <a href="https://zhuanlan.zhihu.com/p/24570791?refer=study-fe" target="_blank" rel="external">ES 6 新特性汇总（一图全览）</a></p>
+</blockquote>
+<p>新时代的前端工程师怎么能不会ES6，下面记录学习与使用过程中常用的ES6语法总结。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/ES6学习总结.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/常见设计模式.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/常见设计模式.html" itemprop="url">常见设计模式</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-04T19:28:55+08:00">
+                2017-05-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/常见设计模式.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/常见设计模式.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/常见设计模式.html" class="leancloud_visitors" data-flag-title="常见设计模式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  279
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>简单的记录下遇到的设计模式，后续会补充。</p>
+<h1 id="构造函数模式"><a href="#构造函数模式" class="headerlink" title="构造函数模式"></a>构造函数模式</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name</div><div class="line">  <span class="keyword">this</span>.age = age</div><div class="line">&#125;</div><div class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.name</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> student = <span class="keyword">new</span> Person(<span class="string">'dk'</span>, <span class="number">23</span>)</div></pre></td></tr></table></figure>
+<h1 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> person = &#123;</div><div class="line">    name: name,</div><div class="line">    sayHello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">`Hello <span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> person</div><div class="line">&#125;</div><div class="line"></div><div class="line">createPerson(<span class="string">'dk'</span>)</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/常见设计模式.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.kmac007.com/2017/前端模块化规范浅析.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kmac007">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatardk.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kmac007">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/前端模块化规范浅析.html" itemprop="url">前端模块化规范CommonJS,AMD,CMD浅析</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-30T15:24:31+08:00">
+                2017-04-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/前端模块化规范浅析.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/前端模块化规范浅析.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/前端模块化规范浅析.html" class="leancloud_visitors" data-flag-title="前端模块化规范CommonJS,AMD,CMD浅析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+          
+            <span class="post-meta-divider">|</span>
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,659
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="为什么使用模块化"><a href="#为什么使用模块化" class="headerlink" title="为什么使用模块化"></a>为什么使用模块化</h1><p>在多人合作的项目中，如果每个人都定义全局变量，难免会出现命名冲突的问题，这是难以维护的。同时分工合作的过程中，如果一人写一个js文件，我的js又需要依赖于另一个js文件，当文件多了，依赖关系变得十分混乱。而模块化编程正好可以解决这些问题。</p>
+<h2 id="模块化的目的"><a href="#模块化的目的" class="headerlink" title="模块化的目的"></a>模块化的目的</h2><ul>
+<li>解决命名冲突</li>
+<li>依赖管理</li>
+<li>提高代码的可读性</li>
+<li>代码解耦，提高复用性</li>
+</ul>
+<h1 id="立即执行函数写一个模块"><a href="#立即执行函数写一个模块" class="headerlink" title="立即执行函数写一个模块"></a>立即执行函数写一个模块</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> <span class="built_in">module</span> = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> _count = <span class="number">0</span></div><div class="line">  <span class="keyword">var</span> m1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">  &#125;</div><div class="line">  <span class="keyword">var</span> m2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//...</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    m1: m1,</div><div class="line">    m2: m2</div><div class="line">  &#125;</div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
+<p>这种方法达到了不暴露私有成员的目的</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/前端模块化规范浅析.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <div id="place-empty"></div>
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatardk.jpg"
+               alt="kmac007" />
+          <p class="site-author-name" itemprop="name">kmac007</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">61</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/kmac007" target="_blank" title="GitHub" rel="external nofollow">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/cdk93" target="_blank" title="微博" rel="external nofollow">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      微博
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              推荐阅读
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.uisdc.com/" title="优设" target="_blank">优设</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ife.baidu.com/" title="百度前端技术学院" target="_blank">百度前端技术学院</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wf.uisdc.com/cn/" title="google前端开发基础" target="_blank">google前端开发基础</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kmac007  </span>
+  <span class="post-meta-divider">|</span>
+
+  <p class="powered-by">Hosted by <a class="theme-link" href="https://pages.coding.me" style="font-weight: bold" rel="external nofollow">Coding Pages</a></p>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+    本站访客数:<span id="busuanzi_value_site_uv"></span>
+  </span>
+  </div>
+
+  
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-angle-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.3/jquery.min.js" data-no-instant></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js" data-no-instant></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js" data-no-instant></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/velocity/1.2.1/velocity.min.js" data-no-instant></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/velocity/1.2.1/velocity.ui.min.js" data-no-instant></script>
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js" data-no-instant></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://kmac007-1.disqus.com/count.js" async></script>
+    
+
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("3i6FSitcPH1XGrhvtLJMgWWu-gzGzoHsz", "ri5kFD1FPm7rBRcbYFfPPmtP");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src= "//cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
+  <script data-no-instant>
+    InstantClick.on('change', function(isInitialLoad) {
+      if (isInitialLoad === false) {
+        if (typeof MathJax !== 'undefined') // support MathJax
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        if (typeof prettyPrint !== 'undefined') // support google code prettify
+          prettyPrint();
+        if (typeof _hmt !== 'undefined')  // support 百度统计
+          _hmt.push(['_trackPageview', location.pathname + location.search]);
+        if (typeof ga !== 'undefined')  // support google analytics
+            ga('send', 'pageview', location.pathname + location.search);
+      }
+    });
+    InstantClick.init();
+  </script>
+</body>
+</html>
